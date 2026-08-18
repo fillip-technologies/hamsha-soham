@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'madefor-text', 'Wix Madefor Text', helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;
+  --font-master: 'madefor-text', 'Wix Madefor Text', helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;
+}
+
+@font-face {
+  font-family: 'madefor-text';
+  src: local('Wix Madefor Text'), local('madefor-text');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --font-master: 'madefor-text', 'Wix Madefor Text', helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;
+  --font-sans: 'madefor-text', 'Wix Madefor Text', helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;
+  --color-brand-flame: #FF4D27;
+  --color-brand-flame-hover: #E03A14;
+}
+
+*, ::before, ::after, html, body, button, input, select, textarea {
+  font-family: var(--font-master) !important;
+}
+
+html, body {
+  font-weight: 400;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #000000;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Premium Light Glassmorphism */
+.glass-header {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.flame-glow {
+  box-shadow: 0 4px 20px -2px rgba(255, 77, 39, 0.35);
+}
+
+.flame-glow-sm {
+  box-shadow: 0 2px 10px -1px rgba(255, 77, 39, 0.25);
+}
+
+.soft-card-shadow {
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 4px 12px -2px rgba(15, 23, 42, 0.02);
+}
