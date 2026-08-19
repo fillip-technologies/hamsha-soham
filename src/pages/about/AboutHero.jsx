@@ -5,22 +5,22 @@ import { ShieldCheck, Award, Eye, Building2, Sparkles, ArrowRight, Calendar, Act
 // Portfolio Product Images
 import eDrishtiImg from "../../assets/portfolio/e_Drishti_P_I.png";
 import hwaiImg from "../../assets/portfolio/hwai.png";
-import heroDashboardImg from "../../assets/hero-dashboard.png";
+import heroDashboardImg from "../../assets/hero-dashboard.jpeg";
 
 export const AboutHero = () => {
   return (
     <section className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20 bg-[#FAFBFD] text-slate-900 select-none font-sans">
-      
+
       {/* Background Ambient Mesh Light Orbs */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[450px] bg-gradient-to-b from-indigo-100/60 via-purple-50/30 to-transparent rounded-full blur-[140px] pointer-events-none -z-0" />
       <div className="absolute top-1/4 left-10 w-80 h-80 bg-[#FF4D27]/10 rounded-full blur-3xl pointer-events-none -z-0" />
       <div className="absolute top-1/3 right-10 w-80 h-80 bg-sky-400/10 rounded-full blur-3xl pointer-events-none -z-0" />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center space-y-6">
-        
+
         {/* 1. TOP BRANDING & SHORTENED COMPACT HEADLINE */}
         <div className="max-w-3xl mx-auto space-y-3.5">
-          
+
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#0B132B] tracking-tight leading-tight">
             Architecting Digital <span className="bg-gradient-to-r from-[#FF4D27] via-amber-500 to-[#5254F2] bg-clip-text text-transparent">Intelligence</span> for Hospitals
           </h1>
@@ -52,7 +52,7 @@ export const AboutHero = () => {
 
         {/* 2. 3D STACKED FLOATING CARD CAROUSEL SHOWCASE STAGE */}
         <div className="relative pt-4 max-w-6xl mx-auto flex items-center justify-center min-h-[380px] sm:min-h-[460px]">
-          
+
           {/* Ribbon Vector Background */}
           <svg
             className="absolute inset-0 w-full h-full pointer-events-none -z-0 opacity-40"
@@ -82,7 +82,7 @@ export const AboutHero = () => {
 
           {/* Center Elevated Master Dashboard Stage Card */}
           <div className="relative z-20 w-full max-w-[340px] sm:max-w-[540px] lg:max-w-[640px] bg-slate-900 rounded-[30px] p-2.5 shadow-2xl border-4 border-white ring-1 ring-slate-200 hover:scale-[1.01] transition-transform duration-500 text-left">
-            
+
             {/* macOS Control Dots Header Bar */}
             <div className="flex items-center justify-between px-4 py-1.5 border-b border-slate-800 text-[10px] font-extrabold text-white">
               <div className="flex items-center gap-1.5">
@@ -120,7 +120,7 @@ export const AboutHero = () => {
 
         {/* 3. FLOATING METRICS RIBBON */}
         <div className="pt-4 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 max-w-4xl mx-auto">
-          
+
           <div className="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-md flex items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#FF4D27] border border-orange-200 flex items-center justify-center shrink-0">
               <Building2 className="w-5 h-5" />

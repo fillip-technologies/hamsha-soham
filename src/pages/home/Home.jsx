@@ -1,5 +1,6 @@
 import React from "react";
 import { HeroSection } from "./HeroSection";
+import { ApprovedBySection } from "./ApprovedBySection";
 import { SegmentSolutionsSection } from "./SegmentSolutionsSection";
 import { FeaturesSection } from "./FeaturesSection";
 import { AboutSection } from "./AboutSection";
@@ -14,7 +15,10 @@ export const Home = () => {
       {/* 1. Homepage Hero Section */}
       <HeroSection />
 
-      {/* 2. Healthcare Solutions for Every Organization (Target Segmentation) */}
+      {/* 2. Official Approvals & Certifications (ABDM / Safe-to-Host / VAPT) */}
+      <ApprovedBySection />
+
+      {/* 3. Healthcare Solutions for Every Organization (Target Segmentation) */}
       <SegmentSolutionsSection />
 
       {/* 3. Hamsa Soham Core Features & Value Pillars Section */}

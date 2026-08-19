@@ -1,18 +1,18 @@
 import React from "react";
 import { Target, Eye } from "lucide-react";
-import heroDashboardImg from "../../assets/hero-dashboard.png";
+import heroDashboardImg from "../../assets/hero-dashboard.jpeg";
 
 export const AboutStory = () => {
   return (
     <section className="py-20 sm:py-28 bg-[#FAFCFF] border-t border-slate-200/80 select-none">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-        
+
         {/* Two-Column Story Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center text-left">
-          
+
           {/* Left Column: Story & Mission text */}
           <div className="lg:col-span-6 space-y-6">
-            
+
             <div className="space-y-3">
               <span className="text-xs font-extrabold uppercase tracking-wider text-[#FF4D27] bg-orange-50 px-3.5 py-1.5 rounded-full border border-orange-200/70 inline-block">
                 Our Origin & Philosophy
@@ -61,7 +61,7 @@ export const AboutStory = () => {
           {/* Right Column: High-Res Clean Interface Graphic */}
           <div className="lg:col-span-6 relative">
             <div className="rounded-3xl bg-white p-3 border border-slate-200 shadow-2xl space-y-2">
-              
+
               {/* Header Dots */}
               <div className="flex items-center justify-between px-3 py-1.5 border-b border-slate-200 text-[10px] text-slate-600 font-bold">
                 <div className="flex items-center gap-1.5">
