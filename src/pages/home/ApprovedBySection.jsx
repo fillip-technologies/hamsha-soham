@@ -16,9 +16,13 @@ import {
 
 // Official PDF and image assets from src/assets/pdf
 import ayushmanLogo from "../../assets/pdf/aysuhaman-1.png";
+import approvedByLogo from "../../assets/pdf/approved.jpeg";
 import abdmCertPdf from "../../assets/pdf/certificate.pdf";
 import safeCertPdf from "../../assets/pdf/safe-cert.pdf";
 import vapCertPdf from "../../assets/pdf/VAPcert.pdf";
+import abdmCertPreview from "../../assets/pdf/previews/certificate.jpg";
+import safeCertPreview from "../../assets/pdf/previews/safe-cert.jpg";
+import vapCertPreview from "../../assets/pdf/previews/VAPcert.jpg";
 
 export const ApprovedBySection = () => {
   const scrollContainerRef = useRef(null);
@@ -29,9 +33,8 @@ export const ApprovedBySection = () => {
       certNumber: "ABDM-NHA-2026-M123",
       name: "Ayushman Bharat Digital Mission (ABDM)",
       authority: "National Health Authority (NHA) • Govt of India",
-      tag: "M1, M2 & M3 Approved",
-      tagColor: "bg-[#FF4D27] text-white",
       logo: ayushmanLogo,
+      preview: abdmCertPreview,
       pdfUrl: abdmCertPdf,
       fileName: "ABDM_Milestone_Certification.pdf",
       features: [
@@ -49,10 +52,9 @@ export const ApprovedBySection = () => {
       certNumber: "CERT-IN-SAFE-HOST-882",
       name: "Safe to Host Security Audit Certificate",
       authority: "CERT-In Empanelled Information Security Auditor",
-      tag: "CERT-In Empanelled",
-      tagColor: "bg-emerald-600 text-white",
       icon: ShieldCheck,
       iconBg: "bg-emerald-50 text-emerald-600 border-emerald-200",
+      preview: safeCertPreview,
       pdfUrl: safeCertPdf,
       fileName: "Safe_To_Host_Security_Certificate.pdf",
       features: [
@@ -70,10 +72,9 @@ export const ApprovedBySection = () => {
       certNumber: "VAPT-HAMSA-AUDIT-409",
       name: "VAPT Security Compliance Certificate",
       authority: "Enterprise Healthcare IT Penetration Testing",
-      tag: "VAPT Certified",
-      tagColor: "bg-blue-600 text-white",
       icon: Lock,
       iconBg: "bg-blue-50 text-blue-600 border-blue-200",
+      preview: vapCertPreview,
       pdfUrl: vapCertPdf,
       fileName: "VAPT_Security_Certificate.pdf",
       features: [
@@ -145,6 +146,33 @@ export const ApprovedBySection = () => {
           </div>
         </div>
 
+        {/* Official Government Approval Banner — clearly showcases both logo assets */}
+        <div className="mb-8 sm:mb-10 rounded-3xl bg-white border border-slate-200/90 shadow-sm overflow-hidden">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 px-6 sm:px-10 py-8 sm:py-10">
+            {/* Ayushman Bharat Integration Seal */}
+            <img
+              src={ayushmanLogo}
+              alt="Ayushman Bharat Digital Mission — M1, M2, M3 Integrated Seal"
+              className="h-24 sm:h-28 w-auto object-contain shrink-0"
+            />
+
+            {/* Divider */}
+            <div className="hidden sm:block w-px h-20 bg-slate-200" />
+            <div className="sm:hidden w-24 h-px bg-slate-200" />
+
+            {/* National Health Authority Approval Banner */}
+            <img
+              src={approvedByLogo}
+              alt="Approved By National Health Authority, Government of India"
+              className="h-16 sm:h-20 w-auto object-contain shrink-0"
+            />
+          </div>
+          <p className="text-xs sm:text-sm font-bold text-slate-500 text-center leading-snug pb-6 sm:pb-8 px-6">
+            Hamsa Soham HIMS is officially recognized and approved by the National Health
+            Authority (NHA), Government of India, under the Ayushman Bharat Digital Mission.
+          </p>
+        </div>
+
         {/* Scrollable Certificate Cards Track */}
         <div
           ref={scrollContainerRef}
@@ -154,91 +182,107 @@ export const ApprovedBySection = () => {
           {certificates.map((cert) => (
             <div
               key={cert.id}
-              className={`min-w-[320px] sm:min-w-[400px] md:min-w-[440px] bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group relative overflow-hidden flex-shrink-0 ${cert.accentBorder}`}
+              className={`min-w-[320px] sm:min-w-[400px] md:min-w-[440px] bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col group relative overflow-hidden flex-shrink-0 ${cert.accentBorder}`}
             >
               {/* Top Accent Radial Glow */}
               <div
-                className={`absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl ${cert.accentGlow} rounded-full blur-3xl pointer-events-none group-hover:scale-150 transition-transform duration-500`}
+                className={`absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl ${cert.accentGlow} rounded-full blur-3xl pointer-events-none group-hover:scale-150 transition-transform duration-500 z-10`}
               />
 
-              <div className="space-y-5 relative z-10">
-                {/* Header: Logo / Icon + Tag Pill */}
-                <div className="flex items-center justify-between gap-4">
-                  {cert.logo ? (
-                    <div className="h-14 w-auto max-w-[150px] flex items-center justify-start p-1.5 bg-slate-50/80 rounded-2xl border border-slate-200/60 shadow-2xs group-hover:scale-105 transition-transform duration-300">
-                      <img
-                        src={cert.logo}
-                        alt={cert.name}
-                        className="max-h-11 w-auto object-contain"
-                      />
-                    </div>
-                  ) : (
-                    <div
-                      className={`w-14 h-14 rounded-2xl flex items-center justify-center border shadow-xs group-hover:scale-105 transition-transform duration-300 ${cert.iconBg}`}
-                    >
-                      <cert.icon className="w-7 h-7" />
-                    </div>
-                  )}
+              {/* Certificate Image Preview — actual scanned certificate, click to view full PDF */}
+              <a
+                href={cert.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative block w-full h-44 sm:h-48 overflow-hidden bg-slate-100 group/preview"
+                title={`View ${cert.name} full certificate`}
+              >
+                <img
+                  src={cert.preview}
+                  alt={`${cert.name} certificate scan`}
+                  className="w-full h-full object-cover object-top group-hover/preview:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent opacity-0 group-hover/preview:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                  <span className="text-white text-xs font-bold flex items-center gap-1.5 bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                    <FileText className="w-3.5 h-3.5" />
+                    View Full Certificate
+                  </span>
+                </div>
+              </a>
 
-                  <div className="text-right">
-                    <span
-                      className={`text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-2xs ${cert.tagColor}`}
-                    >
-                      {cert.tag}
-                    </span>
-                    <div className="text-[10px] font-bold text-slate-400 mt-1">
+              <div className="p-6 sm:p-7 flex flex-col justify-between flex-1 relative z-10">
+                <div className="space-y-5">
+                  {/* Header: Logo / Icon + Accreditation Label */}
+                  <div className="flex items-center justify-between gap-4">
+                    {cert.logo ? (
+                      <div className="h-14 w-auto max-w-[150px] flex items-center justify-start p-1.5 bg-slate-50/80 rounded-2xl border border-slate-200/60 shadow-2xs group-hover:scale-105 transition-transform duration-300">
+                        <img
+                          src={cert.logo}
+                          alt={cert.name}
+                          className="max-h-11 w-auto object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        className={`w-14 h-14 rounded-2xl flex items-center justify-center border shadow-xs group-hover:scale-105 transition-transform duration-300 ${cert.iconBg}`}
+                      >
+                        <cert.icon className="w-7 h-7" />
+                      </div>
+                    )}
+
+                    <div className="text-right text-[10px] font-bold text-slate-400">
                       {cert.badgeText}
                     </div>
                   </div>
+
+                  {/* Certificate Title & Authority */}
+                  <div className="space-y-1">
+                    <h3 className="text-lg sm:text-xl font-black text-[#0B132B] tracking-tight group-hover:text-[#FF4D27] transition-colors leading-snug">
+                      {cert.name}
+                    </h3>
+                    <p className="text-xs font-bold text-slate-500">
+                      {cert.authority}
+                    </p>
+                  </div>
+
+                  {/* Feature / Milestone Checklist */}
+                  <div className="space-y-2 pt-2 border-t border-slate-100">
+                    {cert.features.map((feat, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start gap-2 text-xs font-medium text-slate-700"
+                      >
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                        <span>{feat}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Certificate Title & Authority */}
-                <div className="space-y-1">
-                  <h3 className="text-lg sm:text-xl font-black text-[#0B132B] tracking-tight group-hover:text-[#FF4D27] transition-colors leading-snug">
-                    {cert.name}
-                  </h3>
-                  <p className="text-xs font-bold text-slate-500">
-                    {cert.authority}
-                  </p>
+                {/* Direct PDF Access Strip */}
+                <div className="pt-5 mt-5 border-t border-slate-100 flex items-center gap-2.5">
+                  <a
+                    href={cert.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-3 px-4 rounded-xl bg-slate-900 hover:bg-[#FF4D27] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs hover:shadow-lg hover:shadow-orange-500/20 transition-all cursor-pointer group/btn"
+                    title={`View ${cert.name} PDF Certificate`}
+                  >
+                    <FileText className="w-4 h-4" />
+                    <span>View Official PDF</span>
+                    <ExternalLink className="w-3.5 h-3.5 opacity-80 group-hover/btn:translate-x-0.5 transition-transform" />
+                  </a>
+
+                  <a
+                    href={cert.pdfUrl}
+                    download={cert.fileName}
+                    className="p-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center border border-slate-200/90 shadow-2xs hover:shadow-xs transition-colors cursor-pointer"
+                    title="Download PDF"
+                    aria-label={`Download ${cert.fileName}`}
+                  >
+                    <Download className="w-4 h-4" />
+                  </a>
                 </div>
-
-                {/* Feature / Milestone Checklist */}
-                <div className="space-y-2 pt-2 border-t border-slate-100">
-                  {cert.features.map((feat, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-start gap-2 text-xs font-medium text-slate-700"
-                    >
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Direct PDF Access Strip */}
-              <div className="pt-5 mt-5 border-t border-slate-100 flex items-center gap-2.5 relative z-10">
-                <a
-                  href={cert.pdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 py-3 px-4 rounded-xl bg-slate-900 hover:bg-[#FF4D27] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs hover:shadow-lg hover:shadow-orange-500/20 transition-all cursor-pointer group/btn"
-                  title={`View ${cert.name} PDF Certificate`}
-                >
-                  <FileText className="w-4 h-4" />
-                  <span>View Official PDF</span>
-                  <ExternalLink className="w-3.5 h-3.5 opacity-80 group-hover/btn:translate-x-0.5 transition-transform" />
-                </a>
-
-                <a
-                  href={cert.pdfUrl}
-                  download={cert.fileName}
-                  className="p-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center border border-slate-200/90 shadow-2xs hover:shadow-xs transition-colors cursor-pointer"
-                  title="Download PDF"
-                  aria-label={`Download ${cert.fileName}`}
-                >
-                  <Download className="w-4 h-4" />
-                </a>
               </div>
             </div>
           ))}

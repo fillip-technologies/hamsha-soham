@@ -11,6 +11,7 @@ import {
   Lock,
 } from "lucide-react";
 import logoImg from "../../../assets/logo.png";
+import filliptechLogo from "../../../assets/Fillip-logo-white.webp";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -227,19 +228,40 @@ export const Footer = () => {
         </div>
 
         {/* Footer Bottom Copyright & Compliance Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-medium">
-          <p>© {currentYear} Hamsa Soham Healthcare Pvt Ltd. All rights reserved.</p>
+        <div className="space-y-3">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-medium">
+            <p>© {currentYear} Hamsa Soham Healthcare Pvt Ltd. All rights reserved.</p>
 
-          <div className="flex items-center gap-4 text-[11px]">
-            <span className="flex items-center gap-1 text-emerald-400">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>NABH & ABDM Ready</span>
+            <div className="flex items-center gap-4 text-[11px]">
+              <span className="flex items-center gap-1 text-emerald-400">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                <span>NABH & ABDM Ready</span>
+              </span>
+              <span className="text-slate-600">•</span>
+              <span className="flex items-center gap-1 text-slate-300">
+                <Lock className="w-3.5 h-3.5 text-amber-400" />
+                <span>ISO 27001 Certified Security</span>
+              </span>
+            </div>
+          </div>
+
+          {/* Designed & Developed Credit */}
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-[11px] text-slate-500 font-medium">
+              Design and Developed by
             </span>
-            <span className="text-slate-600">•</span>
-            <span className="flex items-center gap-1 text-slate-300">
-              <Lock className="w-3.5 h-3.5 text-amber-400" />
-              <span>ISO 27001 Certified Security</span>
-            </span>
+            <a
+              href="https://filliptechnologies.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-80 hover:opacity-100 transition-opacity"
+            >
+              <img
+                src={filliptechLogo}
+                alt="Fillip Technologies"
+                className="h-4 w-auto object-contain"
+              />
+            </a>
           </div>
         </div>
 

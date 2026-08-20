@@ -12,81 +12,58 @@ export const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Dr. Rajesh Sharma",
-      position: "Medical Director",
-      hospital: "Sharda Imagine Hospital",
-      location: "Patna, Bihar",
-      avatar:
-        "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=240&auto=format&fit=crop&q=80",
+      name: "Aastha Super Speciality Hospital & Diagnostics",
+      position: null,
+      hospital: "Siliguri, West Bengal",
+      initials: "AS",
       quote:
-        "Hamsa Soham's e_Kshitiz software transformed our multi-branch administration. The centralized real-time OPD and IPD tracking reduced operational delays by over 40% across all hospital departments.",
+        "We have been using your software for the past 1 year — the services are satisfying and user-friendly. Some issues remain around registration and bed allotment, where occupancy sometimes fails to display; it's our humble request that the team look into the matter.",
       backdropColor: "bg-[#1E74B7]",
       backdropRotate: "-rotate-6",
     },
     {
       id: 2,
-      name: "Dr. M. K. Sinha",
-      position: "Chief Ophthalmologist",
-      hospital: "Akhand Jyoti Eye Hospital",
-      location: "Mastichak, Saran",
-      avatar:
-        "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=240&auto=format&fit=crop&q=80",
+      name: "Nilesh Kumar",
+      position: null,
+      hospital: "Vivantes Hospital and Research Institute Pvt. Ltd.",
+      initials: "NK",
       quote:
-        "e_Drishti Lite proved to be an invaluable asset for our eye care camps and surgical workflows. Seamless refraction records, diagnostic device connectivity, and optical inventory management.",
+        "Your support team is great. All our modules are live and working fine with the help of your support team, and because of this I am getting MIS reports properly. I hope you will continue like this.",
       backdropColor: "bg-[#43A047]",
       backdropRotate: "rotate-6",
     },
     {
       id: 3,
-      name: "Dr. Ananya Sarraf",
-      position: "Senior Ophthalmic Surgeon",
-      hospital: "Sarraf Eye Hospital",
-      location: "Ranchi, Jharkhand",
-      avatar:
-        "https://images.unsplash.com/photo-1594824813598-a3f278077717?w=240&auto=format&fit=crop&q=80",
+      name: "Ashish Sehgal",
+      position: "General Manager",
+      hospital: "Sharda Imaging, Panipat",
+      initials: "AS",
       quote:
-        "Cost control and patient satisfaction improved dramatically within 3 months of deploying e_Drishti. It is one of the few healthcare IT solutions that is simple, reliable, and truly effective.",
+        "We are getting proper services from your side. There is no such problem in our software, and we hope for the same in future. Mr. Rajender has been very supportive throughout — looking for the same support going forward.",
       backdropColor: "bg-[#00897B]",
       backdropRotate: "-rotate-6",
     },
     {
       id: 4,
-      name: "Sunil Verma",
-      position: "Chief Operating Officer",
-      hospital: "Holy Family Hospital",
-      location: "Kurji, Patna",
-      avatar:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=240&auto=format&fit=crop&q=80",
+      name: "Deepankar Chanda",
+      position: "IT Head",
+      hospital: "Akhandjyoti Eye Hospital",
+      initials: "DC",
       quote:
-        "The speed, reliability, and 24/7 technical support of Hamsa Soham e_Kshitiz have given our administrative team total peace of mind. Billing and pharmacy inventory are 100% synchronized.",
+        "We have been using e-Drishti Hospital Management Information System, developed by Hamsa Soham Healthcare, for the last 2 years. The software has all the modules to run hospital operations efficiently, and their support services have been good since commissioning.",
       backdropColor: "bg-[#FF4D27]",
       backdropRotate: "rotate-6",
     },
     {
       id: 5,
-      name: "Dr. Arvind Kumar",
-      position: "Director of Ophthalmology",
-      hospital: "Aastha Eye Hospital",
-      location: "Gaya, Bihar",
-      avatar:
-        "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=240&auto=format&fit=crop&q=80",
+      name: "Sri Sai Lions Netralaya",
+      position: null,
+      hospital: "Patna, Bihar",
+      initials: "SS",
       quote:
-        "Managing multiple vision testing labs and optical retail stores used to be complex. e_Drishti unified our entire OPD workflow into a single seamless dashboard.",
+        "The best thing about Hamsa Soham is their support team. It is the most affordable software and has features unique to the eye care hospital module. We are happy with its performance and are implementing it in our other branches too — it can be recommended to any other hospital.",
       backdropColor: "bg-[#6D28D9]",
       backdropRotate: "-rotate-6",
-    },
-    {
-      id: 6,
-      name: "Sanjay Mehta",
-      position: "Head of Hospital IT",
-      hospital: "SSLN Medical Center",
-      location: "Muzaffarpur, Bihar",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&auto=format&fit=crop&q=80",
-      quote:
-        "The customer service team at Hamsa Soham is exceptional. They migrated our legacy hospital data without a single minute of downtime. Highly recommended HIMS provider.",
-      backdropColor: "bg-[#D97706]",
-      backdropRotate: "rotate-6",
     },
   ];
 
@@ -167,23 +144,23 @@ export const TestimonialsSection = () => {
               {/* Pure White Front Card */}
               <div className="bg-white rounded-[32px] sm:rounded-[36px] shadow-2xl p-8 pt-18 pb-12 relative z-10 text-center flex flex-col justify-between items-center h-full border border-slate-100 transition-transform duration-300 group-hover:-translate-y-1">
                 
-                {/* Overlapping Profile Avatar Image on Top Center */}
-                <div className="absolute -top-12 sm:-top-14 left-1/2 -translate-x-1/2 w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-white shadow-xl overflow-hidden z-20 bg-slate-100 group-hover:scale-105 transition-transform duration-300">
-                  <img
-                    src={item.avatar}
-                    alt={item.name}
-                    className="w-full h-full object-cover"
-                  />
+                {/* Overlapping Initials Avatar Badge on Top Center */}
+                <div
+                  className={`absolute -top-12 sm:-top-14 left-1/2 -translate-x-1/2 w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-white shadow-xl z-20 flex items-center justify-center text-white text-2xl sm:text-3xl font-black tracking-tight group-hover:scale-105 transition-transform duration-300 ${item.backdropColor}`}
+                >
+                  {item.initials}
                 </div>
 
                 {/* Author Name, Position, & Hospital */}
                 <div className="space-y-1 text-center w-full">
-                  <h3 className="text-2xl sm:text-[26px] font-extrabold text-[#1E293B] tracking-tight">
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#1E293B] tracking-tight leading-snug">
                     {item.name}
                   </h3>
-                  <p className="text-sm italic text-slate-400 font-medium">
-                    {item.position}
-                  </p>
+                  {item.position && (
+                    <p className="text-sm italic text-slate-400 font-medium">
+                      {item.position}
+                    </p>
+                  )}
                   <p className="text-xs font-bold text-[#FF4D27] uppercase tracking-wider pt-0.5">
                     {item.hospital}
                   </p>
