@@ -154,15 +154,13 @@ export const MobileDrawer = ({ isOpen, onClose, onRequestDemo, onLogin }) => {
 
         {/* Mobile Action Buttons: Login & Request Live Demo */}
         <div className="pt-4 border-t border-slate-200 space-y-2.5">
-          <button
-            onClick={() => {
-              onClose();
-              if (onLogin) onLogin();
-            }}
+          <Link
+            to="/login"
+            onClick={onClose}
             className="w-full py-3 rounded-full border border-slate-200 hover:border-slate-300 bg-slate-50 hover:bg-slate-100 text-[#0B132B] font-bold text-sm flex items-center justify-center transition-all cursor-pointer"
           >
             <span>Login</span>
-          </button>
+          </Link>
 
           <button
             onClick={() => {

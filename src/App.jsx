@@ -23,6 +23,9 @@ import { AboutPage } from "./pages/about/AboutPage";
 // Contact Page
 import { ContactPage } from "./pages/contact/ContactPage";
 
+// Login Page
+import { LoginPage } from "./pages/login/LoginPage";
+
 // Scroll To Top on Route Navigation Component
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -64,6 +67,7 @@ export function AppContent() {
           <Route path="/integrations" element={<IntegrationsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
