@@ -50,7 +50,7 @@ export const NavItem = ({ item }) => {
 
       {/* Mega Dropdown Portal */}
       {item.hasDropdown && isOpen && (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="absolute top-full left-1/2 -translate-x-[22%] pt-3 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
           <PortfolioDropdown
             data={item.dropdownData}
             onClose={() => setIsOpen(false)}

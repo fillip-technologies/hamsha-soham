@@ -49,11 +49,11 @@ export const Footer = () => {
     {
       title: "Support",
       links: [
-        { name: "Client Login" },
-        { name: "Support" },
-        { name: "License Activation" },
-        { name: "Service Request" },
-        { name: "Webmail" },
+        { name: "Client Login", path: "/login" },
+        { name: "Support", path: "/contact" },
+        { name: "License Activation", path: "/contact" },
+        { name: "Service Request", path: "/contact" },
+        { name: "Webmail", path: "/contact" },
       ],
     },
     {

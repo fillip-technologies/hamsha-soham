@@ -35,11 +35,11 @@ export const HeroSection = () => {
           <div className="lg:col-span-6 space-y-6 text-left">
             
             {/* Master Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] font-black tracking-tight leading-[1.15]">
+            <h1 className="text-2xl sm:text-4xl lg:text-[42px] xl:text-[48px] font-black tracking-tight leading-[1.2] sm:leading-[1.15]">
               <span className="block text-[#0B132B]">
                 Complete Healthcare
               </span>
-              <span className="bg-gradient-to-r from-[#FF4D27] via-amber-500 to-[#5254F2] bg-clip-text text-transparent block whitespace-nowrap lg:whitespace-normal">
+              <span className="bg-gradient-to-r from-[#FF4D27] via-amber-500 to-[#5254F2] bg-clip-text text-transparent block">
                 Information Management Solutions
               </span>
             </h1>
