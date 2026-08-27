@@ -5,20 +5,26 @@ import ajehLogo from "../../assets/clients/ajeh.png";
 import holyLogo from "../../assets/clients/holy.png";
 import sarrafLogo from "../../assets/clients/sarraf-removebg-preview.png";
 import sslnLogo from "../../assets/clients/ssln-removebg-preview.png";
+import shardaLogo from "../../assets/clients/sharda-imging.png";
+import vhriLogo from "../../assets/clients/vhri-logo.png";
 
 export const ClientsSection = () => {
   const clientsRow1 = [
     { id: "ajeh1", name: "Akhand Jyoti Eye Hospital", logo: ajehLogo },
+    { id: "vhri1", name: "Vivantes Hospital & Research Institute", logo: vhriLogo },
     { id: "holy1", name: "Holy Family Hospital", logo: holyLogo },
     { id: "aastha1", name: "Aastha Eye Hospital", logo: aasthaLogo },
     { id: "sarraf1", name: "Sarraf Eye Hospital", logo: sarrafLogo },
-    { id: "ssln1", name: "Sharda Imagine / SSLN", logo: sslnLogo },
+    { id: "sharda1", name: "Sharda Imaging", logo: shardaLogo },
+    { id: "ssln1", name: "Sri Sai Lions Netralaya", logo: sslnLogo },
   ];
 
   const clientsRow2 = [
-    { id: "ssln2", name: "Sharda Imagine / SSLN", logo: sslnLogo },
+    { id: "sharda2", name: "Sharda Imaging", logo: shardaLogo },
+    { id: "ssln2", name: "Sri Sai Lions Netralaya", logo: sslnLogo },
     { id: "sarraf2", name: "Sarraf Eye Hospital", logo: sarrafLogo },
     { id: "aastha2", name: "Aastha Eye Hospital", logo: aasthaLogo },
+    { id: "vhri2", name: "Vivantes Hospital & Research Institute", logo: vhriLogo },
     { id: "holy2", name: "Holy Family Hospital", logo: holyLogo },
     { id: "ajeh2", name: "Akhand Jyoti Eye Hospital", logo: ajehLogo },
   ];

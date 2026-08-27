@@ -11,6 +11,8 @@ import ajehLogo from "../../assets/clients/ajeh.png";
 import sslnLogo from "../../assets/clients/ssln-removebg-preview.png";
 import holyLogo from "../../assets/clients/holy.png";
 import sarrafLogo from "../../assets/clients/sarraf-removebg-preview.png";
+import shardaLogo from "../../assets/clients/sharda-imging.png";
+import vhriLogo from "../../assets/clients/vhri-logo.png";
 
 export const TestimonialsSection = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -25,7 +27,7 @@ export const TestimonialsSection = () => {
       avatarBg: "bg-white",
       initials: "AS",
       quote:
-        "We have been using your software for the past 1 year — the services are satisfying and user-friendly. Some issues remain around registration and bed allotment, where occupancy sometimes fails to display; it's our humble request that the team look into the matter.",
+        "This feedback is given to Hamsa Soham as we have been using your software from past 1 year, the services are satisfying and user friendly but some issues are there as in registration head and bed allotment for the given patient, sometimes the software fails to display bed occupancy. So, it’s my humble request to look into the matter.",
       backdropColor: "bg-[#1E74B7]",
       backdropRotate: "-rotate-6",
     },
@@ -34,11 +36,11 @@ export const TestimonialsSection = () => {
       name: "Nilesh Kumar",
       position: null,
       hospital: "Vivantes Hospital and Research Institute Pvt. Ltd.",
-      image: null,
-      avatarBg: "bg-[#43A047]",
+      image: vhriLogo,
+      avatarBg: "bg-white",
       initials: "NK",
       quote:
-        "Your support team is great. All our modules are live and working fine with the help of your support team, and because of this I am getting MIS reports properly. I hope you will continue like this.",
+        "Your support team is great. All our modules are live and working fine with the help of your support team. And because of this I am getting MIS report properly. I hope you will continue like this.",
       backdropColor: "bg-[#43A047]",
       backdropRotate: "rotate-6",
     },
@@ -47,11 +49,11 @@ export const TestimonialsSection = () => {
       name: "Ashish Sehgal",
       position: "General Manager",
       hospital: "Sharda Imaging, Panipat",
-      image: null,
-      avatarBg: "bg-[#00897B]",
+      image: shardaLogo,
+      avatarBg: "bg-white",
       initials: "AS",
       quote:
-        "We are getting proper services from your side. There is no such problem in our software, and we hope for the same in future. Mr. Rajender has been very supportive throughout — looking for the same support going forward.",
+        "This is to bring in your kind notice that we are getting proper services from your side. There is no such problem in our software & hope for the same in future. Mr. Rajender is very supportive throughout the time. Looking for the same support in future.",
       backdropColor: "bg-[#00897B]",
       backdropRotate: "-rotate-6",
     },
@@ -64,7 +66,7 @@ export const TestimonialsSection = () => {
       avatarBg: "bg-[#0F172A]", // Dark Navy so white text & red logo pop clearly
       initials: "DC",
       quote:
-        "We have been using e-Drishti Hospital Management Information System, developed by Hamsa Soham Healthcare, for the last 2 years. The software has all the modules to run hospital operations efficiently, and their support services have been good since commissioning.",
+        "This is to acknowledge that we have been using e-Dristi Hospital Management Information System, developed by Hamsa Soham Healthcare Pvt. Ltd., for the last 2 years. The software has all the modules to run the Hospital operations efficiently. Their support services are good since the commissioning of the HMIS.",
       backdropColor: "bg-[#FF4D27]",
       backdropRotate: "rotate-6",
     },
@@ -78,7 +80,7 @@ export const TestimonialsSection = () => {
       imageClass: "contrast-[2.2] brightness-[0.65] scale-120", // Deepens the faint grey text and eye graphic for crystal clear visibility on white
       initials: "SS",
       quote:
-        "The best thing about Hamsa Soham is their support team. It is the most affordable software and has features unique to the eye care hospital module. We are happy with its performance and are implementing it in our other branches too — it can be recommended to any other hospital.",
+        "We are impressed; the best thing about Hamsa Soham is their support team. This is good software. We are using Hamsa Soham software in all the centres. It is the most affordable and has features unique to the eye care hospital module. We are happy with the performance of the software and we are also implementing Hamsa Soham in other branches and can be recommended to any other hospital.",
       backdropColor: "bg-[#6D28D9]",
       backdropRotate: "-rotate-6",
     },
