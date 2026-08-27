@@ -6,6 +6,12 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import aasthaLogo from "../../assets/clients/aastha-removebg-preview.png";
+import ajehLogo from "../../assets/clients/ajeh.png";
+import sslnLogo from "../../assets/clients/ssln-removebg-preview.png";
+import holyLogo from "../../assets/clients/holy.png";
+import sarrafLogo from "../../assets/clients/sarraf-removebg-preview.png";
+
 export const TestimonialsSection = () => {
   const [startIndex, setStartIndex] = useState(0);
 
@@ -15,6 +21,8 @@ export const TestimonialsSection = () => {
       name: "Aastha Super Speciality Hospital & Diagnostics",
       position: null,
       hospital: "Siliguri, West Bengal",
+      image: aasthaLogo,
+      avatarBg: "bg-white",
       initials: "AS",
       quote:
         "We have been using your software for the past 1 year — the services are satisfying and user-friendly. Some issues remain around registration and bed allotment, where occupancy sometimes fails to display; it's our humble request that the team look into the matter.",
@@ -26,6 +34,8 @@ export const TestimonialsSection = () => {
       name: "Nilesh Kumar",
       position: null,
       hospital: "Vivantes Hospital and Research Institute Pvt. Ltd.",
+      image: null,
+      avatarBg: "bg-[#43A047]",
       initials: "NK",
       quote:
         "Your support team is great. All our modules are live and working fine with the help of your support team, and because of this I am getting MIS reports properly. I hope you will continue like this.",
@@ -37,6 +47,8 @@ export const TestimonialsSection = () => {
       name: "Ashish Sehgal",
       position: "General Manager",
       hospital: "Sharda Imaging, Panipat",
+      image: null,
+      avatarBg: "bg-[#00897B]",
       initials: "AS",
       quote:
         "We are getting proper services from your side. There is no such problem in our software, and we hope for the same in future. Mr. Rajender has been very supportive throughout — looking for the same support going forward.",
@@ -48,6 +60,8 @@ export const TestimonialsSection = () => {
       name: "Deepankar Chanda",
       position: "IT Head",
       hospital: "Akhandjyoti Eye Hospital",
+      image: ajehLogo,
+      avatarBg: "bg-[#0F172A]", // Dark Navy so white text & red logo pop clearly
       initials: "DC",
       quote:
         "We have been using e-Drishti Hospital Management Information System, developed by Hamsa Soham Healthcare, for the last 2 years. The software has all the modules to run hospital operations efficiently, and their support services have been good since commissioning.",
@@ -59,6 +73,9 @@ export const TestimonialsSection = () => {
       name: "Sri Sai Lions Netralaya",
       position: null,
       hospital: "Patna, Bihar",
+      image: sslnLogo,
+      avatarBg: "bg-white",
+      imageClass: "contrast-[2.2] brightness-[0.65] scale-120", // Deepens the faint grey text and eye graphic for crystal clear visibility on white
       initials: "SS",
       quote:
         "The best thing about Hamsa Soham is their support team. It is the most affordable software and has features unique to the eye care hospital module. We are happy with its performance and are implementing it in our other branches too — it can be recommended to any other hospital.",
@@ -142,13 +159,25 @@ export const TestimonialsSection = () => {
               />
 
               {/* Pure White Front Card */}
-              <div className="bg-white rounded-[32px] sm:rounded-[36px] shadow-2xl p-8 pt-18 pb-12 relative z-10 text-center flex flex-col justify-between items-center h-full border border-slate-100 transition-transform duration-300 group-hover:-translate-y-1">
+              <div className="bg-white rounded-[32px] sm:rounded-[36px] shadow-2xl p-8 pt-20 sm:pt-22 pb-12 relative z-10 text-center flex flex-col justify-between items-center h-full border border-slate-100 transition-transform duration-300 group-hover:-translate-y-1">
                 
-                {/* Overlapping Initials Avatar Badge on Top Center */}
+                {/* Overlapping Client Image / Initials Avatar Badge on Top Center */}
                 <div
-                  className={`absolute -top-12 sm:-top-14 left-1/2 -translate-x-1/2 w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-white shadow-xl z-20 flex items-center justify-center text-white text-2xl sm:text-3xl font-black tracking-tight group-hover:scale-105 transition-transform duration-300 ${item.backdropColor}`}
+                  className={`absolute -top-14 sm:-top-16 left-1/2 -translate-x-1/2 w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-white shadow-2xl z-20 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 ${
+                    item.image
+                      ? `${item.avatarBg || "bg-white"} p-3 shadow-[0_12px_28px_-6px_rgba(0,0,0,0.25)]`
+                      : `${item.backdropColor} text-white text-2xl sm:text-3xl font-black tracking-tight`
+                  }`}
                 >
-                  {item.initials}
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className={`w-full h-full object-contain ${item.imageClass || "scale-110"}`}
+                    />
+                  ) : (
+                    <span>{item.initials}</span>
+                  )}
                 </div>
 
                 {/* Author Name, Position, & Hospital */}

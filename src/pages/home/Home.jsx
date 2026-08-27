@@ -1,6 +1,7 @@
 import React from "react";
 import { HeroSection } from "./HeroSection";
 import { ApprovedBySection } from "./ApprovedBySection";
+import { DashboardCarouselSection } from "./DashboardCarouselSection";
 import { SegmentSolutionsSection } from "./SegmentSolutionsSection";
 import { FeaturesSection } from "./FeaturesSection";
 import { AboutSection } from "./AboutSection";
@@ -18,6 +19,9 @@ export const Home = () => {
       {/* 2. Official Approvals & Certifications (ABDM / Safe-to-Host / VAPT) */}
       <ApprovedBySection />
 
+      {/* Dashboard Preview Carousel */}
+      <DashboardCarouselSection />
+
       {/* 3. Healthcare Solutions for Every Organization (Target Segmentation) */}
       <SegmentSolutionsSection />
 
@@ -34,7 +38,7 @@ export const Home = () => {
       <WhyHamsaSection />
 
       {/* 7. Our Partners & Clients Section */}
-      <ClientsSection />
+      {/* <ClientsSection /> */}
 
       {/* 8. Client Testimonials & Reviews Section */}
       <TestimonialsSection />

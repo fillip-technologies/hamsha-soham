@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { navConfig } from "../../../config/navigation.config";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ChevronDown, ArrowRight, LogIn } from "lucide-react";
 
-export const MobileDrawer = ({ isOpen, onClose, onRequestDemo }) => {
+export const MobileDrawer = ({ isOpen, onClose, onRequestDemo, onLogin }) => {
   const [expandedId, setExpandedId] = useState(null);
   const location = useLocation();
 
@@ -54,19 +54,97 @@ export const MobileDrawer = ({ isOpen, onClose, onRequestDemo }) => {
                   )}
                 </div>
 
-                {/* Mobile Dropdown Items */}
+                {/* Mobile Dropdown Items (Structured Groups) */}
                 {item.hasDropdown && isExpanded && item.dropdownData && (
-                  <div className="pl-4 pr-2 py-2 space-y-2 bg-slate-50 rounded-xl mt-1 border border-slate-100">
-                    {item.dropdownData.categories.map((cat, idx) => (
-                      <Link
-                        key={idx}
-                        to={cat.link}
-                        onClick={onClose}
-                        className="block text-xs font-semibold text-slate-700 hover:text-[#FF4D27] py-1.5"
-                      >
-                        {cat.title}
-                      </Link>
-                    ))}
+                  <div className="pl-2 pr-2 py-3 space-y-3 bg-slate-50 rounded-2xl mt-2 border border-slate-100">
+                    {/* 1. HWAI */}
+                    <div className="bg-white p-3 rounded-xl border border-purple-100 space-y-1">
+                      <div className="flex items-center justify-between">
+                        <Link
+                          to="/products/hwai"
+                          onClick={onClose}
+                          className="text-xs font-black text-purple-700 hover:underline"
+                        >
+                          HWAI
+                        </Link>
+                        <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-purple-50 text-purple-700">
+                          AI & HIMS
+                        </span>
+                      </div>
+                      <ul className="text-[10px] text-slate-600 space-y-0.5 pl-1">
+                        <li>• Enterprise Multispecialty</li>
+                        <li>• NABH and NABL compliant model</li>
+                        <li>• ABDM and NHA Integration</li>
+                      </ul>
+                    </div>
+
+                    {/* 2. e_Drishti */}
+                    <div className="bg-white p-3 rounded-xl border border-orange-100 space-y-1">
+                      <div className="flex items-center justify-between">
+                        <Link
+                          to="/products/e-drishti"
+                          onClick={onClose}
+                          className="text-xs font-black text-[#FF4D27] hover:underline"
+                        >
+                          e_Drishti
+                        </Link>
+                        <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-orange-50 text-[#FF4D27]">
+                          Eye Care EMR
+                        </span>
+                      </div>
+                      <ul className="text-[10px] text-slate-600 space-y-0.5 pl-1">
+                        <li>• Enterprise Eye Hospital</li>
+                        <li>• Registration to Inventory Management</li>
+                        <li>• Comprehensive Eye EMR</li>
+                      </ul>
+                    </div>
+
+                    {/* 3. Lite Products */}
+                    <div className="bg-white p-3 rounded-xl border border-emerald-100 space-y-1.5">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-black text-emerald-800">
+                          Lite Products
+                        </span>
+                        <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">
+                          Clinic Suite
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-1.5 pt-0.5">
+                        <Link
+                          to="/products/e-kshitiz-lite"
+                          onClick={onClose}
+                          className="p-1.5 rounded-lg bg-emerald-50 text-[10px] font-bold text-emerald-800 text-center hover:bg-emerald-100"
+                        >
+                          e_Kshitiz Lite
+                        </Link>
+                        <Link
+                          to="/products/e-drishti-lite"
+                          onClick={onClose}
+                          className="p-1.5 rounded-lg bg-emerald-50 text-[10px] font-bold text-emerald-800 text-center hover:bg-emerald-100"
+                        >
+                          e_Drishti Lite
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* 4. e_Kshitiz */}
+                    <div className="bg-white p-3 rounded-xl border border-blue-100 space-y-1">
+                      <div className="flex items-center justify-between">
+                        <Link
+                          to="/products/e-kshitiz"
+                          onClick={onClose}
+                          className="text-xs font-black text-blue-700 hover:underline"
+                        >
+                          e_Kshitiz
+                        </Link>
+                        <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700">
+                          Hospital HIMS
+                        </span>
+                      </div>
+                      <ul className="text-[10px] text-slate-600 space-y-0.5 pl-1">
+                        <li>• Workforce / SMB Healthcare</li>
+                      </ul>
+                    </div>
                   </div>
                 )}
               </div>
@@ -74,8 +152,18 @@ export const MobileDrawer = ({ isOpen, onClose, onRequestDemo }) => {
           })}
         </div>
 
-        {/* Mobile Request Live Demo Action Button */}
-        <div className="pt-4 border-t border-slate-200">
+        {/* Mobile Action Buttons: Login & Request Live Demo */}
+        <div className="pt-4 border-t border-slate-200 space-y-2.5">
+          <button
+            onClick={() => {
+              onClose();
+              if (onLogin) onLogin();
+            }}
+            className="w-full py-3 rounded-full border border-slate-200 hover:border-slate-300 bg-slate-50 hover:bg-slate-100 text-[#0B132B] font-bold text-sm flex items-center justify-center transition-all cursor-pointer"
+          >
+            <span>Login</span>
+          </button>
+
           <button
             onClick={() => {
               onClose();

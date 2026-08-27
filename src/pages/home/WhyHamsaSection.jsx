@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   HeartPulse,
   TrendingUp,
@@ -264,10 +265,13 @@ export const WhyHamsaSection = () => {
                     <span className="font-extrabold text-slate-900">{card.statValue}</span>
                   </div>
 
-                  <span className="text-[#FF4D27] font-extrabold text-[11px] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                    <span>Verified</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-[#FF4D27] text-white font-extrabold text-[11px] shadow-xs transition-all hover:scale-105 shrink-0 cursor-pointer"
+                  >
+                    <span>Request Demo</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </Link>
                 </div>
               </div>
             );

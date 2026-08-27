@@ -10,7 +10,6 @@ import {
   ExternalLink,
   Lock,
 } from "lucide-react";
-import logoImg from "../../../assets/logo.png";
 import filliptechLogo from "../../../assets/Fillip-logo-white.webp";
 
 export const Footer = () => {
@@ -32,7 +31,8 @@ export const Footer = () => {
       links: [
         { name: "Hospital Management", path: "/solutions" },
         { name: "Eye Hospital Management", path: "/solutions" },
-        { name: "Healthcare Workforce", path: "/products/hwai" },
+        { name: "Integrations & Ecosystem", path: "/integrations" },
+        { name: "Security & Compliance", path: "/integrations#security-compliance" },
         { name: "Enterprise Healthcare", path: "/solutions" },
       ],
     },
@@ -57,12 +57,12 @@ export const Footer = () => {
       ],
     },
     {
-      title: "Legal",
+      title: "Legal & Security",
       links: [
-        { name: "Privacy Policy", path: "/privacy-policy" },
+        { name: "Security & VAPT", path: "/integrations#security-compliance" },
+        { name: "ABDM Compliance", path: "/integrations" },
+        { name: "Data Privacy", path: "/integrations#security-compliance" },
         { name: "Terms & Conditions", path: "/terms" },
-        { name: "Security", path: "/security" },
-        { name: "Data Privacy", path: "/data-privacy" },
       ],
     },
   ];
@@ -158,27 +158,13 @@ export const Footer = () => {
           ))}
         </div>
 
-        {/* Company Identity & Detailed Address/Contact Row */}
+        {/* Detailed Address & Contact Row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-slate-700/60 text-left items-start">
           
-          {/* Brand Info */}
-          <div className="lg:col-span-4 space-y-4">
-            <Link to="/" className="inline-flex items-center bg-white px-4 py-2 rounded-2xl shadow-lg border border-white/80">
-              <img
-                src={logoImg}
-                alt="Hamsa Soham Healthcare Logo"
-                className="h-9 sm:h-10 w-auto object-contain"
-              />
-            </Link>
-            <p className="text-xs text-slate-300 font-normal leading-relaxed">
-              Hamsa Soham Healthcare is defined by Breathing and Life. We empower multispeciality hospitals, eye-care networks, and SMB clinics across India with integrated, secure, and NABH-compliant HIMS platforms.
-            </p>
-          </div>
-
           {/* Corporate & Registered Office Cards */}
-          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs text-slate-200">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-200">
             {/* Corporate Address */}
-            <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-1.5">
+            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
               <div className="text-[11px] font-extrabold text-white flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-[#FF4D27] shrink-0" />
                 <span>Corporate Office:</span>
@@ -189,7 +175,7 @@ export const Footer = () => {
             </div>
 
             {/* Registered Office */}
-            <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-1.5">
+            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
               <div className="text-[11px] font-extrabold text-white flex items-center gap-1.5">
                 <Building className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 <span>Registered Office:</span>
@@ -201,8 +187,8 @@ export const Footer = () => {
           </div>
 
           {/* Direct Support & Hotline Strip */}
-          <div className="lg:col-span-3 space-y-2 text-xs">
-            <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+          <div className="lg:col-span-4 space-y-2 text-xs">
+            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2.5">
               <div className="flex items-center justify-between border-b border-white/10 pb-2 text-[11px]">
                 <span className="font-bold text-white flex items-center gap-1.5">
                   <Phone className="w-3.5 h-3.5 text-[#FF4D27]" />
@@ -246,20 +232,20 @@ export const Footer = () => {
           </div>
 
           {/* Designed & Developed Credit */}
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-[11px] text-slate-500 font-medium">
+          <div className="pt-2 flex items-center justify-center gap-2.5 sm:gap-3">
+            <span className="text-xs sm:text-sm text-slate-400 font-medium">
               Design and Developed by
             </span>
             <a
               href="https://filliptechnologies.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-80 hover:opacity-100 transition-opacity"
+              className="opacity-90 hover:opacity-100 hover:scale-105 transition-all inline-flex items-center"
             >
               <img
                 src={filliptechLogo}
                 alt="Fillip Technologies"
-                className="h-4 w-auto object-contain"
+                className="h-6 sm:h-7 w-auto object-contain"
               />
             </a>
           </div>

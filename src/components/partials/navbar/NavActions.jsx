@@ -5,9 +5,18 @@ export const NavActions = ({
   isMobileOpen,
   onToggleMobile,
   onRequestDemo,
+  onLogin,
 }) => {
   return (
-    <div className="flex items-center gap-3 sm:gap-4">
+    <div className="flex items-center gap-2.5 sm:gap-3.5">
+      {/* Client Portal Login Button */}
+      <button
+        onClick={onLogin}
+        className="hidden md:inline-flex items-center px-4 py-2 rounded-full border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50 text-slate-700 hover:text-[#0B132B] text-xs sm:text-sm font-bold shadow-xs hover:shadow-sm transition-all cursor-pointer select-none"
+      >
+        <span>Login</span>
+      </button>
+
       {/* Request Live Demo CTA Button */}
       <button
         onClick={onRequestDemo}

@@ -1,11 +1,8 @@
-import React, { useRef } from "react";
 import {
   ShieldCheck,
   FileText,
   ExternalLink,
   Download,
-  ChevronLeft,
-  ChevronRight,
   BadgeCheck,
   Award,
   Lock,
@@ -14,9 +11,10 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-// Official PDF and image assets from src/assets/pdf
-import ayushmanLogo from "../../assets/pdf/aysuhaman-1.png";
-import approvedByLogo from "../../assets/pdf/approved.jpeg";
+// Official PDF and image assets
+import ayushmanLogo from "../../assets/aysuhman-bharat-removebg-preview.png";
+import ayushmanSeal from "../../assets/pdf/aysuhaman-1.png";
+import nhaLogo from "../../assets/nha.png";
 import abdmCertPdf from "../../assets/pdf/certificate.pdf";
 import safeCertPdf from "../../assets/pdf/safe-cert.pdf";
 import vapCertPdf from "../../assets/pdf/VAPcert.pdf";
@@ -25,8 +23,6 @@ import safeCertPreview from "../../assets/pdf/previews/safe-cert.jpg";
 import vapCertPreview from "../../assets/pdf/previews/VAPcert.jpg";
 
 export const ApprovedBySection = () => {
-  const scrollContainerRef = useRef(null);
-
   const certificates = [
     {
       id: "abdm-m1-m3",
@@ -89,17 +85,6 @@ export const ApprovedBySection = () => {
     },
   ];
 
-  const scroll = (direction) => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, clientWidth } = scrollContainerRef.current;
-      const scrollAmount = clientWidth * 0.8;
-      scrollContainerRef.current.scrollTo({
-        left: direction === "left" ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <section className="relative bg-[#F8FAFC] py-12 sm:py-16 border-b border-slate-200/80 select-none overflow-hidden">
       {/* Background Decorative Mesh Glows */}
@@ -109,7 +94,7 @@ export const ApprovedBySection = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8 sm:mb-10">
+        <div className="mb-8 sm:mb-10 text-left">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-[#FF4D27] text-xs font-black uppercase tracking-wider shadow-2xs">
               <BadgeCheck className="w-4 h-4" />
@@ -119,63 +104,50 @@ export const ApprovedBySection = () => {
               Approved & Certified By
             </h2>
           </div>
-
-          {/* Navigation Controls & Status Indicator */}
-          <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-2 text-xs font-bold text-slate-500 bg-white px-3 py-1.5 rounded-full border border-slate-200 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Active Verified Status</span>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => scroll("left")}
-                className="w-10 h-10 rounded-full bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center border border-slate-200/90 shadow-xs hover:shadow-md transition-all cursor-pointer hover:scale-105 active:scale-95"
-                aria-label="Previous Certificate"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => scroll("right")}
-                className="w-10 h-10 rounded-full bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center border border-slate-200/90 shadow-xs hover:shadow-md transition-all cursor-pointer hover:scale-105 active:scale-95"
-                aria-label="Next Certificate"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
         </div>
 
-        {/* Official Government Approval Banner — clearly showcases both logo assets */}
-        <div className="mb-8 sm:mb-10 rounded-3xl bg-white border border-slate-200/90 shadow-sm overflow-hidden">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 px-6 sm:px-10 py-8 sm:py-10">
-            {/* Ayushman Bharat Integration Seal */}
-            <img
-              src={ayushmanLogo}
-              alt="Ayushman Bharat Digital Mission — M1, M2, M3 Integrated Seal"
-              className="h-24 sm:h-28 w-auto object-contain shrink-0"
-            />
+        {/* Official Government Recognition Logos */}
+        <div className="mb-10 sm:mb-14 rounded-3xl bg-white border border-slate-200/90 shadow-md py-10 sm:py-14 px-6 sm:px-12 lg:px-16 flex items-center justify-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-10 sm:gap-14 lg:gap-20 w-full max-w-5xl">
+            {/* Ayushman Bharat Digital Mission Seal */}
+            <div className="flex items-center justify-center h-32 sm:h-40 md:h-44 w-full md:w-auto">
+              <img
+                src={ayushmanSeal}
+                alt="Ayushman Bharat Digital Mission Integration Seal"
+                className="h-full max-h-44 w-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-xs"
+              />
+            </div>
 
-            {/* Divider */}
-            <div className="hidden sm:block w-px h-20 bg-slate-200" />
-            <div className="sm:hidden w-24 h-px bg-slate-200" />
+            {/* Subtle Divider */}
+            <div className="hidden md:block w-px h-28 lg:h-32 bg-slate-200" />
+            <div className="md:hidden w-36 h-px bg-slate-200" />
 
-            {/* National Health Authority Approval Banner */}
-            <img
-              src={approvedByLogo}
-              alt="Approved By National Health Authority, Government of India"
-              className="h-16 sm:h-20 w-auto object-contain shrink-0"
-            />
+            {/* Ayushman Bharat Digital Mission Logo */}
+            <div className="flex items-center justify-center h-28 sm:h-36 md:h-40 w-full md:w-auto">
+              <img
+                src={ayushmanLogo}
+                alt="Ayushman Bharat Digital Mission"
+                className="h-full max-h-40 w-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-xs"
+              />
+            </div>
+
+            {/* Subtle Divider */}
+            <div className="hidden md:block w-px h-28 lg:h-32 bg-slate-200" />
+            <div className="md:hidden w-36 h-px bg-slate-200" />
+
+            {/* National Health Authority Logo */}
+            <div className="flex items-center justify-center h-24 sm:h-32 md:h-36 w-full md:w-auto">
+              <img
+                src={nhaLogo}
+                alt="National Health Authority"
+                className="h-full max-h-36 w-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-xs"
+              />
+            </div>
           </div>
-          <p className="text-xs sm:text-sm font-bold text-slate-500 text-center leading-snug pb-6 sm:pb-8 px-6">
-            Hamsa Soham HIMS is officially recognized and approved by the National Health
-            Authority (NHA), Government of India, under the Ayushman Bharat Digital Mission.
-          </p>
         </div>
 
         {/* Scrollable Certificate Cards Track */}
         <div
-          ref={scrollContainerRef}
           className="flex items-stretch gap-6 overflow-x-auto pb-4 pt-1 scroll-smooth no-scrollbar"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >

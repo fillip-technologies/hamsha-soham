@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import { SolutionsHero } from "./SolutionsHero";
 import { SolutionsGrid } from "./SolutionsGrid";
 import { SDLCProcess } from "./SDLCProcess";
-import { PreSaleForm } from "./PreSaleForm";
 import { Link } from "react-router-dom";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight, Sparkles, Eye, Layers, Building2 } from "lucide-react";
 
 export const SolutionsPage = () => {
   useEffect(() => {
@@ -16,16 +15,144 @@ export const SolutionsPage = () => {
       {/* 1. Solutions Hero Section */}
       <SolutionsHero />
 
-      {/* 2. Tailored Solutions Grid */}
+      {/* 2. Structured 4-Column Solutions Matrix (Exact Match to User Reference UI) */}
+      <section className="py-12 sm:py-16 bg-[#070D1E] text-white relative overflow-hidden border-y border-slate-800">
+        {/* Ambient background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[350px] bg-gradient-to-r from-purple-500/10 via-sky-500/10 to-[#FF4D27]/10 blur-[120px] pointer-events-none" />
+
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+          
+          <div className="bg-[#0A1128]/95 backdrop-blur-2xl border border-slate-700/60 rounded-3xl shadow-2xl p-8 sm:p-12 text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-700/60 gap-8 md:gap-0">
+              
+              {/* COLUMN 1: HWAI */}
+              <div className="md:pr-8 space-y-4 pt-4 md:pt-0">
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center text-white shadow-inner">
+                    <Sparkles className="w-6 h-6 text-purple-300" />
+                  </div>
+                  <h3 className="text-xl font-black text-white tracking-tight">
+                    HWAI
+                  </h3>
+                </div>
+
+                <ul className="space-y-3 text-sm text-slate-300">
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-slate-400 select-none mt-0.5">•</span>
+                    <Link to="/products/hwai" className="hover:text-white transition-colors">
+                      Enterprise Multispecialty
+                    </Link>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-slate-400 select-none mt-0.5">•</span>
+                    <Link to="/products/hwai" className="hover:text-white transition-colors">
+                      NABH and NABL compliant model
+                    </Link>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-slate-400 select-none mt-0.5">•</span>
+                    <Link to="/products/hwai" className="hover:text-white transition-colors">
+                      ABDM and NHA Integration
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* COLUMN 2: e_Drishti */}
+              <div className="md:px-8 space-y-4 pt-6 md:pt-0">
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center text-white shadow-inner">
+                    <Eye className="w-6 h-6 text-orange-300" />
+                  </div>
+                  <h3 className="text-xl font-black text-white tracking-tight">
+                    e_Drishti
+                  </h3>
+                </div>
+
+                <ul className="space-y-3 text-sm text-slate-300">
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-slate-400 select-none mt-0.5">•</span>
+                    <Link to="/products/e-drishti" className="hover:text-white transition-colors">
+                      Enterprise Eye Hospital
+                    </Link>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-slate-400 select-none mt-0.5">•</span>
+                    <Link to="/products/e-drishti" className="hover:text-white transition-colors">
+                      Registration to Inventory Management
+                    </Link>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-slate-400 select-none mt-0.5">•</span>
+                    <Link to="/products/e-drishti" className="hover:text-white transition-colors">
+                      Comprehensive Eye EMR
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* COLUMN 3: Lite Products */}
+              <div className="md:px-8 space-y-4 pt-6 md:pt-0">
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center text-white shadow-inner">
+                    <Layers className="w-6 h-6 text-emerald-300" />
+                  </div>
+                  <h3 className="text-xl font-black text-white tracking-tight">
+                    Lite Products
+                  </h3>
+                </div>
+
+                <ul className="space-y-3 text-sm text-slate-300">
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-slate-400 select-none mt-0.5">•</span>
+                    <Link to="/products/e-kshitiz-lite" className="hover:text-emerald-400 font-semibold transition-colors">
+                      e_Kshitiz Lite
+                    </Link>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-slate-400 select-none mt-0.5">•</span>
+                    <Link to="/products/e-drishti-lite" className="hover:text-emerald-400 font-semibold transition-colors">
+                      e_Drishti Lite
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* COLUMN 4: e_Kshitiz */}
+              <div className="md:pl-8 space-y-4 pt-6 md:pt-0">
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center text-white shadow-inner">
+                    <Building2 className="w-6 h-6 text-blue-300" />
+                  </div>
+                  <h3 className="text-xl font-black text-white tracking-tight">
+                    e_Kshitiz
+                  </h3>
+                </div>
+
+                <ul className="space-y-3 text-sm text-slate-300">
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-slate-400 select-none mt-0.5">•</span>
+                    <Link to="/products/e-kshitiz" className="hover:text-white transition-colors">
+                      Workforce / SMB Healthcare
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 3. Tailored Solutions Grid */}
       <SolutionsGrid />
+
 
       {/* 3. 5-Step Software Development Life Cycle (SDLC Process from hamsasoham.com/web-development) */}
       <SDLCProcess />
 
-      {/* 4. Pre-Sale Inquiry Question Section */}
-      <PreSaleForm />
-
-      {/* 5. Value Proposition Matrix */}
+      {/* 4. Value Proposition Matrix */}
       <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80 text-left">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
           

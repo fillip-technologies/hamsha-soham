@@ -14,6 +14,9 @@ import { HwaiPage } from "./pages/portfolio/hwai/HwaiPage";
 // Solutions Page
 import { SolutionsPage } from "./pages/solutions/SolutionsPage";
 
+// Integrations Page
+import { IntegrationsPage } from "./pages/integrations/IntegrationsPage";
+
 // About Page
 import { AboutPage } from "./pages/about/AboutPage";
 
@@ -58,11 +61,13 @@ export function AppContent() {
           <Route path="/portfolio/hwai" element={<HwaiPage />} />
 
           <Route path="/solutions" element={<SolutionsPage />} />
+          <Route path="/integrations" element={<IntegrationsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
+
 
       {/* Production Master Footer Partial */}
       <Footer />
