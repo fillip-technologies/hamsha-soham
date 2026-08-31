@@ -4,14 +4,12 @@ import { NavLogo } from "./NavLogo";
 import { NavMenu } from "./NavMenu";
 import { NavActions } from "./NavActions";
 import { MobileDrawer } from "./MobileDrawer";
-import { RequestDemoModal } from "../../common/RequestDemoModal";
 import { LoginModal } from "../../common/LoginModal";
 
 export const Navbar = () => {
   const { isScrolled } = useScrollDirection();
   const [activeId, setActiveId] = useState("home");
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   return (
@@ -36,7 +34,6 @@ export const Navbar = () => {
             <NavActions
               isMobileOpen={isMobileOpen}
               onToggleMobile={() => setIsMobileOpen((prev) => !prev)}
-              onRequestDemo={() => setIsDemoModalOpen(true)}
               onLogin={() => setIsLoginModalOpen(true)}
             />
           </div>
@@ -48,16 +45,9 @@ export const Navbar = () => {
           onClose={() => setIsMobileOpen(false)}
           activeId={activeId}
           setActiveId={setActiveId}
-          onRequestDemo={() => setIsDemoModalOpen(true)}
           onLogin={() => setIsLoginModalOpen(true)}
         />
       </header>
-
-      {/* Global Request Live Demo Modal */}
-      <RequestDemoModal
-        isOpen={isDemoModalOpen}
-        onClose={() => setIsDemoModalOpen(false)}
-      />
 
       {/* Global Client Portal Login Modal */}
       <LoginModal

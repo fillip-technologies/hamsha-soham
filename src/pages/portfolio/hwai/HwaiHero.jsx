@@ -7,11 +7,9 @@ import {
   Sparkles,
 } from "lucide-react";
 import hwaiImg from "../../../assets/portfolio/hwai.png";
-import { RequestDemoModal } from "../../../components/common/RequestDemoModal";
 import { AnimatedCounter } from "../../../components/common/AnimatedCounter";
 
 export const HwaiHero = () => {
-  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   return (
@@ -35,24 +33,26 @@ export const HwaiHero = () => {
             <h1 className="text-4xl sm:text-6xl font-black text-[#0B132B] tracking-tight leading-[1.10]">
               HWAI Platform <br />
               <span className="bg-gradient-to-r from-amber-600 via-orange-500 to-amber-500 bg-clip-text text-transparent">
-                Healthcare Analytics & AI Suite
+                Healthcare Management System
               </span>
             </h1>
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-              Predictive AI platform for hospital operational intelligence, automated patient queue prediction, financial auditing, clinical decision support, and real-time revenue cycle management.
+              Complete Healthcare Management System designed for hospital operational intelligence, patient workflow management, financial auditing, clinical decision support, and real-time revenue cycle tracking.
             </p>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <button
-                onClick={() => setIsDemoModalOpen(true)}
+              <a
+                href="https://apps.hamsasoham.com/portal/index.xhtml"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-7 py-3.5 rounded-full bg-gradient-to-r from-amber-600 via-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-base flex items-center gap-2.5 shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/35 hover:-translate-y-0.5 transition-all cursor-pointer"
               >
-                <span>Request Live AI Demo</span>
+                <span>Request Live Demo</span>
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </a>
 
               <a
                 href="tel:+919153998385"
@@ -83,7 +83,7 @@ export const HwaiHero = () => {
                 </div>
                 <div className="text-[11px] font-semibold text-slate-300 bg-slate-950 px-4 py-1 rounded-full border border-slate-800 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
-                  HWAI Healthcare Intelligence Platform
+                  HWAI Healthcare Management System
                 </div>
                 <button
                   onClick={() => setIsPreviewOpen(true)}
@@ -98,7 +98,7 @@ export const HwaiHero = () => {
               <div className="relative bg-slate-900 p-2 rounded-b-2xl overflow-hidden flex items-center justify-center">
                 <img
                   src={hwaiImg}
-                  alt="HWAI Platform Interface"
+                  alt="HWAI Healthcare Management System Interface"
                   className="w-full h-auto object-contain rounded-xl shadow-lg transform group-hover:scale-[1.01] transition-transform duration-500"
                 />
               </div>
@@ -115,7 +115,7 @@ export const HwaiHero = () => {
             <div className="text-3xl sm:text-4xl font-black text-[#0B132B]">
               <AnimatedCounter end={5000000} duration={2000} suffix="+" />
             </div>
-            <div className="text-xs sm:text-sm text-slate-600 font-medium mt-1">AI Data Points Analyzed</div>
+            <div className="text-xs sm:text-sm text-slate-600 font-medium mt-1">Healthcare Records Managed</div>
           </div>
           <div className="group hover:-translate-y-1 transition-transform">
             <div className="text-3xl sm:text-4xl font-black text-amber-600">
@@ -127,7 +127,7 @@ export const HwaiHero = () => {
             <div className="text-3xl sm:text-4xl font-black text-[#0B132B]">
               <AnimatedCounter end={99.99} decimals={2} duration={2200} suffix="%" />
             </div>
-            <div className="text-xs sm:text-sm text-slate-600 font-medium mt-1">AI Model Precision</div>
+            <div className="text-xs sm:text-sm text-slate-600 font-medium mt-1">System Reliability & Precision</div>
           </div>
           <div className="group hover:-translate-y-1 transition-transform">
             <div className="text-3xl sm:text-4xl font-black text-orange-600 flex items-center justify-center gap-1">
@@ -154,7 +154,7 @@ export const HwaiHero = () => {
             <div className="flex items-center justify-between pb-3 border-b border-slate-800 text-white">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-amber-400" />
-                <h3 className="text-lg font-bold">HWAI Healthcare AI Platform Full View</h3>
+                <h3 className="text-lg font-bold">HWAI Healthcare Management System Full View</h3>
               </div>
               <button
                 onClick={() => setIsPreviewOpen(false)}
@@ -174,13 +174,6 @@ export const HwaiHero = () => {
           </div>
         </div>
       )}
-
-      {/* Unified Demo Modal */}
-      <RequestDemoModal
-        isOpen={isDemoModalOpen}
-        onClose={() => setIsDemoModalOpen(false)}
-        defaultProduct="HWAI"
-      />
     </section>
   );
 };

@@ -46,11 +46,11 @@ export const SolutionsHero = () => {
     },
     {
       id: "hwai",
-      title: "HWAI AI Platform",
-      tagline: "Healthcare Operational Predictive Analytics",
+      title: "HWAI Healthcare Management",
+      tagline: "Healthcare Operations & Management Intelligence",
       image: hwaiImg,
       link: "/products/hwai",
-      badge: "Predictive AI Engine",
+      badge: "Healthcare Management",
     },
   ];
 
@@ -173,8 +173,10 @@ export const SolutionsHero = () => {
                 </div>
 
                 {/* Dashed Border Card (Exact Match to Screenshot) */}
-                <Link
-                  to={centerItem.link}
+                <a
+                  href="https://apps.hamsasoham.com/portal/index.xhtml"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block p-4 rounded-2xl border border-dashed border-indigo-200 bg-indigo-50/40 space-y-1 hover:bg-indigo-50 transition-colors"
                 >
                   <div className="text-xs font-extrabold text-slate-900 flex items-center justify-between">
@@ -184,7 +186,7 @@ export const SolutionsHero = () => {
                   <p className="text-[11px] text-slate-500 font-normal leading-relaxed">
                     Walkthrough of e_Drishti or e_Kshitiz HIMS.
                   </p>
-                </Link>
+                </a>
 
                 {/* Main Feature Image Card (Exact Match to Screenshot) */}
                 <div className="rounded-2xl overflow-hidden border border-slate-200/80 shadow-md bg-white space-y-2 pb-3 group">

@@ -7,11 +7,9 @@ import {
   Eye,
 } from "lucide-react";
 import eDrishtiImg from "../../../assets/portfolio/e_Drishti_P_I.png";
-import { RequestDemoModal } from "../../../components/common/RequestDemoModal";
 import { AnimatedCounter } from "../../../components/common/AnimatedCounter";
 
 export const EDrishtiHero = () => {
-  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   return (
@@ -46,13 +44,15 @@ export const EDrishtiHero = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <button
-                onClick={() => setIsDemoModalOpen(true)}
+              <a
+                href="https://apps.hamsasoham.com/portal/index.xhtml"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-7 py-3.5 rounded-full bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-700 hover:from-sky-500 hover:to-cyan-500 text-white font-bold text-base flex items-center gap-2.5 shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/35 hover:-translate-y-0.5 transition-all cursor-pointer"
               >
                 <span>Request Live Demo</span>
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </a>
 
               <a
                 href="tel:+919153998385"
@@ -172,13 +172,6 @@ export const EDrishtiHero = () => {
           </div>
         </div>
       )}
-
-      {/* Unified Demo Modal */}
-      <RequestDemoModal
-        isOpen={isDemoModalOpen}
-        onClose={() => setIsDemoModalOpen(false)}
-        defaultProduct="e_Drishti"
-      />
     </section>
   );
 };

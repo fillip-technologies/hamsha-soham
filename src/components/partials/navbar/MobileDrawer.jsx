@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { navConfig } from "../../../config/navigation.config";
 import { ChevronDown, ArrowRight, LogIn } from "lucide-react";
 
-export const MobileDrawer = ({ isOpen, onClose, onRequestDemo, onLogin }) => {
+export const MobileDrawer = ({ isOpen, onClose, onLogin }) => {
   const [expandedId, setExpandedId] = useState(null);
   const location = useLocation();
 
@@ -154,24 +154,24 @@ export const MobileDrawer = ({ isOpen, onClose, onRequestDemo, onLogin }) => {
 
         {/* Mobile Action Buttons: Login & Request Live Demo */}
         <div className="pt-4 border-t border-slate-200 space-y-2.5">
-          <Link
-            to="/login"
-            onClick={onClose}
+          <a
+            href="https://apps.hamsasoham.com/portal/index.xhtml"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full py-3 rounded-full border border-slate-200 hover:border-slate-300 bg-slate-50 hover:bg-slate-100 text-[#0B132B] font-bold text-sm flex items-center justify-center transition-all cursor-pointer"
           >
             <span>Login</span>
-          </Link>
+          </a>
 
-          <button
-            onClick={() => {
-              onClose();
-              if (onRequestDemo) onRequestDemo();
-            }}
+          <a
+            href="https://apps.hamsasoham.com/portal/index.xhtml"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full py-3.5 rounded-full bg-[#0B132B] hover:bg-slate-800 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer"
           >
             <span>Request Live Demo</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </a>
         </div>
       </div>
     </div>

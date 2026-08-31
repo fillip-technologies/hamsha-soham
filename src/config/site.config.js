@@ -3,6 +3,7 @@ export const siteConfig = {
   tagline: "Empowering Digital Excellence & Healthcare Innovation",
   description: "Enterprise HIMS platforms, specialized ophthalmic EMR workflows, and predictive AI analytics.",
   url: "https://hamsasoham.com",
+  portalUrl: "https://apps.hamsasoham.com/portal/index.xhtml",
   announcement: {
     enabled: true,
     badge: "ENTERPRISE HIMS",

@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
-import { RequestDemoModal } from "../../components/common/RequestDemoModal";
 
 export const FeaturesSection = () => {
   const sectionRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
-  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   const features = [
     {
@@ -142,13 +140,15 @@ export const FeaturesSection = () => {
 
               {/* Action CTA Button */}
               <div className="pt-1 sm:pt-2 flex items-center gap-4">
-                <button
-                  onClick={() => setIsDemoModalOpen(true)}
+                <a
+                  href="https://apps.hamsasoham.com/portal/index.xhtml"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 sm:px-8 py-3 sm:py-3.5 rounded-full bg-white hover:bg-slate-50 text-[#0B132B] font-bold text-sm sm:text-base flex items-center gap-3 shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all cursor-pointer group"
                 >
                   <span>Explore Capabilities</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF4D27] transform group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
               </div>
 
             </div>
@@ -261,11 +261,6 @@ export const FeaturesSection = () => {
         </div>
 
       </div>
-      {/* Unified Demo Request Modal */}
-      <RequestDemoModal
-        isOpen={isDemoModalOpen}
-        onClose={() => setIsDemoModalOpen(false)}
-      />
     </section>
   );
 };

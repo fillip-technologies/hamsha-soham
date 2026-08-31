@@ -49,7 +49,7 @@ export const Footer = () => {
     {
       title: "Support",
       links: [
-        { name: "Client Login", path: "/login" },
+        { name: "Client Login", path: "https://apps.hamsasoham.com/portal/index.xhtml", isExternal: true },
         { name: "Support", path: "/contact" },
         { name: "License Activation", path: "/contact" },
         { name: "Service Request", path: "/contact" },

@@ -65,10 +65,10 @@ export const HwaiFeatures = () => {
         {/* Clean Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight uppercase">
-            AI & Analytics <span className="bg-gradient-to-r from-amber-600 via-orange-500 to-amber-500 bg-clip-text text-transparent">Capabilities</span>
+            Healthcare Management <span className="bg-gradient-to-r from-amber-600 via-orange-500 to-amber-500 bg-clip-text text-transparent">Capabilities</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal">
-            Empower hospital leadership with predictive operational intelligence and real-time clinical AI insights.
+            Empower hospital leadership with integrated operational intelligence, workflow automation, and real-time clinical insights.
           </p>
         </div>
 

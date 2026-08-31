@@ -102,6 +102,17 @@ export const SignupPage = () => {
             <p className="text-xs text-slate-500 font-normal">
               Get started with Hamsa Soham healthcare intelligence platform.
             </p>
+            <div className="pt-2">
+              <a
+                href="https://apps.hamsasoham.com/portal/index.xhtml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#0B132B] hover:bg-slate-800 text-white text-xs font-bold transition-all shadow-xs"
+              >
+                <span>Launch Official Enterprise Portal</span>
+                <span>↗</span>
+              </a>
+            </div>
           </div>
 
           {/* Direct Google Sign Up Button */}

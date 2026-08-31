@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { HwaiHero } from "./HwaiHero";
 import { HwaiFeatures } from "./HwaiFeatures";
-import { RequestDemoModal } from "../../../components/common/RequestDemoModal";
 import {
   Phone,
   CheckCircle2,
@@ -10,7 +9,6 @@ import {
 } from "lucide-react";
 
 export const HwaiPage = () => {
-  const [isBottomDemoOpen, setIsBottomDemoOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,10 +28,10 @@ export const HwaiPage = () => {
           
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight">
-              Traditional Static Reports vs <span className="text-amber-600">HWAI Predictive AI</span>
+              Traditional Static Reports vs <span className="text-amber-600">HWAI Healthcare Management</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg">
-              Transform reactive hospital management into proactive, predictive healthcare operations.
+              Transform reactive hospital management into proactive, intelligent healthcare operations.
             </p>
           </div>
 
@@ -64,11 +62,11 @@ export const HwaiPage = () => {
               </ul>
             </div>
 
-            {/* HWAI Analytics & AI */}
+            {/* HWAI Healthcare Management */}
             <div className="bg-amber-50/70 rounded-3xl p-8 border border-amber-300/80 shadow-md space-y-6">
               <div className="flex items-center gap-3 text-amber-800">
                 <CheckCircle2 className="w-6 h-6 text-amber-600" />
-                <h3 className="text-xl font-extrabold">With HWAI AI Platform</h3>
+                <h3 className="text-xl font-extrabold">With HWAI Platform</h3>
               </div>
               <ul className="space-y-3 text-sm text-slate-800 font-medium">
                 <li className="flex items-center gap-2.5">
@@ -77,11 +75,11 @@ export const HwaiPage = () => {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-amber-600" />
-                  Predictive queue management forecasting patient wait times accurately
+                  Intelligent queue management forecasting patient wait times accurately
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-amber-600" />
-                  AI pre-audit of TPA insurance claims reducing rejection rate to &lt;2%
+                  Automated pre-audit of TPA insurance claims reducing rejection rate to &lt;2%
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-amber-600" />
@@ -102,22 +100,24 @@ export const HwaiPage = () => {
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
             Schedule Your Live{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-300 to-yellow-400 bg-clip-text text-transparent">
-              HWAI AI Platform Demo
+              HWAI Healthcare Platform Demo
             </span>
           </h2>
 
           <p className="text-slate-300 text-base max-w-2xl mx-auto">
-            Discover how HWAI transforms healthcare analytics with predictive operational intelligence and real-time revenue audits.
+            Discover how HWAI transforms healthcare management with integrated operational intelligence and real-time revenue audits.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <button
-              onClick={() => setIsBottomDemoOpen(true)}
+            <a
+              href="https://apps.hamsasoham.com/portal/index.xhtml"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-7 py-3.5 rounded-full bg-gradient-to-r from-amber-600 via-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-sm sm:text-base shadow-xl shadow-amber-500/30 transition-all flex items-center gap-2.5 cursor-pointer"
             >
               <span>Request Live Demo</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </a>
 
             <a
               href="tel:+919153998385"
@@ -128,12 +128,6 @@ export const HwaiPage = () => {
             </a>
           </div>
         </div>
-
-        <RequestDemoModal
-          isOpen={isBottomDemoOpen}
-          onClose={() => setIsBottomDemoOpen(false)}
-          defaultProduct="HWAI"
-        />
       </section>
     </div>
   );

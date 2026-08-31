@@ -25,14 +25,16 @@ export const AboutCTA = () => {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-1">
-          <Link
-            to="/contact"
+          <a
+            href="https://apps.hamsasoham.com/portal/index.xhtml"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#FF4D27] to-[#FF6B4A] hover:from-[#E03A14] hover:to-[#FF4D27] text-white font-extrabold text-xs uppercase tracking-wider flex items-center gap-2.5 shadow-lg shadow-[#FF4D27]/30 hover:shadow-xl hover:-translate-y-0.5 transition-all cursor-pointer"
           >
             <Calendar className="w-4.5 h-4.5" />
             <span>Schedule Live Demo</span>
             <ArrowRight className="w-4.5 h-4.5" />
-          </Link>
+          </a>
 
           <a
             href="tel:+919153998385"

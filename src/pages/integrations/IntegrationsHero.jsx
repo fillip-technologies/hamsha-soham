@@ -169,13 +169,15 @@ export const IntegrationsHero = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
-              <Link
-                to="/contact"
+              <a
+                href="https://apps.hamsasoham.com/portal/index.xhtml"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#FF4D27] to-[#FF7043] hover:from-[#E03A14] hover:to-[#FF4D27] text-white font-extrabold text-sm sm:text-base shadow-xl shadow-[#FF4D27]/30 transition-all flex items-center gap-2 hover:scale-105 group cursor-pointer"
               >
                 <span>Request Live Demo</span>
                 <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
 
               <a
                 href="#connected-ecosystem"

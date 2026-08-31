@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { EKshitizHero } from "./EKshitizHero";
 import { EKshitizFeatures } from "./EKshitizFeatures";
-import { RequestDemoModal } from "../../../components/common/RequestDemoModal";
 import {
   Phone,
   CheckCircle2,
@@ -10,7 +9,6 @@ import {
 } from "lucide-react";
 
 export const EKshitizPage = () => {
-  const [isBottomDemoOpen, setIsBottomDemoOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -111,13 +109,15 @@ export const EKshitizPage = () => {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <button
-              onClick={() => setIsBottomDemoOpen(true)}
+            <a
+              href="https://apps.hamsasoham.com/portal/index.xhtml"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-7 py-3.5 rounded-full bg-gradient-to-r from-[#FF4D27] via-orange-500 to-amber-500 hover:from-orange-600 hover:to-[#FF4D27] text-white font-bold text-sm sm:text-base shadow-xl shadow-[#FF4D27]/30 transition-all flex items-center gap-2.5 cursor-pointer"
             >
               <span>Request Live Demo</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </a>
 
             <a
               href="tel:+919153998385"
@@ -128,12 +128,6 @@ export const EKshitizPage = () => {
             </a>
           </div>
         </div>
-
-        <RequestDemoModal
-          isOpen={isBottomDemoOpen}
-          onClose={() => setIsBottomDemoOpen(false)}
-          defaultProduct="e_Kshitiz"
-        />
       </section>
     </div>
   );

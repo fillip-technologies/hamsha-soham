@@ -4,10 +4,8 @@ import {
   Phone,
 } from "lucide-react";
 import heroDashboardImg from "../../assets/image-1.png";
-import { RequestDemoModal } from "../../components/common/RequestDemoModal";
 
 export const HeroSection = () => {
-  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   // Clean URL hash if any exists
   useEffect(() => {
@@ -71,13 +69,15 @@ export const HeroSection = () => {
 
             {/* Action CTAs */}
             <div className="flex flex-wrap items-center gap-4 pt-1">
-              <button
-                onClick={() => setIsDemoModalOpen(true)}
+              <a
+                href="https://apps.hamsasoham.com/portal/index.xhtml"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-7 py-3.5 rounded-full bg-gradient-to-r from-[#FF4D27] to-[#FF6B4A] hover:from-[#E03A14] hover:to-[#FF4D27] text-white font-bold text-base flex items-center gap-2.5 shadow-lg shadow-[#FF4D27]/25 hover:shadow-xl hover:shadow-[#FF4D27]/35 hover:-translate-y-0.5 transition-all cursor-pointer"
               >
                 <span>Request Live Demo</span>
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </a>
 
               <a
                 href="tel:+919153998385"
@@ -132,12 +132,6 @@ export const HeroSection = () => {
         </div>
 
       </div>
-
-      {/* Unified Demo Request Modal */}
-      <RequestDemoModal
-        isOpen={isDemoModalOpen}
-        onClose={() => setIsDemoModalOpen(false)}
-      />
     </section>
   );
 };

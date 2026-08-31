@@ -30,14 +30,16 @@ export const AboutHero = () => {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
-            <Link
-              to="/contact"
+            <a
+              href="https://apps.hamsasoham.com/portal/index.xhtml"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#FF4D27] to-[#FF6B4A] hover:from-[#E03A14] hover:to-[#FF4D27] text-white font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-md shadow-[#FF4D27]/30 hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer"
             >
               <Calendar className="w-4 h-4" />
               <span>Schedule Live Demo</span>
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
 
             <a
               href="tel:+919153998385"
@@ -109,9 +111,9 @@ export const AboutHero = () => {
             <div className="relative w-full h-full flex flex-col justify-between">
               <div className="bg-white/95 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200/80 shadow-md inline-flex items-center gap-1.5 text-[10px] font-extrabold text-slate-900 self-start">
                 <Sparkles className="w-3.5 h-3.5 text-[#5254F2]" />
-                <span>HWAI Predictive AI Engine</span>
+                <span>HWAI Healthcare Management</span>
               </div>
-              <img src={hwaiImg} alt="HWAI AI Platform" className="w-full h-40 object-contain my-auto" />
+              <img src={hwaiImg} alt="HWAI Healthcare Management System" className="w-full h-40 object-contain my-auto" />
               <div className="text-white text-[11px] font-bold truncate">TPA Claim Pre-Auditing</div>
             </div>
           </div>

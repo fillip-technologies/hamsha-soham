@@ -37,13 +37,24 @@ export const RequestDemoModal = ({ isOpen, onClose, defaultProduct = "" }) => {
             </h3>
           </div>
 
-          <button
-            onClick={onClose}
-            className="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors cursor-pointer"
-            aria-label="Close demo modal"
-          >
-            <X className="w-5 h-5" />
-          </button>
+          <div className="flex items-center gap-2">
+            <a
+              href="https://apps.hamsasoham.com/portal/index.xhtml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0B132B] hover:bg-slate-800 text-white text-xs font-bold transition-all"
+            >
+              <span>Launch Portal</span>
+              <span>↗</span>
+            </a>
+            <button
+              onClick={onClose}
+              className="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors cursor-pointer"
+              aria-label="Close demo modal"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Embedded Universal Request Demo Form */}

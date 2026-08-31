@@ -13,7 +13,7 @@ export const navConfig = {
           {
             id: "hwai",
             title: "HWAI",
-            badge: "Enterprise AI",
+            badge: "Healthcare Management",
             link: "/products/hwai",
             icon: "Sparkles",
             highlights: [

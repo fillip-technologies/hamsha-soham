@@ -83,8 +83,19 @@ export const LoginPage = () => {
               Sign In to Account
             </h1>
             <p className="text-xs text-slate-500 font-normal">
-              Enter your credentials below to access your account.
+              Enter your credentials below or access the direct enterprise portal.
             </p>
+            <div className="pt-2">
+              <a
+                href="https://apps.hamsasoham.com/portal/index.xhtml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#0B132B] hover:bg-slate-800 text-white text-xs font-bold transition-all shadow-xs"
+              >
+                <span>Launch Official Enterprise Portal</span>
+                <span>↗</span>
+              </a>
+            </div>
           </div>
 
           {/* Direct Google Sign In Button */}

@@ -265,13 +265,15 @@ export const WhyHamsaSection = () => {
                     <span className="font-extrabold text-slate-900">{card.statValue}</span>
                   </div>
 
-                  <Link
-                    to="/contact"
+                  <a
+                    href="https://apps.hamsasoham.com/portal/index.xhtml"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-[#FF4D27] text-white font-extrabold text-[11px] shadow-xs transition-all hover:scale-105 shrink-0 cursor-pointer"
                   >
                     <span>Request Demo</span>
                     <ArrowRight className="w-3 h-3" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             );

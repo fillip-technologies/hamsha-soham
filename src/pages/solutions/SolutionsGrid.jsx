@@ -26,13 +26,13 @@ export const SolutionsGrid = () => {
   const solutionsList = [
     {
       id: "hwai",
-      title: "HWAI Platform",
-      sub: "Healthcare Intelligence & Analytics",
-      desc: "Comprehensive predictive AI and intelligence ecosystem engineered for high-volume multispecialty hospitals, clinical audit compliance, and national health mission connectivity.",
+      title: "HWAI Healthcare Management",
+      sub: "Healthcare Operations & Management System",
+      desc: "Comprehensive healthcare management and operational intelligence ecosystem engineered for high-volume multispecialty hospitals, clinical audit compliance, and national health mission connectivity.",
       icon: Sparkles,
       image: hwaiImg,
       link: "/products/hwai",
-      badge: "Enterprise AI & HIMS",
+      badge: "Healthcare Management System",
       gradient: "from-purple-600 via-indigo-600 to-purple-800",
       accentBg: "bg-purple-50 text-purple-600 border-purple-200",
       highlights: [
@@ -314,13 +314,15 @@ export const SolutionsGrid = () => {
 
             {/* CTA Buttons */}
             <div className="pt-2 flex flex-wrap items-center gap-3">
-              <Link
-                to="/contact"
+              <a
+                href="https://apps.hamsasoham.com/portal/index.xhtml"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-[#FF4D27] to-[#FF7043] hover:from-[#E03A14] hover:to-[#FF4D27] text-white font-extrabold text-xs tracking-wide shadow-lg shadow-[#FF4D27]/30 transition-all duration-300 hover:scale-105 group cursor-pointer"
               >
                 <span>Request Live Demo</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
 
               <Link
                 to={activeSol.link}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { EDrishtiHero } from "./EDrishtiHero";
 import { EDrishtiFeatures } from "./EDrishtiFeatures";
-import { RequestDemoModal } from "../../../components/common/RequestDemoModal";
 import {
   Eye,
   FileText,
@@ -23,7 +22,6 @@ import {
 
 export const EDrishtiPage = () => {
   const [activeRoleTab, setActiveRoleTab] = useState(0);
-  const [isBottomDemoOpen, setIsBottomDemoOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -297,13 +295,15 @@ export const EDrishtiPage = () => {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <button
-              onClick={() => setIsBottomDemoOpen(true)}
+            <a
+              href="https://apps.hamsasoham.com/portal/index.xhtml"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-7 py-3.5 rounded-full bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-700 hover:from-sky-500 hover:to-cyan-500 text-white font-bold text-sm sm:text-base shadow-xl shadow-sky-500/30 transition-all flex items-center gap-2.5 cursor-pointer"
             >
               <span>Request Live Demo</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </a>
 
             <a
               href="tel:+919153998385"
@@ -314,12 +314,6 @@ export const EDrishtiPage = () => {
             </a>
           </div>
         </div>
-
-        <RequestDemoModal
-          isOpen={isBottomDemoOpen}
-          onClose={() => setIsBottomDemoOpen(false)}
-          defaultProduct="e_Drishti"
-        />
       </section>
     </div>
   );

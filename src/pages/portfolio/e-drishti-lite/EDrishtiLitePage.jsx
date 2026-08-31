@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { EDrishtiLiteHero } from "./EDrishtiLiteHero";
 import { EDrishtiLiteFeatures } from "./EDrishtiLiteFeatures";
-import { RequestDemoModal } from "../../../components/common/RequestDemoModal";
 import {
   Phone,
   CheckCircle2,
@@ -13,7 +12,6 @@ import {
 } from "lucide-react";
 
 export const EDrishtiLitePage = () => {
-  const [isBottomDemoOpen, setIsBottomDemoOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -114,13 +112,15 @@ export const EDrishtiLitePage = () => {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <button
-              onClick={() => setIsBottomDemoOpen(true)}
+            <a
+              href="https://apps.hamsasoham.com/portal/index.xhtml"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-7 py-3.5 rounded-full bg-gradient-to-r from-purple-600 via-indigo-600 to-sky-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-sm sm:text-base shadow-xl shadow-purple-500/30 transition-all flex items-center gap-2.5 cursor-pointer"
             >
               <span>Request Live Demo</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </a>
 
             <a
               href="tel:+919153998385"
@@ -131,12 +131,6 @@ export const EDrishtiLitePage = () => {
             </a>
           </div>
         </div>
-
-        <RequestDemoModal
-          isOpen={isBottomDemoOpen}
-          onClose={() => setIsBottomDemoOpen(false)}
-          defaultProduct="e_Drishti Lite"
-        />
       </section>
     </div>
   );

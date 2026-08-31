@@ -56,9 +56,9 @@ export const PortfolioSection = () => {
       id: "hwai",
       num: "05",
       name: "HWAI Platform",
-      category: "Healthcare AI",
+      category: "Healthcare Management System",
       description:
-        "Predictive AI suite for hospital operational intelligence, automated patient queue prediction, financial auditing, and clinical decision support.",
+        "Complete healthcare management platform for hospital operational intelligence, automated patient queue management, financial auditing, and clinical workflow optimization.",
       image: hwaiImg,
       bgGradient: "from-[#D97706] via-[#B45309] to-[#0B132B]",
     },

@@ -35,16 +35,21 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
+    try {
+      window.open("https://apps.hamsasoham.com/portal/index.xhtml", "_blank", "noopener,noreferrer");
+    } catch {
+      window.location.href = "https://apps.hamsasoham.com/portal/index.xhtml";
+    }
     if (onSuccess) {
       setTimeout(() => {
         onSuccess();
-      }, 2500);
+      }, 3500);
     }
   };
 
   if (isSubmitted) {
     return (
-      <div className="p-8 sm:p-10 rounded-3xl bg-emerald-50 border border-emerald-200 text-center space-y-4 animate-in fade-in duration-300">
+      <div className="p-8 sm:p-10 rounded-3xl bg-emerald-50 border border-emerald-200 text-center space-y-5 animate-in fade-in duration-300">
         <div className="w-16 h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-emerald-500/30">
           <CheckCircle2 className="w-9 h-9" />
         </div>
@@ -56,33 +61,58 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
           <span className="font-bold text-slate-900">{formData.mobile || formData.email}</span> within 2 business hours to schedule your personalized live demo for{" "}
           <span className="font-bold text-slate-900">{formData.organization || "your organization"}</span>.
         </p>
-        <button
-          onClick={() => {
-            setIsSubmitted(false);
-            setFormData({
-              name: "",
-              organization: "",
-              designation: "",
-              email: "",
-              mobile: "",
-              city: "",
-              hospitalType: "",
-              beds: "",
-              product: defaultProduct || "e_Kshitiz",
-              currentHis: "",
-              message: "",
-            });
-          }}
-          className="px-6 py-2.5 rounded-full bg-[#0B132B] text-white font-bold text-xs hover:bg-[#FF4D27] transition-colors cursor-pointer"
-        >
-          Submit Another Request
-        </button>
+
+        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <a
+            href="https://apps.hamsasoham.com/portal/index.xhtml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-full bg-[#FF4D27] hover:bg-[#E03A14] text-white font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-[#FF4D27]/30 transition-all hover:scale-105 cursor-pointer"
+          >
+            <span>Launch Live Portal Now</span>
+            <span>↗</span>
+          </a>
+
+          <button
+            onClick={() => {
+              setIsSubmitted(false);
+              setFormData({
+                name: "",
+                organization: "",
+                designation: "",
+                email: "",
+                mobile: "",
+                city: "",
+                hospitalType: "",
+                beds: "",
+                product: defaultProduct || "e_Kshitiz",
+                currentHis: "",
+                message: "",
+              });
+            }}
+            className="px-6 py-2.5 rounded-full bg-[#0B132B] text-white font-bold text-xs hover:bg-slate-800 transition-colors cursor-pointer"
+          >
+            Submit Another Request
+          </button>
+        </div>
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 text-left select-none">
+      {/* Quick Direct Portal Bar */}
+      <div className="p-3 rounded-2xl bg-slate-100 border border-slate-200/80 flex items-center justify-between gap-3 text-xs">
+        <span className="font-semibold text-slate-700">Looking for immediate live portal access?</span>
+        <a
+          href="https://apps.hamsasoham.com/portal/index.xhtml"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-3.5 py-1.5 rounded-full bg-[#0B132B] hover:bg-slate-800 text-white font-bold text-[11px] shrink-0 transition-all shadow-xs"
+        >
+          <span>Launch Portal ↗</span>
+        </a>
+      </div>
       
       {/* Row 1: Name & Organization */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
