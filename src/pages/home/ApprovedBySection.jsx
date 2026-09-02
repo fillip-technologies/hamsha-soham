@@ -6,7 +6,6 @@ import {
   BadgeCheck,
   Award,
   Lock,
-  CheckCircle2,
   Sparkles,
   ArrowRight,
 } from "lucide-react";
@@ -33,11 +32,6 @@ export const ApprovedBySection = () => {
       preview: abdmCertPreview,
       pdfUrl: abdmCertPdf,
       fileName: "ABDM_Milestone_Certification.pdf",
-      features: [
-        "Milestone M1 (ABHA Creation & Verification)",
-        "Milestone M2 (Health Facility & Staff Registry)",
-        "Milestone M3 (Longitudinal Health Records & UHI)",
-      ],
       badgeText: "NHA Official Accreditation",
       accentBorder: "group-hover:border-[#FF4D27]/50",
       accentGlow: "from-orange-500/15 via-[#FF4D27]/5 to-transparent",
@@ -53,11 +47,6 @@ export const ApprovedBySection = () => {
       preview: safeCertPreview,
       pdfUrl: safeCertPdf,
       fileName: "Safe_To_Host_Security_Certificate.pdf",
-      features: [
-        "Zero High / Critical Vulnerabilities",
-        "OWASP Top 10 Application Security Cleared",
-        "Protected Hospital Cloud & Database Hosting",
-      ],
       badgeText: "Host Integrity Cleared",
       accentBorder: "group-hover:border-emerald-500/50",
       accentGlow: "from-emerald-500/15 via-teal-500/5 to-transparent",
@@ -73,11 +62,6 @@ export const ApprovedBySection = () => {
       preview: vapCertPreview,
       pdfUrl: vapCertPdf,
       fileName: "VAPT_Security_Certificate.pdf",
-      features: [
-        "Full Scope Web App & API Pentest Tested",
-        "Granular Role-Based Data Isolation",
-        "256-Bit AES Clinical Data Encryption",
-      ],
       badgeText: "Cybersecurity Audited",
       accentBorder: "group-hover:border-blue-500/50",
       accentGlow: "from-blue-500/15 via-indigo-500/5 to-transparent",
@@ -215,19 +199,6 @@ export const ApprovedBySection = () => {
                     <p className="text-xs font-bold text-slate-500">
                       {cert.authority}
                     </p>
-                  </div>
-
-                  {/* Feature / Milestone Checklist */}
-                  <div className="space-y-2 pt-2 border-t border-slate-100">
-                    {cert.features.map((feat, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-start gap-2 text-xs font-medium text-slate-700"
-                      >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
-                        <span>{feat}</span>
-                      </div>
-                    ))}
                   </div>
                 </div>
 
