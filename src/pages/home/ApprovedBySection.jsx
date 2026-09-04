@@ -76,9 +76,9 @@ export const ApprovedBySection = () => {
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
-        <div className="mb-8 sm:mb-10 text-left">
+        {/* <div className="mb-8 sm:mb-10 text-left">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-[#FF4D27] text-xs font-black uppercase tracking-wider shadow-2xs">
               <BadgeCheck className="w-4 h-4" />
@@ -88,12 +88,12 @@ export const ApprovedBySection = () => {
               Approved & Certified By
             </h2>
           </div>
-        </div>
+        </div> */}
 
-        {/* Official Government Recognition Logos */}
-        <div className="mb-10 sm:mb-14 rounded-3xl bg-white border border-slate-200/90 shadow-md py-10 sm:py-14 px-6 sm:px-12 lg:px-16 flex items-center justify-center">
+
+        {/* <div className="mb-10 sm:mb-14 rounded-3xl bg-white border border-slate-200/90 shadow-md py-10 sm:py-14 px-6 sm:px-12 lg:px-16 flex items-center justify-center">
           <div className="flex flex-col md:flex-row items-center justify-center gap-10 sm:gap-14 lg:gap-20 w-full max-w-5xl">
-            {/* Ayushman Bharat Digital Mission Seal */}
+            
             <div className="flex items-center justify-center h-32 sm:h-40 md:h-44 w-full md:w-auto">
               <img
                 src={ayushmanSeal}
@@ -102,11 +102,11 @@ export const ApprovedBySection = () => {
               />
             </div>
 
-            {/* Subtle Divider */}
+          
             <div className="hidden md:block w-px h-28 lg:h-32 bg-slate-200" />
             <div className="md:hidden w-36 h-px bg-slate-200" />
 
-            {/* Ayushman Bharat Digital Mission Logo */}
+            
             <div className="flex items-center justify-center h-28 sm:h-36 md:h-40 w-full md:w-auto">
               <img
                 src={ayushmanLogo}
@@ -115,11 +115,11 @@ export const ApprovedBySection = () => {
               />
             </div>
 
-            {/* Subtle Divider */}
+          
             <div className="hidden md:block w-px h-28 lg:h-32 bg-slate-200" />
             <div className="md:hidden w-36 h-px bg-slate-200" />
 
-            {/* National Health Authority Logo */}
+          
             <div className="flex items-center justify-center h-24 sm:h-32 md:h-36 w-full md:w-auto">
               <img
                 src={nhaLogo}
@@ -128,7 +128,7 @@ export const ApprovedBySection = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Scrollable Certificate Cards Track */}
         <div

@@ -3,7 +3,7 @@ import {
   ArrowRight,
   Phone,
 } from "lucide-react";
-import heroDashboardImg from "../../assets/image-1.png";
+import heroDashboardImg from "../../assets/Hamsa-soham-hero.png";
 
 export const HeroSection = () => {
 
