@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Navigation, Clock, Building, ExternalLink } from "lucide-react";
+import { MapPin, Clock, Building } from "lucide-react";
 
 export const ContactMap = () => {
   return (
@@ -22,15 +22,15 @@ export const ContactMap = () => {
           {/* Interactive Google Map Frame (8 columns) */}
           <div className="lg:col-span-8 rounded-3xl overflow-hidden border border-slate-200/90 shadow-xl min-h-[380px] sm:min-h-[450px] relative group">
             <iframe
-              title="Hamsa Soham Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.889417088924!2d80.9462!3d26.8467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDUwJzE4LjEiTiA4MMKwNTYnNDYuMyJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              title="Hamsa Soham Healthcare Location Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.9902896346493!2d85.08203807485073!3d25.605238915053736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed578d3e643005%3A0x686cc3415c2d8ab4!2shamsa%20Soham%20Healthcare%20Pvt.%20Ltd.%20Rajendra%20Palace%20Bailey%20Road!5e0!3m2!1sen!2sin!4v1788765431182!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: "380px" }}
               allowFullScreen=""
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full filter grayscale-[15%] contrast-[105%] group-hover:grayscale-0 transition-all duration-500"
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="w-full h-full filter contrast-[105%] transition-all duration-500"
             />
           </div>
 
@@ -51,7 +51,7 @@ export const ContactMap = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#FF4D27] shrink-0 mt-0.5" />
                   <div className="text-sm text-slate-700 leading-relaxed font-normal">
-                    Hamsa Soham Healthcare Pvt Ltd, Operational Hub & Technology Center, India.
+                    Hamsa Soham Healthcare Pvt. Ltd., Rajendra Palace, Bailey Road, Patna, Bihar, India.
                   </div>
                 </div>
 
@@ -60,19 +60,6 @@ export const ContactMap = () => {
                   <span>Monday - Saturday: 9:00 AM - 7:00 PM</span>
                 </div>
               </div>
-            </div>
-
-            <div className="pt-6 border-t border-slate-200">
-              <a
-                href="https://maps.google.com/?q=Hamsa+Soham+Healthcare"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 px-6 rounded-2xl bg-[#0B132B] hover:bg-slate-900 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer group"
-              >
-                <Navigation className="w-4.5 h-4.5 text-sky-400 group-hover:rotate-45 transition-transform" />
-                <span>Get Directions on Google Maps</span>
-                <ExternalLink className="w-4 h-4 text-slate-400" />
-              </a>
             </div>
           </div>
 
