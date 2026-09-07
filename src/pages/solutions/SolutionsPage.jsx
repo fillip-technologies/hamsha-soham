@@ -39,19 +39,19 @@ export const SolutionsPage = () => {
                 <ul className="space-y-3 text-sm text-slate-300">
                   <li className="flex items-start gap-2.5">
                     <span className="text-slate-400 select-none mt-0.5">•</span>
-                    <Link to="/products/hwai" className="hover:text-white transition-colors">
+                    <Link to="/products/hwai#enterprise-multispecialty" className="hover:text-white transition-colors">
                       Enterprise Multispecialty
                     </Link>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-slate-400 select-none mt-0.5">•</span>
-                    <Link to="/products/hwai" className="hover:text-white transition-colors">
+                    <Link to="/products/hwai#nabh-nabl-compliance" className="hover:text-white transition-colors">
                       NABH and NABL compliant model
                     </Link>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-slate-400 select-none mt-0.5">•</span>
-                    <Link to="/products/hwai" className="hover:text-white transition-colors">
+                    <Link to="/products/hwai#abdm-nha-integration" className="hover:text-white transition-colors">
                       ABDM and NHA Integration
                     </Link>
                   </li>

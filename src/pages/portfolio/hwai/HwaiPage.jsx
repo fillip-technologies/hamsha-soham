@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { HwaiHero } from "./HwaiHero";
 import { HwaiFeatures } from "./HwaiFeatures";
+import { HwaiEnterpriseSection } from "./HwaiEnterpriseSection";
+import { HwaiComplianceSection } from "./HwaiComplianceSection";
+import { HwaiAbdmSection } from "./HwaiAbdmSection";
 import {
   Phone,
   CheckCircle2,
@@ -9,10 +13,22 @@ import {
 } from "lucide-react";
 
 export const HwaiPage = () => {
+  const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const timer = setTimeout(() => {
+        const elem = document.getElementById(id);
+        if (elem) {
+          elem.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+      return () => clearTimeout(timer);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans">
@@ -22,7 +38,16 @@ export const HwaiPage = () => {
       {/* 2. AI Capabilities Section */}
       <HwaiFeatures />
 
-      {/* 3. Comparison Matrix */}
+      {/* 3. Dropdown Section 1: Enterprise Multispecialty */}
+      <HwaiEnterpriseSection />
+
+      {/* 4. Dropdown Section 2: NABH and NABL Compliant Model */}
+      <HwaiComplianceSection />
+
+      {/* 5. Dropdown Section 3: ABDM and NHA Integration */}
+      <HwaiAbdmSection />
+
+      {/* 6. Comparison Matrix */}
       <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
           

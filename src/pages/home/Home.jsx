@@ -1,6 +1,8 @@
 import React from "react";
 import { HeroSection } from "./HeroSection";
 import { ApprovedBySection } from "./ApprovedBySection";
+import { AbdmComplianceSection } from "./AbdmComplianceSection";
+import { AbhaCardSection } from "./AbhaCardSection";
 import { DashboardCarouselSection } from "./DashboardCarouselSection";
 import { SegmentSolutionsSection } from "./SegmentSolutionsSection";
 import { FeaturesSection } from "./FeaturesSection";
@@ -15,6 +17,15 @@ export const Home = () => {
     <div className="min-h-screen bg-slate-50">
       {/* 1. Homepage Hero Section */}
       <HeroSection />
+
+      {/* 2. Official Approvals & Certifications (ABDM / Safe-to-Host / VAPT) */}
+      {/* <ApprovedBySection /> */}
+
+      {/* 3. ABHA & ABDM Compliant Hospital Software Feature Showcase */}
+      <AbdmComplianceSection />
+
+      {/* 4. Ayushman Bharat Health Account (ABHA) Overview & ID Card Showcase */}
+      <AbhaCardSection />
 
       {/* 2. Official Approvals & Certifications (ABDM / Safe-to-Host / VAPT) */}
       <ApprovedBySection />

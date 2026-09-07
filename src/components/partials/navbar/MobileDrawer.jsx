@@ -71,10 +71,34 @@ export const MobileDrawer = ({ isOpen, onClose, onLogin }) => {
                           AI & HIMS
                         </span>
                       </div>
-                      <ul className="text-[10px] text-slate-600 space-y-0.5 pl-1">
-                        <li>• Enterprise Multispecialty</li>
-                        <li>• NABH and NABL compliant model</li>
-                        <li>• ABDM and NHA Integration</li>
+                      <ul className="text-[10px] text-slate-600 space-y-1 pl-1">
+                        <li>
+                          <Link
+                            to="/products/hwai#enterprise-multispecialty"
+                            onClick={onClose}
+                            className="hover:text-purple-700 transition-colors flex items-center gap-1"
+                          >
+                            <span>• Enterprise Multispecialty</span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/products/hwai#nabh-nabl-compliance"
+                            onClick={onClose}
+                            className="hover:text-purple-700 transition-colors flex items-center gap-1"
+                          >
+                            <span>• NABH and NABL compliant model</span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/products/hwai#abdm-nha-integration"
+                            onClick={onClose}
+                            className="hover:text-purple-700 transition-colors flex items-center gap-1"
+                          >
+                            <span>• ABDM and NHA Integration</span>
+                          </Link>
+                        </li>
                       </ul>
                     </div>
 

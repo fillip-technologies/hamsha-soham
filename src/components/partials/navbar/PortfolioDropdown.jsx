@@ -30,7 +30,7 @@ export const PortfolioDropdown = ({ data, onClose }) => {
             <li className="flex items-start gap-2 group cursor-pointer">
               <span className="text-slate-400 select-none">•</span>
               <Link
-                to="/products/hwai"
+                to="/products/hwai#enterprise-multispecialty"
                 onClick={onClose}
                 className="hover:text-white transition-colors"
               >
@@ -40,7 +40,7 @@ export const PortfolioDropdown = ({ data, onClose }) => {
             <li className="flex items-start gap-2 group cursor-pointer">
               <span className="text-slate-400 select-none">•</span>
               <Link
-                to="/products/hwai"
+                to="/products/hwai#nabh-nabl-compliance"
                 onClick={onClose}
                 className="hover:text-white transition-colors"
               >
@@ -50,7 +50,7 @@ export const PortfolioDropdown = ({ data, onClose }) => {
             <li className="flex items-start gap-2 group cursor-pointer">
               <span className="text-slate-400 select-none">•</span>
               <Link
-                to="/products/hwai"
+                to="/products/hwai#abdm-nha-integration"
                 onClick={onClose}
                 className="hover:text-white transition-colors"
               >
