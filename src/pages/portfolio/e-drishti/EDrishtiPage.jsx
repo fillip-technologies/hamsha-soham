@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { EDrishtiHero } from "./EDrishtiHero";
+import { EDrishtiEnterpriseSection } from "./EDrishtiEnterpriseSection";
+import { EDrishtiWorkflowSection } from "./EDrishtiWorkflowSection";
+import { EDrishtiEmrSection } from "./EDrishtiEmrSection";
 import { EDrishtiFeatures } from "./EDrishtiFeatures";
 import {
   Eye,
@@ -22,10 +26,22 @@ import {
 
 export const EDrishtiPage = () => {
   const [activeRoleTab, setActiveRoleTab] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const timer = setTimeout(() => {
+        const elem = document.getElementById(id);
+        if (elem) {
+          elem.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+      return () => clearTimeout(timer);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.hash]);
 
   const clinicalRoles = [
     {
@@ -91,7 +107,16 @@ export const EDrishtiPage = () => {
       {/* 1. Light Medical Hero Section */}
       <EDrishtiHero />
 
-      {/* 2. Interactive Clinical Workspace Tour */}
+      {/* 2. Dropdown Highlight Section 1: Enterprise Eye Hospital */}
+      <EDrishtiEnterpriseSection />
+
+      {/* 3. Dropdown Highlight Section 2: Registration to Inventory Management */}
+      <EDrishtiWorkflowSection />
+
+      {/* 4. Dropdown Highlight Section 3: Comprehensive Eye EMR */}
+      <EDrishtiEmrSection />
+
+      {/* 5. Interactive Clinical Workspace Tour */}
       <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
           

@@ -80,7 +80,7 @@ export const PortfolioDropdown = ({ data, onClose }) => {
             <li className="flex items-start gap-2 group cursor-pointer">
               <span className="text-slate-400 select-none">•</span>
               <Link
-                to="/products/e-drishti"
+                to="/products/e-drishti#enterprise-eye-hospital"
                 onClick={onClose}
                 className="hover:text-white transition-colors"
               >
@@ -90,7 +90,7 @@ export const PortfolioDropdown = ({ data, onClose }) => {
             <li className="flex items-start gap-2 group cursor-pointer">
               <span className="text-slate-400 select-none">•</span>
               <Link
-                to="/products/e-drishti"
+                to="/products/e-drishti#registration-inventory-management"
                 onClick={onClose}
                 className="hover:text-white transition-colors"
               >
@@ -100,7 +100,7 @@ export const PortfolioDropdown = ({ data, onClose }) => {
             <li className="flex items-start gap-2 group cursor-pointer">
               <span className="text-slate-400 select-none">•</span>
               <Link
-                to="/products/e-drishti"
+                to="/products/e-drishti#comprehensive-eye-emr"
                 onClick={onClose}
                 className="hover:text-white transition-colors"
               >
@@ -165,7 +165,7 @@ export const PortfolioDropdown = ({ data, onClose }) => {
             <li className="flex items-start gap-2 group cursor-pointer">
               <span className="text-slate-400 select-none">•</span>
               <Link
-                to="/products/e-kshitiz"
+                to="/products/e-kshitiz#workforce-smb-healthcare"
                 onClick={onClose}
                 className="hover:text-white transition-colors"
               >

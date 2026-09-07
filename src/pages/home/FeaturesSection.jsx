@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export const FeaturesSection = () => {
@@ -140,15 +141,13 @@ export const FeaturesSection = () => {
 
               {/* Action CTA Button */}
               <div className="pt-1 sm:pt-2 flex items-center gap-4">
-                <a
-                  href="https://apps.hamsasoham.com/portal/index.xhtml"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/contact"
                   className="px-6 sm:px-8 py-3 sm:py-3.5 rounded-full bg-white hover:bg-slate-50 text-[#0B132B] font-bold text-sm sm:text-base flex items-center gap-3 shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all cursor-pointer group"
                 >
                   <span>Explore Capabilities</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF4D27] transform group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
 
             </div>

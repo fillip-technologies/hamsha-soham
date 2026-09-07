@@ -160,17 +160,8 @@ export const HwaiEnterpriseSection = () => {
     },
   ];
 
-  // 50+ Clinical Specialties Array
-  const specialties = [
-    { name: "Cardiology", icon: HeartPulse, desc: "Echo, Cath Lab & ECG telemetry" },
-    { name: "Neurology", icon: Brain, desc: "GCS & Neuro consultation notes" },
-    { name: "Orthopedics", icon: Activity, desc: "Implant barcode & surgery templates" },
-    { name: "Pediatrics & NICU", icon: Baby, desc: "Immunization & growth tracking" },
-    { name: "Oncology", icon: Stethoscope, desc: "Chemo cycles & daycare scheduling" },
-    { name: "General Surgery", icon: Layers, desc: "PAC clearance & OT checklists" },
-    { name: "Nephrology & Dialysis", icon: Sparkles, desc: "Dialysis cycles & fluid balance" },
-    { name: "Emergency & Trauma", icon: TrendingUp, desc: "24x7 Red-Yellow-Green triage" },
-  ];
+
+
 
   const currentDept = departments[activeDeptTab];
   const DeptIcon = currentDept.icon;
@@ -452,46 +443,8 @@ export const HwaiEnterpriseSection = () => {
           </div>
         </div>
 
-        {/* 3. 50+ Clinical Specialties Integration Strip */}
-        <div className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-200">
-            <div>
-              <span className="text-xs font-extrabold uppercase tracking-wider text-amber-700">
-                Departmental Breadth
-              </span>
-              <h4 className="text-xl font-black text-[#0B132B] mt-0.5">
-                Pre-Configured Specialty Clinical EMR Templates
-              </h4>
-              <p className="text-xs text-slate-500">Engineered with specialized clinical documentation templates and diagnostic device connectors for 50+ specialties</p>
-            </div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200/80 text-amber-800 text-xs font-bold self-start sm:self-auto">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-              <span>Multi-Specialty Ready</span>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
-            {specialties.map((spec, sIdx) => {
-              const SpecIcon = spec.icon;
-              return (
-                <div
-                  key={sIdx}
-                  className="p-3.5 rounded-2xl bg-slate-50/80 border border-slate-200/70 hover:border-amber-300 hover:bg-amber-50/30 transition-all text-center group cursor-default"
-                >
-                  <div className="w-9 h-9 rounded-xl bg-white border border-slate-200 text-amber-600 flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform shadow-2xs">
-                    <SpecIcon className="w-4.5 h-4.5" />
-                  </div>
-                  <div className="text-xs font-black text-slate-900 group-hover:text-amber-600 transition-colors truncate">
-                    {spec.name}
-                  </div>
-                  <div className="text-[10px] text-slate-500 leading-tight mt-0.5 line-clamp-1">
-                    {spec.desc}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+
 
       </div>
     </section>

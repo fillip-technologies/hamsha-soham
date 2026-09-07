@@ -7,12 +7,12 @@ export const AbdmComplianceSection = () => {
   const [hoverPosition, setHoverPosition] = useState({ x: 50, y: 50, active: false });
 
   const coversList = [
-    "Creation & Verification of ABHA Card",
-    "Access control to the ABHA/PHR app with the ABHA address",
-    "Notification to App for Data Linking & Generation",
-    "Make OPD tokens via HIP QR code.",
-    "Access & Discover Health Record via PHR App",
-    "Manage consents for allowing the hospital/doctors to access your record across the facilities.",
+    "Instant ABHA Health ID Generation & Aadhaar Verification",
+    "Secure ABHA/PHR App Authentication via Unique ABHA Address",
+    "Real-time Notifications for Health Record Linking & Generation",
+    "Counterless OPD Queue Tokens via HIP Scan & Share QR Code",
+    "Seamless Health Record Discovery & Access via PHR Apps",
+    "Granular Patient Consent Management for Cross-Facility Doctor Access",
   ];
 
   const floatingIcons = [
@@ -262,7 +262,7 @@ export const AbdmComplianceSection = () => {
 
             {/* Paragraph Description */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-              The Ayushman Bharat Digital Mission (ABDM) aims to develop the backbone necessary to support the integrated digital health infrastructure of the country. It will bridge the existing gap amongst different stakeholders of the healthcare ecosystem through digital highways.
+              The Ayushman Bharat Digital Mission (ABDM) establishes a unified digital infrastructure for nationwide healthcare. By deploying robust digital highways, it bridges systemic gaps between patients, hospitals, diagnostics, and health registries.
             </p>
 
             {/* Section Subheading: Hamsa Soham HMIS covers */}

@@ -130,15 +130,12 @@ export const ApprovedBySection = () => {
           </div>
         </div> */}
 
-        {/* Scrollable Certificate Cards Track */}
-        <div
-          className="flex items-stretch gap-6 overflow-x-auto pb-4 pt-1 scroll-smooth no-scrollbar"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
+        {/* Responsive Grid - 3 Cards in 1 Frame (No Scroll) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 pt-1">
           {certificates.map((cert) => (
             <div
               key={cert.id}
-              className={`min-w-[320px] sm:min-w-[400px] md:min-w-[440px] bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col group relative overflow-hidden flex-shrink-0 ${cert.accentBorder}`}
+              className={`w-full bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col group relative overflow-hidden ${cert.accentBorder}`}
             >
               {/* Top Accent Radial Glow */}
               <div

@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { EKshitizHero } from "./EKshitizHero";
+import { EKshitizWorkforceSection } from "./EKshitizWorkforceSection";
 import { EKshitizFeatures } from "./EKshitizFeatures";
 import {
   Phone,
@@ -9,17 +11,32 @@ import {
 } from "lucide-react";
 
 export const EKshitizPage = () => {
+  const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const timer = setTimeout(() => {
+        const elem = document.getElementById(id);
+        if (elem) {
+          elem.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+      return () => clearTimeout(timer);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans">
       {/* 1. Hero Section */}
       <EKshitizHero />
 
-      {/* 2. Enterprise Features Section */}
+      {/* 2. Single Dropdown Section: Workforce / SMB Healthcare */}
+      <EKshitizWorkforceSection />
+
+      {/* 3. Enterprise Features Section */}
       <EKshitizFeatures />
 
       {/* 3. Comparison Matrix */}

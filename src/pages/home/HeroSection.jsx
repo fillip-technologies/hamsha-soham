@@ -4,6 +4,7 @@ import {
   Phone,
 } from "lucide-react";
 import heroDashboardImg from "../../assets/Hamsa-soham-hero.png";
+import { AnimatedCounter } from "../../components/common/AnimatedCounter";
 
 export const HeroSection = () => {
 
@@ -47,18 +48,24 @@ export const HeroSection = () => {
               Digitize your hospital operations with an integrated, secure and scalable Healthcare IT platform designed for hospitals, eye-care organizations and healthcare groups.
             </p>
 
-            {/* Core Metrics Data (No Background, Clean Inline) */}
+            {/* Core Metrics Data (No Background, Clean Inline with Animated Counters) */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-1 max-w-xl">
               <div className="text-left space-y-0.5">
-                <div className="text-2xl sm:text-3xl font-black text-[#0B132B] tracking-tight">50+</div>
+                <div className="text-2xl sm:text-3xl font-black text-[#0B132B] tracking-tight">
+                  <AnimatedCounter end={50} duration={2000} suffix="+" />
+                </div>
                 <div className="text-xs text-slate-500 font-medium leading-tight">Multispeciality Hospitals</div>
               </div>
               <div className="text-left space-y-0.5">
-                <div className="text-2xl sm:text-3xl font-black text-[#FF4D27] tracking-tight">100%</div>
+                <div className="text-2xl sm:text-3xl font-black text-[#FF4D27] tracking-tight">
+                  <AnimatedCounter end={100} duration={1800} suffix="%" />
+                </div>
                 <div className="text-xs text-slate-500 font-medium leading-tight">NABH & NABL Compliant</div>
               </div>
               <div className="text-left space-y-0.5">
-                <div className="text-2xl sm:text-3xl font-black text-[#0B132B] tracking-tight">99.99%</div>
+                <div className="text-2xl sm:text-3xl font-black text-[#0B132B] tracking-tight">
+                  <AnimatedCounter end={99.99} decimals={2} duration={2200} suffix="%" />
+                </div>
                 <div className="text-xs text-slate-500 font-medium leading-tight">Operational Uptime</div>
               </div>
               <div className="text-left space-y-0.5">

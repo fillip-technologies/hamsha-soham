@@ -1,5 +1,5 @@
 import React from "react";
-import { CreditCard, Fingerprint, LockKeyhole, ScanLine } from "lucide-react";
+import { CreditCard, Fingerprint, LockKeyhole } from "lucide-react";
 import abhaCardImg from "../../assets/abha-card.jpg";
 
 export const AbhaCardSection = () => {
@@ -9,14 +9,14 @@ export const AbhaCardSection = () => {
       title: "ABHA Address",
       copy: (
         <>
-          ABHA (Ayushman Bharat Health Account) is a unique identifier (self-declared username) that enables you to share and access your health records digitally. Your ABHA address may look like <span className="font-semibold text-slate-800">'yourname@consentmanager.'</span> For instance, <span className="font-semibold text-[#FF4D27]">xyz@abdm</span> is an ABHA address with ABDM Consent Manager that will streamline health data exchange for you with appropriate consent on the ABDM network.
+          An ABHA (Ayushman Bharat Health Account) Address serves as a unique digital handle (a personalized username) allowing you to securely view and share medical records online. Formatted similarly to <span className="font-semibold text-slate-800">'yourname@consentmanager'</span>—such as <span className="font-semibold text-[#FF4D27]">xyz@abdm</span> linked to an ABDM Consent Manager—it facilitates frictionless, consent-driven health data exchange across India's national health network.
         </>
       ),
     },
     {
       Icon: CreditCard,
       title: "ABHA Number",
-      copy: "The ABHA Number will uniquely identify you as a participant in India's digital healthcare ecosystem. ABHA is a 14-digit personalized number that harbors the identity of people, their authenticity, and their health records seamlessly.",
+      copy: "The ABHA Number acts as your primary digital identity across India's connected healthcare ecosystem. This 14-digit personalized identification number securely anchors your verified personal identity, medical history, and clinical health records across all participating facilities.",
     },
   ];
 
@@ -214,9 +214,6 @@ export const AbhaCardSection = () => {
                 <div className="abha-privacy-pill absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-white/85 bg-white/90 px-3 py-1.5 text-xs font-black text-slate-700 shadow-lg shadow-slate-300/35 backdrop-blur transition-all duration-300">
                   <LockKeyhole className="h-4 w-4 text-emerald-600" />
                   <span>Consent Secured</span>
-                </div>
-                <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-sky-100 bg-white/85 text-sky-600 shadow-sm backdrop-blur">
-                  <ScanLine className="h-5 w-5" />
                 </div>
               </div>
             </div>

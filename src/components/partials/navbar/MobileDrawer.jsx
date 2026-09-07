@@ -116,10 +116,34 @@ export const MobileDrawer = ({ isOpen, onClose, onLogin }) => {
                           Eye Care EMR
                         </span>
                       </div>
-                      <ul className="text-[10px] text-slate-600 space-y-0.5 pl-1">
-                        <li>• Enterprise Eye Hospital</li>
-                        <li>• Registration to Inventory Management</li>
-                        <li>• Comprehensive Eye EMR</li>
+                      <ul className="text-[10px] text-slate-600 space-y-1 pl-1">
+                        <li>
+                          <Link
+                            to="/products/e-drishti#enterprise-eye-hospital"
+                            onClick={onClose}
+                            className="hover:text-[#FF4D27] transition-colors flex items-center gap-1"
+                          >
+                            <span>• Enterprise Eye Hospital</span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/products/e-drishti#registration-inventory-management"
+                            onClick={onClose}
+                            className="hover:text-[#FF4D27] transition-colors flex items-center gap-1"
+                          >
+                            <span>• Registration to Inventory Management</span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/products/e-drishti#comprehensive-eye-emr"
+                            onClick={onClose}
+                            className="hover:text-[#FF4D27] transition-colors flex items-center gap-1"
+                          >
+                            <span>• Comprehensive Eye EMR</span>
+                          </Link>
+                        </li>
                       </ul>
                     </div>
 
@@ -165,8 +189,16 @@ export const MobileDrawer = ({ isOpen, onClose, onLogin }) => {
                           Hospital HIMS
                         </span>
                       </div>
-                      <ul className="text-[10px] text-slate-600 space-y-0.5 pl-1">
-                        <li>• Workforce / SMB Healthcare</li>
+                      <ul className="text-[10px] text-slate-600 space-y-1 pl-1">
+                        <li>
+                          <Link
+                            to="/products/e-kshitiz#workforce-smb-healthcare"
+                            onClick={onClose}
+                            className="hover:text-blue-700 transition-colors flex items-center gap-1"
+                          >
+                            <span>• Workforce / SMB Healthcare</span>
+                          </Link>
+                        </li>
                       </ul>
                     </div>
                   </div>
