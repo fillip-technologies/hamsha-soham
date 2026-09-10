@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { EDrishtiHero } from "./EDrishtiHero";
 import { EDrishtiEnterpriseSection } from "./EDrishtiEnterpriseSection";
 import { EDrishtiWorkflowSection } from "./EDrishtiWorkflowSection";
+import { EDrishtiModuleStructure } from "./EDrishtiModuleStructure";
 import { EDrishtiEmrSection } from "./EDrishtiEmrSection";
 import { EDrishtiFeatures } from "./EDrishtiFeatures";
 import {
@@ -113,7 +114,10 @@ export const EDrishtiPage = () => {
       {/* 3. Dropdown Highlight Section 2: Registration to Inventory Management */}
       <EDrishtiWorkflowSection />
 
-      {/* 4. Dropdown Highlight Section 3: Comprehensive Eye EMR */}
+      {/* 4. Complete Module Structure */}
+      <EDrishtiModuleStructure />
+
+      {/* 5. Dropdown Highlight Section 3: Comprehensive Eye EMR */}
       <EDrishtiEmrSection />
 
       {/* 5. Interactive Clinical Workspace Tour */}

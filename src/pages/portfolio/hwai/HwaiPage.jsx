@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { HwaiHero } from "./HwaiHero";
 import { HwaiFeatures } from "./HwaiFeatures";
+import { HwaiWorkflowSection } from "./HwaiWorkflowSection";
 import { HwaiEnterpriseSection } from "./HwaiEnterpriseSection";
 import { HwaiComplianceSection } from "./HwaiComplianceSection";
 import { HwaiAbdmSection } from "./HwaiAbdmSection";
@@ -38,16 +39,19 @@ export const HwaiPage = () => {
       {/* 2. AI Capabilities Section */}
       <HwaiFeatures />
 
-      {/* 3. Dropdown Section 1: Enterprise Multispecialty */}
+      {/* 3. Complete Hospital Workflow */}
+      <HwaiWorkflowSection />
+
+      {/* 4. Dropdown Section 1: Enterprise Multispecialty */}
       <HwaiEnterpriseSection />
 
-      {/* 4. Dropdown Section 2: NABH and NABL Compliant Model */}
+      {/* 5. Dropdown Section 2: NABH and NABL Compliant Model */}
       <HwaiComplianceSection />
 
-      {/* 5. Dropdown Section 3: ABDM and NHA Integration */}
+      {/* 6. Dropdown Section 3: ABDM and NHA Integration */}
       <HwaiAbdmSection />
 
-      {/* 6. Comparison Matrix */}
+      {/* 7. Comparison Matrix */}
       <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
           
