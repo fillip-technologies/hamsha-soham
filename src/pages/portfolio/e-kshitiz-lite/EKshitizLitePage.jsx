@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { EKshitizLiteHero } from "./EKshitizLiteHero";
+import { EKshitizLiteModularSection } from "./EKshitizLiteModularSection";
 import { EKshitizLiteFeatures } from "./EKshitizLiteFeatures";
 import {
   Phone,
@@ -19,7 +20,10 @@ export const EKshitizLitePage = () => {
       {/* 1. Hero Section */}
       <EKshitizLiteHero />
 
-      {/* 2. Modular Features Section */}
+      {/* 2. Need-Based Modular Selection Section */}
+      <EKshitizLiteModularSection />
+
+      {/* 3. Modular Features Section */}
       <EKshitizLiteFeatures />
 
       {/* 3. Comparison Matrix */}

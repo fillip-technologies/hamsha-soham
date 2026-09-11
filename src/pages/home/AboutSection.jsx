@@ -3,8 +3,36 @@ import { Plus, Minus } from "lucide-react";
 
 export const AboutSection = () => {
   const sectionRef = useRef(null);
+  const containerRef = useRef(null);
   const [revealedCount, setRevealedCount] = useState(1);
   const [activeId, setActiveId] = useState("about");
+
+  // Performance-optimized direct DOM mouse tracking (Zero React re-renders for smooth 120fps)
+  const handleMouseMove = (e) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const ratioX = ((x / rect.width) - 0.5) * 2;
+    const ratioY = ((y / rect.height) - 0.5) * 2;
+
+    containerRef.current.style.setProperty("--mouse-x", `${x}px`);
+    containerRef.current.style.setProperty("--mouse-y", `${y}px`);
+    containerRef.current.style.setProperty("--ratio-x", ratioX.toFixed(3));
+    containerRef.current.style.setProperty("--ratio-y", ratioY.toFixed(3));
+  };
+
+  const handleMouseEnter = () => {
+    if (!containerRef.current) return;
+    containerRef.current.style.setProperty("--mouse-opacity", "1");
+  };
+
+  const handleMouseLeave = () => {
+    if (!containerRef.current) return;
+    containerRef.current.style.setProperty("--mouse-opacity", "0");
+    containerRef.current.style.setProperty("--ratio-x", "0");
+    containerRef.current.style.setProperty("--ratio-y", "0");
+  };
 
   const items = [
     {
@@ -105,9 +133,64 @@ export const AboutSection = () => {
       className="relative lg:h-[300vh] h-auto py-12 sm:py-20 lg:py-0 bg-[#F8F9FA] text-[#0B132B] select-none border-t border-slate-200/80"
     >
       {/* Sticky Viewport Container on Desktop (h-auto static on Mobile) */}
-      <div className="lg:sticky lg:top-0 lg:h-screen flex items-center justify-center lg:overflow-hidden py-4 lg:py-0">
+      <div
+        ref={containerRef}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="relative lg:sticky lg:top-0 lg:h-screen flex items-center justify-center lg:overflow-hidden py-4 lg:py-0 transition-colors duration-500"
+        style={{
+          "--mouse-x": "50%",
+          "--mouse-y": "50%",
+          "--mouse-opacity": "0",
+          "--ratio-x": "0",
+          "--ratio-y": "0",
+        }}
+      >
+        {/* 1. Full Background Atmospheric Darkening Wash on Hover */}
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.06]"
+          style={{
+            opacity: "var(--mouse-opacity, 0)",
+          }}
+        />
+
+        {/* 2. Dark Outer Vignette */}
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
+          style={{
+            opacity: "var(--mouse-opacity, 0)",
+            background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), transparent 40%, rgba(11, 19, 43, 0.14) 100%)",
+          }}
+        />
+
+        {/* 3. Deep Dark Shadow Halo + Vivid Flame/Indigo Spotlight Core */}
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
+          style={{
+            opacity: "var(--mouse-opacity, 0)",
+            background: `
+              radial-gradient(320px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 77, 39, 0.28) 0%, rgba(82, 84, 242, 0.22) 45%, transparent 80%),
+              radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(15, 23, 42, 0.22) 0%, rgba(30, 41, 59, 0.14) 50%, transparent 80%)
+            `,
+          }}
+        />
+
+        {/* 4. Parallax Background Deep Mesh Glows */}
+        <div
+          className="absolute top-0 right-0 w-[650px] h-[650px] bg-gradient-to-br from-indigo-500/25 via-blue-400/20 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
+          style={{
+            transform: "translate3d(calc(var(--ratio-x, 0) * -35px), calc(var(--ratio-y, 0) * -35px), 0)",
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-[#FF4D27]/25 via-amber-400/20 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
+          style={{
+            transform: "translate3d(calc(var(--ratio-x, 0) * 30px), calc(var(--ratio-y, 0) * 30px), 0)",
+          }}
+        />
         
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 w-full">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center">
             
             {/* Left Column: Fixed Headline & Subtitle */}

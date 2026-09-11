@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   ArrowRight,
   Phone,
@@ -11,16 +11,136 @@ import eDrishtiLiteImg from "../../../assets/portfolio/e_Drishtilite_P_I.png";
 import { AnimatedCounter } from "../../../components/common/AnimatedCounter";
 
 export const EDrishtiLiteHero = () => {
+  const heroRef = useRef(null);
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
+  // Performance-optimized direct DOM mouse tracking (Zero React re-renders for smooth 120fps)
+  const handleMouseMove = (e) => {
+    if (!heroRef.current) return;
+    const rect = heroRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const ratioX = ((x / rect.width) - 0.5) * 2;
+    const ratioY = ((y / rect.height) - 0.5) * 2;
+
+    heroRef.current.style.setProperty("--mouse-x", `${x}px`);
+    heroRef.current.style.setProperty("--mouse-y", `${y}px`);
+    heroRef.current.style.setProperty("--ratio-x", ratioX.toFixed(3));
+    heroRef.current.style.setProperty("--ratio-y", ratioY.toFixed(3));
+  };
+
+  const handleMouseEnter = () => {
+    if (!heroRef.current) return;
+    heroRef.current.style.setProperty("--mouse-opacity", "1");
+  };
+
+  const handleMouseLeave = () => {
+    if (!heroRef.current) return;
+    heroRef.current.style.setProperty("--mouse-opacity", "0");
+    heroRef.current.style.setProperty("--ratio-x", "0");
+    heroRef.current.style.setProperty("--ratio-y", "0");
+  };
+
   return (
-    <section className="relative overflow-hidden pt-10 pb-20 sm:pt-16 sm:pb-28 bg-[#F4F8FD] text-slate-900 select-none border-b border-sky-100">
-      {/* Background Radial Glow Meshes */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-indigo-400/20 via-purple-300/10 to-transparent rounded-full blur-[140px] pointer-events-none -z-0" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-sky-400/15 via-cyan-300/10 to-transparent rounded-full blur-[140px] pointer-events-none -z-0" />
-      
-      {/* Crisp Subtle Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#6366f10a_1px,transparent_1px),linear-gradient(to_bottom,#6366f10a_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none -z-0" />
+    <section
+      ref={heroRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative overflow-hidden pt-10 pb-20 sm:pt-16 sm:pb-28 bg-[#F4F8FD] text-slate-900 select-none border-b border-purple-100 transition-colors duration-500"
+      style={{
+        "--mouse-x": "50%",
+        "--mouse-y": "40%",
+        "--mouse-opacity": "0",
+        "--ratio-x": "0",
+        "--ratio-y": "0",
+      }}
+    >
+      {/* 1. Base Subtle Geometric Grid Overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#6366f10f_1px,transparent_1px),linear-gradient(to_bottom,#6366f10f_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none -z-0" />
+
+      {/* 2. Full Background Atmospheric Darkening Wash on Hover */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.06]"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+        }}
+      />
+
+      {/* 3. Dark Outer Vignette */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+          background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 40%), transparent 40%, rgba(11, 19, 43, 0.14) 100%)",
+        }}
+      />
+
+      {/* 4. Bold Dark Grid Lines (Revealed under cursor on hover) */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-300 -z-0 bg-[linear-gradient(to_right,#0F172A_1.5px,transparent_1.5px),linear-gradient(to_bottom,#0F172A_1.5px,transparent_1.5px)] bg-[size:36px_36px]"
+        style={{
+          opacity: "calc(var(--mouse-opacity, 0) * 0.45)",
+          WebkitMaskImage: "radial-gradient(550px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), black 15%, transparent 80%)",
+          maskImage: "radial-gradient(550px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), black 15%, transparent 80%)",
+        }}
+      />
+
+      {/* 5. Deep Dark Shadow Halo + Vivid Purple/Indigo/Sky Spotlight Core */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+          background: `
+            radial-gradient(320px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(147, 51, 234, 0.28) 0%, rgba(2, 132, 199, 0.22) 45%, transparent 80%),
+            radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(15, 23, 42, 0.22) 0%, rgba(30, 41, 59, 0.14) 50%, transparent 80%)
+          `,
+        }}
+      />
+
+      {/* 6. Parallax Background Deep Mesh Glows */}
+      <div
+        className="absolute top-0 right-0 w-[650px] h-[650px] bg-gradient-to-br from-purple-500/25 via-indigo-400/20 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * -35px), calc(var(--ratio-y, 0) * -35px), 0)",
+        }}
+      />
+      <div
+        className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-sky-500/20 via-cyan-400/15 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * 30px), calc(var(--ratio-y, 0) * 30px), 0)",
+        }}
+      />
+
+      {/* 7. Interactive Background Floating Tech Accents */}
+      <div
+        className="absolute top-[16%] left-[8%] text-purple-500/40 pointer-events-none -z-0 transition-transform duration-700 ease-out hidden md:block"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * -25px), calc(var(--ratio-y, 0) * -25px), 0)",
+        }}
+      >
+        <div className="w-8 h-8 rounded-full border border-purple-400/40 flex items-center justify-center">
+          <span className="w-2 h-2 rounded-full bg-purple-500/80 animate-ping" />
+        </div>
+      </div>
+
+      <div
+        className="absolute bottom-[20%] left-[34%] text-sky-600/30 pointer-events-none -z-0 transition-transform duration-700 ease-out hidden md:block"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * 30px), calc(var(--ratio-y, 0) * 30px), 0)",
+        }}
+      >
+        <span className="text-2xl font-light select-none">+</span>
+      </div>
+
+      <div
+        className="absolute top-[26%] right-[22%] text-indigo-600/35 pointer-events-none -z-0 transition-transform duration-700 ease-out hidden md:block"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * -30px), calc(var(--ratio-y, 0) * -30px), 0)",
+        }}
+      >
+        <span className="text-3xl font-light select-none">+</span>
+      </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 w-full">
         
@@ -30,6 +150,12 @@ export const EDrishtiLiteHero = () => {
           {/* Left Column: Headlines & Action CTAs */}
           <div className="lg:col-span-6 space-y-6 text-left">
             
+            {/* Edition Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/80 border border-purple-300/80 text-purple-900 text-xs font-black uppercase tracking-wider shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
+              Compact Edition • Modules Provided As Per Your Need
+            </div>
+
             {/* Master Headline */}
             <h1 className="text-4xl sm:text-6xl font-black text-[#0B132B] tracking-tight leading-[1.10]">
               e_Drishti Lite <br />
@@ -40,7 +166,7 @@ export const EDrishtiLiteHero = () => {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-              Ultra-lightweight eye care clinic solution for fast patient consults, diagnostic device connectivity, optical inventory tracking, and automated prescription printing.
+              The agile, compact edition of our flagship e_Drishti platform. Designed for eye clinics, practitioners, and optical stores—we provide tailored modules strictly according to your needs with zero enterprise bloat and 100% plug-and-play scalability.
             </p>
 
             {/* Action Buttons */}

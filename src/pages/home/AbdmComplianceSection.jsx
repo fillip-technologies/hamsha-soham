@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { Activity, CheckCircle2, Cloud, FileText, QrCode, ShieldCheck } from "lucide-react";
 import ayushmanLogo from "../../assets/aysuhman-bharat-removebg-preview.png";
 import nhaLogo from "../../assets/nha.png";
 
 export const AbdmComplianceSection = () => {
-  const [hoverPosition, setHoverPosition] = useState({ x: 50, y: 50, active: false });
+  const sectionRef = useRef(null);
 
   const coversList = [
     "Instant ABHA Health ID Generation & Aadhaar Verification",
@@ -23,25 +23,46 @@ export const AbdmComplianceSection = () => {
     { Icon: Activity, className: "top-[46%] right-[4%]", delay: "1.8s" },
   ];
 
-  const handleMouseMove = (event) => {
-    const bounds = event.currentTarget.getBoundingClientRect();
+  // Performance-optimized direct DOM mouse tracking (Zero React re-renders for smooth 120fps)
+  const handleMouseMove = (e) => {
+    if (!sectionRef.current) return;
+    const rect = sectionRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const ratioX = ((x / rect.width) - 0.5) * 2;
+    const ratioY = ((y / rect.height) - 0.5) * 2;
 
-    setHoverPosition({
-      x: ((event.clientX - bounds.left) / bounds.width) * 100,
-      y: ((event.clientY - bounds.top) / bounds.height) * 100,
-      active: true,
-    });
+    sectionRef.current.style.setProperty("--mouse-x", `${x}px`);
+    sectionRef.current.style.setProperty("--mouse-y", `${y}px`);
+    sectionRef.current.style.setProperty("--ratio-x", ratioX.toFixed(3));
+    sectionRef.current.style.setProperty("--ratio-y", ratioY.toFixed(3));
+  };
+
+  const handleMouseEnter = () => {
+    if (!sectionRef.current) return;
+    sectionRef.current.style.setProperty("--mouse-opacity", "1");
+  };
+
+  const handleMouseLeave = () => {
+    if (!sectionRef.current) return;
+    sectionRef.current.style.setProperty("--mouse-opacity", "0");
+    sectionRef.current.style.setProperty("--ratio-x", "0");
+    sectionRef.current.style.setProperty("--ratio-y", "0");
   };
 
   return (
     <section
-      className="abdm-interactive-section group/abdm relative bg-white py-16 sm:py-20 border-b border-slate-200/80 select-none overflow-hidden"
+      ref={sectionRef}
       onMouseMove={handleMouseMove}
-      onMouseLeave={() => setHoverPosition((position) => ({ ...position, active: false }))}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="abdm-interactive-section group/abdm relative bg-[#F8FAFD] py-16 sm:py-20 border-b border-slate-200/80 select-none overflow-hidden transition-colors duration-500"
       style={{
-        "--abdm-hover-x": `${hoverPosition.x}%`,
-        "--abdm-hover-y": `${hoverPosition.y}%`,
-        "--abdm-hover-opacity": hoverPosition.active ? 1 : 0,
+        "--mouse-x": "50%",
+        "--mouse-y": "50%",
+        "--mouse-opacity": "0",
+        "--ratio-x": "0",
+        "--ratio-y": "0",
       }}
     >
       <style>
@@ -125,22 +146,6 @@ export const AbdmComplianceSection = () => {
             pointer-events: none;
           }
 
-          .abdm-cursor-glow {
-            background:
-              radial-gradient(circle at var(--abdm-hover-x) var(--abdm-hover-y), rgba(14, 165, 233, 0.18), rgba(34, 197, 94, 0.08) 16%, transparent 34%),
-              radial-gradient(circle at var(--abdm-hover-x) var(--abdm-hover-y), rgba(255, 77, 39, 0.10), transparent 18%);
-            opacity: var(--abdm-hover-opacity);
-            transition: opacity 220ms ease;
-          }
-
-          .abdm-cursor-ring {
-            left: var(--abdm-hover-x);
-            top: var(--abdm-hover-y);
-            opacity: var(--abdm-hover-opacity);
-            transform: translate(-50%, -50%);
-            transition: opacity 180ms ease;
-          }
-
           @media (prefers-reduced-motion: reduce) {
             .abdm-network-line,
             .abdm-floating-icon,
@@ -148,9 +153,7 @@ export const AbdmComplianceSection = () => {
             .abdm-card-enter,
             .abdm-content-enter,
             .abdm-check-item,
-            .abdm-cert-card::after,
-            .abdm-cursor-glow,
-            .abdm-cursor-ring {
+            .abdm-cert-card::after {
               animation: none !important;
               opacity: 0 !important;
             }
@@ -158,10 +161,56 @@ export const AbdmComplianceSection = () => {
         `}
       </style>
 
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,77,39,0.055),transparent_28%),radial-gradient(circle_at_82%_42%,rgba(14,165,233,0.075),transparent_30%)] abdm-drift-bg" />
-        <div className="abdm-cursor-glow absolute inset-0" />
-        <div className="abdm-cursor-ring absolute h-28 w-28 rounded-full border border-sky-300/40 bg-white/10 shadow-[0_0_45px_rgba(14,165,233,0.18)] backdrop-blur-[1px]" />
+      {/* 1. Full Background Atmospheric Darkening Wash on Hover */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.06]"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+        }}
+      />
+
+      {/* 2. Dark Outer Vignette */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+          background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), transparent 40%, rgba(11, 19, 43, 0.14) 100%)",
+        }}
+      />
+
+      {/* 3. Deep Dark Shadow Halo + Vivid Flame/Cyan Spotlight Core */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+          background: `
+            radial-gradient(320px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 77, 39, 0.28) 0%, rgba(14, 165, 233, 0.24) 45%, transparent 80%),
+            radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(15, 23, 42, 0.22) 0%, rgba(30, 41, 59, 0.14) 50%, transparent 80%)
+          `,
+        }}
+      />
+
+      {/* 6. Parallax Background Deep Mesh Glows */}
+      <div
+        className="absolute top-0 right-0 w-[650px] h-[650px] bg-gradient-to-br from-indigo-500/25 via-sky-400/20 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * -35px), calc(var(--ratio-y, 0) * -35px), 0)",
+        }}
+      />
+      <div
+        className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-[#FF4D27]/25 via-emerald-400/20 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * 30px), calc(var(--ratio-y, 0) * 30px), 0)",
+        }}
+      />
+
+      {/* 7. Ambient Decorative Network & Floating Icons */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-transform duration-700 ease-out"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * -12px), calc(var(--ratio-y, 0) * -12px), 0)",
+        }}
+      >
         <svg
           className="absolute inset-0 h-full w-full opacity-70"
           viewBox="0 0 1440 620"

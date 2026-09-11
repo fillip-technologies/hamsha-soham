@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   ArrowRight,
   Phone,
 } from "lucide-react";
 import heroDashboardImg from "../../assets/Hamsa-soham-hero.png";
 import { AnimatedCounter } from "../../components/common/AnimatedCounter";
+import { SarvamGenerativeCanvas } from "./SarvamGenerativeCanvas";
 
 export const HeroSection = () => {
+  const heroRef = useRef(null);
 
   // Clean URL hash if any exists
   useEffect(() => {
@@ -16,21 +18,23 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-28 bg-[#F6F9FD] text-slate-900 select-none border-b border-slate-200/80">
+    <section
+      ref={heroRef}
+      className="relative overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-28 bg-[#F8FAFD] text-slate-900 select-none border-b border-slate-200/80"
+    >
       
-      {/* Background Radial Glow Meshes */}
-      <div className="absolute top-0 right-0 w-[650px] h-[650px] bg-gradient-to-br from-indigo-400/15 via-blue-300/10 to-transparent rounded-full blur-[140px] pointer-events-none -z-0" />
-      <div className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-[#FF4D27]/10 via-amber-300/10 to-transparent rounded-full blur-[140px] pointer-events-none -z-0" />
-      
-      {/* Subtle Geometric Grid Lines */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#0284c70a_1px,transparent_1px),linear-gradient(to_bottom,#0284c70a_1px,transparent_1px)] bg-[size:44px_44px] pointer-events-none -z-0" />
+      {/* 1. Sarvam AI Modular Lattice Grid (Base) & Magnetic Moiré Mandala Warp on Hover */}
+      <SarvamGenerativeCanvas
+        containerRef={heroRef}
+        className="opacity-100"
+      />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 w-full">
         
         {/* 2-Column Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Column: Headline, Description & CTAs (5-6 Columns) */}
+          {/* Left Column: Headline, Description & CTAs (Floating cleanly over the background pattern) */}
           <div className="lg:col-span-6 space-y-6 text-left">
             
             {/* Master Headline */}
@@ -95,27 +99,16 @@ export const HeroSection = () => {
               </a>
             </div>
 
-
-
           </div>
 
           {/* Right Column: Desktop Monitor Frame & Stand Showcase */}
-          <div className="lg:col-span-6 relative flex flex-col items-center justify-center group">
+          <div className="lg:col-span-6 relative flex flex-col items-center justify-center group w-full">
             
             {/* Ambient Background Glow Behind Monitor */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 via-sky-400/15 to-[#FF4D27]/15 rounded-3xl blur-3xl -z-10 transform scale-105" />
-
-            {/* Decorative Background Petal/Leaf Accents (Matching Reference Mockup) */}
-            {/* Top Right Petals */}
-            <div className="absolute -top-6 -right-4 sm:-top-8 sm:-right-6 w-16 sm:w-20 h-24 sm:h-28 bg-sky-200/80 rounded-[40px_0_40px_0] transform rotate-12 pointer-events-none -z-10 shadow-xs" />
-            <div className="absolute top-10 -right-6 sm:top-14 sm:-right-8 w-14 sm:w-16 h-20 sm:h-24 bg-amber-300/80 rounded-[0_35px_0_35px] transform -rotate-12 pointer-events-none -z-10 shadow-xs" />
-
-            {/* Bottom Left Petals */}
-            <div className="absolute bottom-16 -left-6 sm:bottom-20 sm:-left-8 w-16 sm:w-20 h-22 sm:h-28 bg-sky-200/80 rounded-[0_40px_0_40px] transform -rotate-12 pointer-events-none -z-10 shadow-xs" />
-            <div className="absolute -bottom-2 -left-3 sm:-bottom-4 sm:-left-5 w-12 sm:w-16 h-16 sm:h-20 bg-white border border-slate-200 rounded-[35px_0_35px_0] transform rotate-45 pointer-events-none -z-10 shadow-sm" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-sky-400/15 via-blue-500/10 to-[#FF4D27]/10 rounded-3xl blur-3xl -z-10 transform scale-105 pointer-events-none" />
 
             {/* Monitor Screen Frame */}
-            <div className="w-full relative rounded-2xl sm:rounded-3xl bg-white p-2.5 sm:p-3.5 border-2 sm:border-[3px] border-slate-200/90 shadow-2xl transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-2xl">
+            <div className="w-full relative rounded-2xl sm:rounded-3xl bg-white p-2.5 sm:p-3.5 border-2 border-slate-200/90 shadow-2xl transition-all duration-500 group-hover:-translate-y-1">
               
               {/* Screen Inner Bezel */}
               <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-slate-950 border border-slate-200/60 shadow-inner">

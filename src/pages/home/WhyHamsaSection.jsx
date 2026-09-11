@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   HeartPulse,
@@ -22,6 +22,35 @@ import {
 } from "lucide-react";
 
 export const WhyHamsaSection = () => {
+  const sectionRef = useRef(null);
+
+  // Performance-optimized direct DOM mouse tracking (Zero React re-renders for smooth 120fps)
+  const handleMouseMove = (e) => {
+    if (!sectionRef.current) return;
+    const rect = sectionRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const ratioX = ((x / rect.width) - 0.5) * 2;
+    const ratioY = ((y / rect.height) - 0.5) * 2;
+
+    sectionRef.current.style.setProperty("--mouse-x", `${x}px`);
+    sectionRef.current.style.setProperty("--mouse-y", `${y}px`);
+    sectionRef.current.style.setProperty("--ratio-x", ratioX.toFixed(3));
+    sectionRef.current.style.setProperty("--ratio-y", ratioY.toFixed(3));
+  };
+
+  const handleMouseEnter = () => {
+    if (!sectionRef.current) return;
+    sectionRef.current.style.setProperty("--mouse-opacity", "1");
+  };
+
+  const handleMouseLeave = () => {
+    if (!sectionRef.current) return;
+    sectionRef.current.style.setProperty("--mouse-opacity", "0");
+    sectionRef.current.style.setProperty("--ratio-x", "0");
+    sectionRef.current.style.setProperty("--ratio-y", "0");
+  };
+
   const cards = [
     {
       id: "healthcare-focused",
@@ -181,10 +210,62 @@ export const WhyHamsaSection = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#F8FAFC] relative overflow-hidden text-slate-900 select-none border-t border-slate-200/80">
-      {/* Background Decorative Mesh Glows */}
-      <div className="absolute top-1/4 -left-40 w-96 h-96 bg-[#FF4D27]/8 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 -right-40 w-96 h-96 bg-blue-500/8 rounded-full blur-[140px] pointer-events-none" />
+    <section
+      ref={sectionRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="py-20 sm:py-28 bg-[#F8FAFC] relative overflow-hidden text-slate-900 select-none border-t border-slate-200/80 transition-colors duration-500"
+      style={{
+        "--mouse-x": "50%",
+        "--mouse-y": "50%",
+        "--mouse-opacity": "0",
+        "--ratio-x": "0",
+        "--ratio-y": "0",
+      }}
+    >
+      {/* 1. Full Background Atmospheric Darkening Wash on Hover */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.06]"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+        }}
+      />
+
+      {/* 2. Dark Outer Vignette */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+          background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), transparent 40%, rgba(11, 19, 43, 0.14) 100%)",
+        }}
+      />
+
+      {/* 3. Deep Dark Shadow Halo + Vivid Flame/Blue Spotlight Core */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+          background: `
+            radial-gradient(320px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 77, 39, 0.28) 0%, rgba(13, 98, 255, 0.24) 45%, transparent 80%),
+            radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(15, 23, 42, 0.22) 0%, rgba(30, 41, 59, 0.14) 50%, transparent 80%)
+          `,
+        }}
+      />
+
+      {/* 4. Parallax Background Deep Mesh Glows */}
+      <div
+        className="absolute top-1/4 -left-40 w-[600px] h-[600px] bg-[#FF4D27]/20 rounded-full blur-[140px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * 35px), calc(var(--ratio-y, 0) * 35px), 0)",
+        }}
+      />
+      <div
+        className="absolute bottom-10 -right-40 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[140px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * -35px), calc(var(--ratio-y, 0) * -35px), 0)",
+        }}
+      />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         

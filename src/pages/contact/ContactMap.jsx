@@ -5,7 +5,7 @@ export const ContactMap = () => {
   return (
     <section className="py-16 sm:py-24 bg-white border-t border-slate-200/80 select-none">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 space-y-12">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3">
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight uppercase">
@@ -18,12 +18,12 @@ export const ContactMap = () => {
 
         {/* Map Container + Location Details Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          
+
           {/* Interactive Google Map Frame (8 columns) */}
           <div className="lg:col-span-8 rounded-3xl overflow-hidden border border-slate-200/90 shadow-xl min-h-[380px] sm:min-h-[450px] relative group">
             <iframe
               title="Hamsa Soham Healthcare Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.9902896346493!2d85.08203807485073!3d25.605238915053736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed578d3e643005%3A0x686cc3415c2d8ab4!2shamsa%20Soham%20Healthcare%20Pvt.%20Ltd.%20Rajendra%20Palace%20Bailey%20Road!5e0!3m2!1sen!2sin!4v1788765431182!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.8973575541645!2d85.0735369751778!3d25.608326777448635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57743e6b75f9%3A0x81e3cf6a28c29649!2sMayank%20Manan%20Apartment!5e0!3m2!1sen!2sin!4v1789123083942!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: "380px" }}
@@ -51,7 +51,7 @@ export const ContactMap = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#FF4D27] shrink-0 mt-0.5" />
                   <div className="text-sm text-slate-700 leading-relaxed font-normal">
-                    Hamsa Soham Healthcare Pvt. Ltd., Rajendra Palace, Bailey Road, Patna, Bihar, India.
+                    Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna, Bihar – 800025, India
                   </div>
                 </div>
 

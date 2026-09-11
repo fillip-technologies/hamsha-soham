@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { EDrishtiLiteHero } from "./EDrishtiLiteHero";
+import { EDrishtiLiteModularSection } from "./EDrishtiLiteModularSection";
 import { EDrishtiLiteFeatures } from "./EDrishtiLiteFeatures";
 import {
   Phone,
@@ -22,7 +23,10 @@ export const EDrishtiLitePage = () => {
       {/* 1. Hero Section */}
       <EDrishtiLiteHero />
 
-      {/* 2. Clinic Features Section */}
+      {/* 2. Need-Based Modular Selection Section */}
+      <EDrishtiLiteModularSection />
+
+      {/* 3. Clinic Features Section */}
       <EDrishtiLiteFeatures />
 
       {/* 3. Comparison Matrix: Manual Worksheets vs e_Drishti Lite */}

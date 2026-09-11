@@ -223,7 +223,7 @@ export const MobileDrawer = ({ isOpen, onClose, onLogin }) => {
             href="https://apps.hamsasoham.com/portal/index.xhtml"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-3.5 rounded-full bg-[#0B132B] hover:bg-slate-800 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer"
+            className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#FF4D27] to-[#FF6B4A] hover:from-[#E03A14] hover:to-[#FF4D27] text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#FF4D27]/25 transition-all cursor-pointer"
           >
             <span>Request Live Demo</span>
             <ArrowRight className="w-4 h-4" />

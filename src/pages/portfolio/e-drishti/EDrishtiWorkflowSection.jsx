@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   Layers,
   FileText,
@@ -15,6 +15,35 @@ import {
 } from "lucide-react";
 
 export const EDrishtiWorkflowSection = () => {
+  const sectionRef = useRef(null);
+
+  // Performance-optimized direct DOM mouse tracking (Zero React re-renders for smooth 120fps)
+  const handleMouseMove = (e) => {
+    if (!sectionRef.current) return;
+    const rect = sectionRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const ratioX = ((x / rect.width) - 0.5) * 2;
+    const ratioY = ((y / rect.height) - 0.5) * 2;
+
+    sectionRef.current.style.setProperty("--mouse-x", `${x}px`);
+    sectionRef.current.style.setProperty("--mouse-y", `${y}px`);
+    sectionRef.current.style.setProperty("--ratio-x", ratioX.toFixed(3));
+    sectionRef.current.style.setProperty("--ratio-y", ratioY.toFixed(3));
+  };
+
+  const handleMouseEnter = () => {
+    if (!sectionRef.current) return;
+    sectionRef.current.style.setProperty("--mouse-opacity", "1");
+  };
+
+  const handleMouseLeave = () => {
+    if (!sectionRef.current) return;
+    sectionRef.current.style.setProperty("--mouse-opacity", "0");
+    sectionRef.current.style.setProperty("--ratio-x", "0");
+    sectionRef.current.style.setProperty("--ratio-y", "0");
+  };
+
   const steps = [
     { num: "01", label: "Smart OPD Token", desc: "ABHA QR & Demographics", icon: QrCode },
     { num: "02", label: "Auto-Refractor Sync", desc: "NIDEK / Topcon Interface", icon: Cpu },
@@ -26,21 +55,66 @@ export const EDrishtiWorkflowSection = () => {
   return (
     <section
       id="registration-inventory-management"
-      className="py-20 sm:py-28 bg-[#FAFCFF] border-t border-slate-200/80 scroll-mt-24 relative overflow-hidden select-none"
+      ref={sectionRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="py-20 sm:py-28 bg-[#FAFCFF] border-t border-slate-200/80 scroll-mt-24 relative overflow-hidden select-none transition-colors duration-500"
+      style={{
+        "--mouse-x": "50%",
+        "--mouse-y": "50%",
+        "--mouse-opacity": "0",
+        "--ratio-x": "0",
+        "--ratio-y": "0",
+      }}
     >
-      {/* Ambient Mesh Background */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-cyan-400/10 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-0 right-10 w-[500px] h-[500px] bg-sky-400/10 rounded-full blur-[160px] pointer-events-none" />
+      {/* 1. Full Background Atmospheric Darkening Wash on Hover */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.08]"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+        }}
+      />
+
+      {/* 2. Dark Outer Vignette */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+          background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), transparent 35%, rgba(11, 19, 43, 0.18) 100%)",
+        }}
+      />
+
+      {/* 3. Deep Dark Shadow Halo + Vivid Sky/Cyan Spotlight Core */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
+        style={{
+          opacity: "var(--mouse-opacity, 0)",
+          background: `
+            radial-gradient(350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(2, 132, 199, 0.32) 0%, rgba(6, 182, 212, 0.22) 45%, transparent 80%),
+            radial-gradient(700px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(15, 23, 42, 0.24) 0%, rgba(30, 41, 59, 0.16) 50%, transparent 80%)
+          `,
+        }}
+      />
+
+      {/* 4. Parallax Background Deep Mesh Glows */}
+      <div
+        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-cyan-400/20 rounded-full blur-[160px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * 35px), calc(var(--ratio-y, 0) * 35px), 0)",
+        }}
+      />
+      <div
+        className="absolute bottom-0 right-10 w-[500px] h-[500px] bg-sky-400/20 rounded-full blur-[160px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
+        style={{
+          transform: "translate3d(calc(var(--ratio-x, 0) * -35px), calc(var(--ratio-y, 0) * -35px), 0)",
+        }}
+      />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-200/80 text-cyan-800 text-xs font-extrabold uppercase tracking-widest">
-            <Layers className="w-3.5 h-3.5 text-cyan-600" />
-            End-to-End Hospital Operations
-          </div>
-
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight leading-[1.12]">
             Registration to{" "}
             <span className="bg-gradient-to-r from-cyan-600 via-sky-500 to-[#FF4D27] bg-clip-text text-transparent">

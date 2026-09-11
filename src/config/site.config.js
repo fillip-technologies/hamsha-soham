@@ -16,7 +16,6 @@ export const siteConfig = {
     phonePrimary: "+91 9153998385",
     phoneSecondary: "+91 8789287388",
     whatsapp: "+91 9153998385",
-    address: "Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna-14, Bihar (IN)",
-    regOffice: "Rental Flat No. 119, Lohiya Nagar, Kankarbagh, Patna-20, Bihar (IN)",
+    address: "Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna, Bihar – 800025, India",
   },
 };

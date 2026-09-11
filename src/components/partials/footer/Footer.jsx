@@ -5,7 +5,6 @@ import {
   Mail,
   MessageSquare,
   MapPin,
-  Building,
   ShieldCheck,
   ExternalLink,
   Lock,
@@ -161,27 +160,15 @@ export const Footer = () => {
         {/* Detailed Address & Contact Row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-slate-700/60 text-left items-start">
           
-          {/* Corporate & Registered Office Cards */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-200">
-            {/* Corporate Address */}
+          {/* Corporate Office Card */}
+          <div className="lg:col-span-8 text-xs text-slate-200">
             <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
               <div className="text-[11px] font-extrabold text-white flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-[#FF4D27] shrink-0" />
                 <span>Corporate Office:</span>
               </div>
               <p className="text-slate-300 text-[11px] leading-relaxed">
-                Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna-14, Bihar (IN)
-              </p>
-            </div>
-
-            {/* Registered Office */}
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
-              <div className="text-[11px] font-extrabold text-white flex items-center gap-1.5">
-                <Building className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span>Registered Office:</span>
-              </div>
-              <p className="text-slate-300 text-[11px] leading-relaxed">
-                Rental Flat No. 119, Lohiya Nagar, Kankarbagh, Patna-20, Bihar (IN)
+                Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna, Bihar – 800025, India
               </p>
             </div>
           </div>

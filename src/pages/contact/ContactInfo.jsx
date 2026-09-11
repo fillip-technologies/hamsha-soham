@@ -1,11 +1,11 @@
 import React from "react";
-import { MapPin, Phone, Mail, MessageCircle, Building, ShieldCheck } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle, ShieldCheck } from "lucide-react";
 
 export const ContactInfo = () => {
   return (
     <div className="space-y-6 text-left select-none">
       
-      {/* Corporate & Registered Address Card */}
+      {/* Corporate Address Card */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-md space-y-5">
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-2xl bg-orange-50 text-[#FF4D27] flex items-center justify-center border border-orange-100 shrink-0">
@@ -24,18 +24,7 @@ export const ContactInfo = () => {
             <span>Address:</span>
           </div>
           <p className="text-xs text-slate-600 font-medium leading-relaxed pl-5">
-            Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna-14, Bihar (IN)
-          </p>
-        </div>
-
-        {/* Registered Office */}
-        <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1">
-          <div className="text-xs font-black text-[#0B132B] flex items-center gap-1.5">
-            <Building className="w-4 h-4 text-amber-500" />
-            <span>Reg. Office:</span>
-          </div>
-          <p className="text-xs text-slate-600 font-medium leading-relaxed pl-5">
-            Rental Flat No. 119, Lohiya Nagar, Kankarbagh, Patna-20, Bihar (IN)
+            Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna, Bihar – 800025, India
           </p>
         </div>
       </div>
