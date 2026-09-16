@@ -14,8 +14,14 @@ export const MobileDrawer = ({ isOpen, onClose, onLogin }) => {
   };
 
   return (
-    <div className="lg:hidden fixed inset-0 z-40 bg-slate-900/30 backdrop-blur-sm flex flex-col justify-between pt-20 animate-in fade-in duration-200">
-      <div className="bg-white border-t border-slate-200 p-6 space-y-5 max-h-[80vh] overflow-y-auto soft-card-shadow">
+    <div
+      onClick={onClose}
+      className="lg:hidden fixed inset-0 z-40 bg-slate-900/30 backdrop-blur-sm flex flex-col justify-start pt-16 sm:pt-20 animate-in fade-in duration-200"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="bg-white border-t border-slate-200 p-6 space-y-5 max-h-[80vh] overflow-y-auto soft-card-shadow"
+      >
         <div className="space-y-1">
           {navConfig.items.map((item) => {
             const isActive =
@@ -208,26 +214,28 @@ export const MobileDrawer = ({ isOpen, onClose, onLogin }) => {
           })}
         </div>
 
-        {/* Mobile Action Buttons: Login & Request Live Demo */}
+        {/* Mobile Action Buttons: Request Live Demo & Login */}
         <div className="pt-4 border-t border-slate-200 space-y-2.5">
           <a
             href="https://apps.hamsasoham.com/portal/index.xhtml"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-3 rounded-full border border-slate-200 hover:border-slate-300 bg-slate-50 hover:bg-slate-100 text-[#0B132B] font-bold text-sm flex items-center justify-center transition-all cursor-pointer"
-          >
-            <span>Login</span>
-          </a>
-
-          <a
-            href="https://apps.hamsasoham.com/portal/index.xhtml"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={onClose}
             className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#FF4D27] to-[#FF6B4A] hover:from-[#E03A14] hover:to-[#FF4D27] text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#FF4D27]/25 transition-all cursor-pointer"
           >
             <span>Request Live Demo</span>
             <ArrowRight className="w-4 h-4" />
           </a>
+
+          {/* <a
+            href="https://apps.hamsasoham.com/portal/index.xhtml"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="w-full py-3 rounded-full border border-slate-200 hover:border-slate-300 bg-slate-50 hover:bg-slate-100 text-[#0B132B] font-bold text-sm flex items-center justify-center transition-all cursor-pointer"
+          >
+            <span>Login</span>
+          </a> */}
         </div>
       </div>
     </div>

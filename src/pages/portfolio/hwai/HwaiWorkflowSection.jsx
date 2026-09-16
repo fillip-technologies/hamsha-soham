@@ -96,31 +96,21 @@ export const HwaiWorkflowSection = () => {
       {/* 1. Base Subtle Geometric Grid Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#d977060f_1px,transparent_1px),linear-gradient(to_bottom,#d977060f_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none -z-0" />
 
-      {/* 2. Full Background Atmospheric Darkening Wash on Hover */}
+      {/* 2. Soft Light Luminous Ambient Wash on Hover */}
       <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.08]"
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-gradient-to-b from-white/40 via-transparent to-amber-50/20"
         style={{
           opacity: "var(--mouse-opacity, 0)",
         }}
       />
 
-      {/* 3. Dark Outer Vignette */}
+      {/* 3. Soft Luminous Light Spotlight Follower (Clean Light Glow, Zero Dark Shadow/Vignette) */}
       <div
         className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
         style={{
           opacity: "var(--mouse-opacity, 0)",
-          background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), transparent 35%, rgba(11, 19, 43, 0.18) 100%)",
-        }}
-      />
-
-      {/* 4. Deep Dark Shadow Halo + Vivid Amber/Flame Spotlight Core */}
-      <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
-        style={{
-          opacity: "var(--mouse-opacity, 0)",
           background: `
-            radial-gradient(350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(217, 119, 6, 0.32) 0%, rgba(255, 77, 39, 0.22) 45%, transparent 80%),
-            radial-gradient(700px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(15, 23, 42, 0.24) 0%, rgba(30, 41, 59, 0.16) 50%, transparent 80%)
+            radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(217, 119, 6, 0.12) 0%, rgba(245, 158, 11, 0.08) 35%, rgba(255, 77, 39, 0.05) 60%, transparent 80%)
           `,
         }}
       />

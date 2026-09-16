@@ -94,46 +94,22 @@ export const EDrishtiModuleStructure = () => {
         "--ratio-y": "0",
       }}
     >
-      {/* 1. Full Background Atmospheric Darkening Wash on Hover */}
+      {/* 1. Single Color Soft Ambient Wash on Hover Only */}
       <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.08]"
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-sky-500/[0.03]"
         style={{
           opacity: "var(--mouse-opacity, 0)",
         }}
       />
 
-      {/* 2. Dark Outer Vignette */}
+      {/* 2. Single Color Luminous Spotlight (Hover Only) */}
       <div
         className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
         style={{
           opacity: "var(--mouse-opacity, 0)",
-          background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), transparent 35%, rgba(11, 19, 43, 0.18) 100%)",
-        }}
-      />
-
-      {/* 5. Deep Dark Shadow Halo + Vivid Sky/Cyan Spotlight Core */}
-      <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
-        style={{
-          opacity: "var(--mouse-opacity, 0)",
           background: `
-            radial-gradient(350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(2, 132, 199, 0.32) 0%, rgba(6, 182, 212, 0.22) 45%, transparent 80%),
-            radial-gradient(700px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(15, 23, 42, 0.24) 0%, rgba(30, 41, 59, 0.16) 50%, transparent 80%)
+            radial-gradient(520px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(2, 132, 199, 0.14) 0%, rgba(2, 132, 199, 0.05) 50%, transparent 80%)
           `,
-        }}
-      />
-
-      {/* 6. Parallax Background Deep Mesh Glows */}
-      <div
-        className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-sky-400/20 rounded-full blur-[140px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
-        style={{
-          transform: "translate3d(calc(var(--ratio-x, 0) * 35px), calc(var(--ratio-y, 0) * 35px), 0)",
-        }}
-      />
-      <div
-        className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-[140px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
-        style={{
-          transform: "translate3d(calc(var(--ratio-x, 0) * -35px), calc(var(--ratio-y, 0) * -35px), 0)",
         }}
       />
 

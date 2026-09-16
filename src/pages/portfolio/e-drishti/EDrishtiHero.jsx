@@ -58,60 +58,26 @@ export const EDrishtiHero = () => {
       {/* 1. Base Subtle Geometric Grid Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#0284c70f_1px,transparent_1px),linear-gradient(to_bottom,#0284c70f_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none -z-0" />
 
-      {/* 2. Full Background Atmospheric Darkening Wash on Hover */}
+      {/* 2. Single Color Soft Ambient Wash on Hover Only */}
       <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.06]"
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-sky-500/[0.03]"
         style={{
           opacity: "var(--mouse-opacity, 0)",
         }}
       />
 
-      {/* 3. Dark Outer Vignette */}
+      {/* 3. Single Color Luminous Spotlight (Hover Only) */}
       <div
         className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
         style={{
           opacity: "var(--mouse-opacity, 0)",
-          background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 40%), transparent 40%, rgba(11, 19, 43, 0.14) 100%)",
-        }}
-      />
-
-      {/* 4. Bold Dark Grid Lines (Revealed under cursor on hover) */}
-      <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-300 -z-0 bg-[linear-gradient(to_right,#0F172A_1.5px,transparent_1.5px),linear-gradient(to_bottom,#0F172A_1.5px,transparent_1.5px)] bg-[size:36px_36px]"
-        style={{
-          opacity: "calc(var(--mouse-opacity, 0) * 0.45)",
-          WebkitMaskImage: "radial-gradient(550px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), black 15%, transparent 80%)",
-          maskImage: "radial-gradient(550px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), black 15%, transparent 80%)",
-        }}
-      />
-
-      {/* 5. Deep Dark Shadow Halo + Vivid Sky/Cyan/Flame Spotlight Core */}
-      <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
-        style={{
-          opacity: "var(--mouse-opacity, 0)",
           background: `
-            radial-gradient(320px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(2, 132, 199, 0.28) 0%, rgba(255, 77, 39, 0.22) 45%, transparent 80%),
-            radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(15, 23, 42, 0.22) 0%, rgba(30, 41, 59, 0.14) 50%, transparent 80%)
+            radial-gradient(520px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(2, 132, 199, 0.14) 0%, rgba(2, 132, 199, 0.05) 50%, transparent 80%)
           `,
         }}
       />
 
-      {/* 6. Parallax Background Deep Mesh Glows */}
-      <div
-        className="absolute top-0 right-0 w-[650px] h-[650px] bg-gradient-to-br from-sky-500/25 via-cyan-400/20 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
-        style={{
-          transform: "translate3d(calc(var(--ratio-x, 0) * -35px), calc(var(--ratio-y, 0) * -35px), 0)",
-        }}
-      />
-      <div
-        className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-[#FF4D27]/20 via-amber-400/15 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
-        style={{
-          transform: "translate3d(calc(var(--ratio-x, 0) * 30px), calc(var(--ratio-y, 0) * 30px), 0)",
-        }}
-      />
-
-      {/* 7. Interactive Background Floating Tech Accents */}
+      {/* 4. Interactive Background Floating Tech Accents */}
       <div
         className="absolute top-[16%] left-[8%] text-sky-500/40 pointer-events-none -z-0 transition-transform duration-700 ease-out hidden md:block"
         style={{
@@ -124,7 +90,7 @@ export const EDrishtiHero = () => {
       </div>
 
       <div
-        className="absolute bottom-[20%] left-[34%] text-[#FF4D27]/30 pointer-events-none -z-0 transition-transform duration-700 ease-out hidden md:block"
+        className="absolute bottom-[20%] left-[34%] text-sky-500/30 pointer-events-none -z-0 transition-transform duration-700 ease-out hidden md:block"
         style={{
           transform: "translate3d(calc(var(--ratio-x, 0) * 30px), calc(var(--ratio-y, 0) * 30px), 0)",
         }}

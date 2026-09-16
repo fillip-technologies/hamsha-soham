@@ -161,46 +161,22 @@ export const AbdmComplianceSection = () => {
         `}
       </style>
 
-      {/* 1. Full Background Atmospheric Darkening Wash on Hover */}
+      {/* 1. Single Color Soft Ambient Wash on Hover Only */}
       <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.06]"
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-sky-500/[0.03]"
         style={{
           opacity: "var(--mouse-opacity, 0)",
         }}
       />
 
-      {/* 2. Dark Outer Vignette */}
+      {/* 2. Single Color Luminous Spotlight (Hover Only) */}
       <div
         className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
         style={{
           opacity: "var(--mouse-opacity, 0)",
-          background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), transparent 40%, rgba(11, 19, 43, 0.14) 100%)",
-        }}
-      />
-
-      {/* 3. Deep Dark Shadow Halo + Vivid Flame/Cyan Spotlight Core */}
-      <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
-        style={{
-          opacity: "var(--mouse-opacity, 0)",
           background: `
-            radial-gradient(320px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 77, 39, 0.28) 0%, rgba(14, 165, 233, 0.24) 45%, transparent 80%),
-            radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(15, 23, 42, 0.22) 0%, rgba(30, 41, 59, 0.14) 50%, transparent 80%)
+            radial-gradient(520px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(2, 132, 199, 0.14) 0%, rgba(14, 165, 233, 0.05) 50%, transparent 80%)
           `,
-        }}
-      />
-
-      {/* 6. Parallax Background Deep Mesh Glows */}
-      <div
-        className="absolute top-0 right-0 w-[650px] h-[650px] bg-gradient-to-br from-indigo-500/25 via-sky-400/20 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
-        style={{
-          transform: "translate3d(calc(var(--ratio-x, 0) * -35px), calc(var(--ratio-y, 0) * -35px), 0)",
-        }}
-      />
-      <div
-        className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-[#FF4D27]/25 via-emerald-400/20 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
-        style={{
-          transform: "translate3d(calc(var(--ratio-x, 0) * 30px), calc(var(--ratio-y, 0) * 30px), 0)",
         }}
       />
 
@@ -219,8 +195,8 @@ export const AbdmComplianceSection = () => {
           preserveAspectRatio="none"
         >
           <path className="abdm-network-line" d="M75 156C242 96 360 238 505 184C650 130 718 60 905 126C1092 192 1178 108 1355 158" stroke="#0EA5E9" strokeWidth="1.5" />
-          <path className="abdm-network-line" d="M18 446C190 352 320 454 480 386C640 318 730 470 884 394C1038 318 1172 422 1420 326" stroke="#22C55E" strokeWidth="1.5" style={{ animationDelay: "1.4s" }} />
-          <path className="abdm-network-line" d="M220 295C335 218 475 276 596 252C718 228 814 170 947 230C1080 290 1200 262 1310 204" stroke="#FF4D27" strokeWidth="1.3" style={{ animationDelay: "2.2s" }} />
+          <path className="abdm-network-line" d="M18 446C190 352 320 454 480 386C640 318 730 470 884 394C1038 318 1172 422 1420 326" stroke="#0EA5E9" strokeWidth="1.5" style={{ animationDelay: "1.4s" }} />
+          <path className="abdm-network-line" d="M220 295C335 218 475 276 596 252C718 228 814 170 947 230C1080 290 1200 262 1310 204" stroke="#0EA5E9" strokeWidth="1.3" style={{ animationDelay: "2.2s" }} />
           {[
             [75, 156],
             [505, 184],
@@ -230,8 +206,8 @@ export const AbdmComplianceSection = () => {
             [884, 394],
             [1310, 204],
             [596, 252],
-          ].map(([cx, cy], idx) => (
-            <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r={idx % 2 ? "4" : "5"} fill={idx % 3 === 0 ? "#0EA5E9" : "#22C55E"} opacity="0.22" />
+          ].map(([cx, cy]) => (
+            <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="4" fill="#0EA5E9" opacity="0.22" />
           ))}
         </svg>
         {floatingIcons.map(({ Icon, className, delay }, idx) => (

@@ -58,41 +58,21 @@ export const EKshitizHero = () => {
       {/* 1. Base Subtle Geometric Grid Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ff4d270f_1px,transparent_1px),linear-gradient(to_bottom,#ff4d270f_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none -z-0" />
 
-      {/* 2. Full Background Atmospheric Darkening Wash on Hover */}
+      {/* 2. Soft Light Luminous Ambient Wash on Hover */}
       <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.06]"
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-gradient-to-b from-white/40 via-transparent to-orange-50/20"
         style={{
           opacity: "var(--mouse-opacity, 0)",
         }}
       />
 
-      {/* 3. Dark Outer Vignette */}
+      {/* 3. Soft Luminous Light Spotlight Follower (Clean Light Glow, Zero Dark Shadow/Vignette) */}
       <div
         className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
         style={{
           opacity: "var(--mouse-opacity, 0)",
-          background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 40%), transparent 40%, rgba(11, 19, 43, 0.14) 100%)",
-        }}
-      />
-
-      {/* 4. Bold Dark Grid Lines (Revealed under cursor on hover) */}
-      <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-300 -z-0 bg-[linear-gradient(to_right,#0F172A_1.5px,transparent_1.5px),linear-gradient(to_bottom,#0F172A_1.5px,transparent_1.5px)] bg-[size:36px_36px]"
-        style={{
-          opacity: "calc(var(--mouse-opacity, 0) * 0.45)",
-          WebkitMaskImage: "radial-gradient(550px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), black 15%, transparent 80%)",
-          maskImage: "radial-gradient(550px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), black 15%, transparent 80%)",
-        }}
-      />
-
-      {/* 5. Deep Dark Shadow Halo + Vivid Flame/Orange/Amber Spotlight Core */}
-      <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
-        style={{
-          opacity: "var(--mouse-opacity, 0)",
           background: `
-            radial-gradient(320px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(255, 77, 39, 0.30) 0%, rgba(245, 158, 11, 0.22) 45%, transparent 80%),
-            radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(15, 23, 42, 0.22) 0%, rgba(30, 41, 59, 0.14) 50%, transparent 80%)
+            radial-gradient(480px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(255, 77, 39, 0.12) 0%, rgba(245, 158, 11, 0.08) 35%, rgba(251, 191, 36, 0.05) 60%, transparent 80%)
           `,
         }}
       />

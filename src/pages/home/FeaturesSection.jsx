@@ -108,10 +108,10 @@ export const FeaturesSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[280vh] sm:h-[320vh] bg-gradient-to-br from-[#3B41C5] via-[#6366F1] to-[#F97316] select-none border-b border-white/10"
+      className="relative h-[220vh] sm:h-[250vh] select-none bg-gradient-to-br from-[#3B41C5] via-[#6366F1] to-[#F97316]"
     >
       {/* Sticky Fixed Viewport During Scroll */}
-      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
+      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#3B41C5] via-[#6366F1] to-[#F97316] border-b border-white/10">
         
         {/* Ambient Background Glows */}
         <div className="absolute top-1/4 left-1/6 w-[550px] h-[550px] bg-white/10 rounded-full blur-[140px] pointer-events-none -z-0" />
@@ -162,11 +162,11 @@ export const FeaturesSection = () => {
                   if (idx === 0) {
                     arrivalProgress = 1; // Card 0 is anchored
                   } else if (idx === 1) {
-                    arrivalProgress = Math.min(Math.max((scrollProgress - 0.05) / 0.27, 0), 1);
+                    arrivalProgress = Math.min(Math.max((scrollProgress - 0.05) / 0.28, 0), 1);
                   } else if (idx === 2) {
-                    arrivalProgress = Math.min(Math.max((scrollProgress - 0.33) / 0.29, 0), 1);
+                    arrivalProgress = Math.min(Math.max((scrollProgress - 0.35) / 0.28, 0), 1);
                   } else if (idx === 3) {
-                    arrivalProgress = Math.min(Math.max((scrollProgress - 0.63) / 0.29, 0), 1);
+                    arrivalProgress = Math.min(Math.max((scrollProgress - 0.65) / 0.28, 0), 1);
                   }
 
                   const isSelected = activeStep === idx;

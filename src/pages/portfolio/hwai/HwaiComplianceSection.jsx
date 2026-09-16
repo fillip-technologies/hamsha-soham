@@ -167,31 +167,21 @@ export const HwaiComplianceSection = () => {
         "--ratio-y": "0",
       }}
     >
-      {/* 1. Full Background Atmospheric Darkening Wash on Hover */}
+      {/* 1. Soft Light Luminous Ambient Wash on Hover */}
       <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.06]"
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-gradient-to-b from-white/40 via-transparent to-amber-50/20"
         style={{
           opacity: "var(--mouse-opacity, 0)",
         }}
       />
 
-      {/* 2. Dark Outer Vignette */}
+      {/* 2. Soft Luminous Light Spotlight Follower (Clean Light Glow, Zero Dark Shadow/Vignette) */}
       <div
         className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
         style={{
           opacity: "var(--mouse-opacity, 0)",
-          background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), transparent 40%, rgba(11, 19, 43, 0.14) 100%)",
-        }}
-      />
-
-      {/* 3. Deep Dark Shadow Halo + Vivid Amber/Flame Spotlight Core */}
-      <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
-        style={{
-          opacity: "var(--mouse-opacity, 0)",
           background: `
-            radial-gradient(320px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(217, 119, 6, 0.28) 0%, rgba(255, 77, 39, 0.22) 45%, transparent 80%),
-            radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(15, 23, 42, 0.22) 0%, rgba(30, 41, 59, 0.14) 50%, transparent 80%)
+            radial-gradient(480px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(217, 119, 6, 0.12) 0%, rgba(245, 158, 11, 0.08) 35%, rgba(255, 77, 39, 0.05) 60%, transparent 80%)
           `,
         }}
       />

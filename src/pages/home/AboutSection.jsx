@@ -147,46 +147,22 @@ export const AboutSection = () => {
           "--ratio-y": "0",
         }}
       >
-        {/* 1. Full Background Atmospheric Darkening Wash on Hover */}
+        {/* 1. Single Color Soft Ambient Wash on Hover Only */}
         <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#0B132B]/[0.06]"
+          className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0 bg-[#FF4D27]/[0.02]"
           style={{
             opacity: "var(--mouse-opacity, 0)",
           }}
         />
 
-        {/* 2. Dark Outer Vignette */}
+        {/* 2. Single Color Luminous Spotlight (Hover Only) */}
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-500 -z-0"
           style={{
             opacity: "var(--mouse-opacity, 0)",
-            background: "radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), transparent 40%, rgba(11, 19, 43, 0.14) 100%)",
-          }}
-        />
-
-        {/* 3. Deep Dark Shadow Halo + Vivid Flame/Indigo Spotlight Core */}
-        <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
-          style={{
-            opacity: "var(--mouse-opacity, 0)",
             background: `
-              radial-gradient(320px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 77, 39, 0.28) 0%, rgba(82, 84, 242, 0.22) 45%, transparent 80%),
-              radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(15, 23, 42, 0.22) 0%, rgba(30, 41, 59, 0.14) 50%, transparent 80%)
+              radial-gradient(520px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 77, 39, 0.14) 0%, rgba(255, 77, 39, 0.04) 50%, transparent 80%)
             `,
-          }}
-        />
-
-        {/* 4. Parallax Background Deep Mesh Glows */}
-        <div
-          className="absolute top-0 right-0 w-[650px] h-[650px] bg-gradient-to-br from-indigo-500/25 via-blue-400/20 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
-          style={{
-            transform: "translate3d(calc(var(--ratio-x, 0) * -35px), calc(var(--ratio-y, 0) * -35px), 0)",
-          }}
-        />
-        <div
-          className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-gradient-to-tr from-[#FF4D27]/25 via-amber-400/20 to-transparent rounded-full blur-[130px] pointer-events-none -z-0 transition-transform duration-700 ease-out"
-          style={{
-            transform: "translate3d(calc(var(--ratio-x, 0) * 30px), calc(var(--ratio-y, 0) * 30px), 0)",
           }}
         />
         

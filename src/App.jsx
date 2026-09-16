@@ -53,7 +53,7 @@ const ScrollToTop = () => {
 
 export function AppContent() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans relative overflow-x-hidden">
+    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans relative [overflow-x:clip]">
       <ScrollToTop />
       {/* Production Master Navbar Partial */}
       <Navbar />

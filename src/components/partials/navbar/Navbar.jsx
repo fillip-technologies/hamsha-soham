@@ -14,12 +14,12 @@ export const Navbar = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full transition-all duration-300">
+      <header className="sticky top-0 z-50 w-full transition-all duration-300">
         {/* Main Navbar Header */}
         <div
-          className={`w-full transition-all duration-300 border-b ${
-            isScrolled
-              ? "bg-white/95 backdrop-blur-md border-slate-200/90 shadow-xs py-3"
+          className={`relative z-50 w-full transition-all duration-300 border-b ${
+            isScrolled || isMobileOpen
+              ? "bg-white border-slate-200/90 shadow-xs py-3"
               : "bg-white border-slate-200/70 py-4"
           }`}
         >

@@ -3,7 +3,8 @@ import {
   ArrowRight,
   Phone,
 } from "lucide-react";
-import heroDashboardImg from "../../assets/Hamsa-soham-hero.png";
+import heroDashboardWebp from "../../assets/Hamsa-soham-hero.webp";
+import heroDashboardPng from "../../assets/Hamsa-soham-hero.png";
 import { AnimatedCounter } from "../../components/common/AnimatedCounter";
 import { SarvamGenerativeCanvas } from "./SarvamGenerativeCanvas";
 
@@ -114,12 +115,20 @@ export const HeroSection = () => {
             <div className="w-full relative rounded-2xl sm:rounded-3xl bg-white p-2 sm:p-3.5 border-2 border-slate-200/90 shadow-2xl transition-all duration-500 group-hover:-translate-y-1">
               
               {/* Screen Inner Bezel */}
-              <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-slate-950 border border-slate-200/60 shadow-inner">
-                <img
-                  src={heroDashboardImg}
-                  alt="Hamsa Soham Complete Healthcare Information Management System Dashboard"
-                  className="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-500"
-                />
+              <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-slate-950 border border-slate-200/60 shadow-inner aspect-[1600/854]">
+                <picture>
+                  <source srcSet={heroDashboardWebp} type="image/webp" />
+                  <img
+                    src={heroDashboardPng}
+                    alt="Hamsa Soham Complete Healthcare Information Management System Dashboard"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="sync"
+                    width="1600"
+                    height="854"
+                    className="w-full h-full object-cover transform group-hover:scale-[1.01] transition-transform duration-500"
+                  />
+                </picture>
               </div>
 
             </div>

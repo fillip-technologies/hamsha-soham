@@ -19,15 +19,14 @@ export const NavActions = ({
         <span>Login</span>
       </a> */}
 
-      {/* Request Live Demo CTA Button */}
+      {/* Request Live Demo CTA Button - Hidden on mobile screens, shown on sm+ */}
       <a
         href="https://apps.hamsasoham.com/portal/index.xhtml"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-[#FF4D27] to-[#FF6B4A] hover:from-[#E03A14] hover:to-[#FF4D27] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#FF4D27]/25 hover:shadow-lg hover:shadow-[#FF4D27]/35 hover:-translate-y-0.5 transition-all cursor-pointer select-none"
+        className="hidden sm:inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-[#FF4D27] to-[#FF6B4A] hover:from-[#E03A14] hover:to-[#FF4D27] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#FF4D27]/25 hover:shadow-lg hover:shadow-[#FF4D27]/35 hover:-translate-y-0.5 transition-all cursor-pointer select-none"
       >
-        <span className="hidden xs:inline sm:inline">Request Live Demo</span>
-        <span className="inline xs:hidden sm:hidden">Live Demo</span>
+        <span>Request Live Demo</span>
         <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
       </a>
 
