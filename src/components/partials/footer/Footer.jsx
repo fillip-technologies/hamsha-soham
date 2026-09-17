@@ -7,7 +7,6 @@ import {
   MapPin,
   ShieldCheck,
   ExternalLink,
-  Lock,
 } from "lucide-react";
 import filliptechLogo from "../../../assets/Fillip-logo-white.webp";
 
@@ -209,11 +208,6 @@ export const Footer = () => {
               <span className="flex items-center gap-1 text-emerald-400">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>NABH & ABDM Ready</span>
-              </span>
-              <span className="text-slate-600">•</span>
-              <span className="flex items-center gap-1 text-slate-300">
-                <Lock className="w-3.5 h-3.5 text-amber-400" />
-                <span>ISO 27001 Certified Security</span>
               </span>
             </div>
           </div>

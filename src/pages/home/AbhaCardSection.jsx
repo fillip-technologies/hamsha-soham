@@ -1,6 +1,6 @@
 import React from "react";
 import { CreditCard, Fingerprint, LockKeyhole } from "lucide-react";
-import abhaCardImg from "../../assets/abha-card.jpg";
+import abhaCardImg from "../../assets/abha-card.webp";
 
 export const AbhaCardSection = () => {
   const infoBlocks = [
@@ -209,6 +209,8 @@ export const AbhaCardSection = () => {
                 <img
                   src={abhaCardImg}
                   alt="Ayushman Bharat Health Account (ABHA) Card"
+                  loading="lazy"
+                  decoding="async"
                   className="block h-auto w-full object-contain transition-transform duration-500 group-hover/abha:scale-[1.025]"
                 />
                 <div className="abha-privacy-pill absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-white/85 bg-white/90 px-3 py-1.5 text-xs font-black text-slate-700 shadow-lg shadow-slate-300/35 backdrop-blur transition-all duration-300">

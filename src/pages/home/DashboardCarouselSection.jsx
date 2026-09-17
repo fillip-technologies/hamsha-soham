@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import img1 from "../../assets/image-1.png";
-import img2 from "../../assets/image-2.png";
-import img3 from "../../assets/image-3.png";
+import img1 from "../../assets/image-1.webp";
+import img2 from "../../assets/image-2.webp";
+import img3 from "../../assets/image-3.webp";
 
 export const DashboardCarouselSection = () => {
   const images = [
@@ -87,6 +87,7 @@ export const DashboardCarouselSection = () => {
                     alt={item.alt}
                     className="w-full h-auto block object-cover rounded-2xl sm:rounded-3xl"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}
