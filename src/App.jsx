@@ -29,6 +29,9 @@ import { LoginPage } from "./pages/login/LoginPage";
 // Signup Page
 import { SignupPage } from "./pages/signup/SignupPage";
 
+// Admin Page (Admin Login, Signup & Inquiries Dashboard)
+import { AdminPage } from "./pages/admin/AdminPage";
+
 // Scroll To Top on Route Navigation Component
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
@@ -52,11 +55,14 @@ const ScrollToTop = () => {
 };
 
 export function AppContent() {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith("/admin");
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans relative [overflow-x:clip]">
       <ScrollToTop />
-      {/* Production Master Navbar Partial */}
-      <Navbar />
+      {/* Production Master Navbar Partial (Hidden on Admin Routes) */}
+      {!isAdminRoute && <Navbar />}
 
       {/* Main Page Content with React Router Routes */}
       <main className="flex-1">
@@ -83,13 +89,14 @@ export function AppContent() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
 
 
-      {/* Production Master Footer Partial */}
-      <Footer />
+      {/* Production Master Footer Partial (Hidden on Admin Routes) */}
+      {!isAdminRoute && <Footer />}
     </div>
   );
 }

@@ -13,7 +13,10 @@ import {
   MessageSquare,
   Send,
   CheckCircle2,
+  AlertCircle,
 } from "lucide-react";
+
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000/api";
 
 export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = false }) => {
   const [formData, setFormData] = useState({
@@ -30,20 +33,68 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    // Prepare complete form submission payload taking all inputs from the form
+    const payload = {
+      name: formData.name.trim(),
+      organization: formData.organization.trim(),
+      designation: formData.designation.trim(),
+      email: formData.email.trim(),
+      mobile: formData.mobile.trim(),
+      city: formData.city ? formData.city.trim() : "",
+      hospitalType: formData.hospitalType,
+      beds: formData.beds ? formData.beds.trim() : "",
+      product: formData.product || defaultProduct || "e_Kshitiz",
+      currentHis: formData.currentHis ? formData.currentHis.trim() : "",
+      message: formData.message ? formData.message.trim() : "",
+    };
+
+    // Post to Database API
     try {
-      window.open("https://apps.hamsasoham.com/portal/index.xhtml", "_blank", "noopener,noreferrer");
-    } catch {
-      window.location.href = "https://apps.hamsasoham.com/portal/index.xhtml";
-    }
-    if (onSuccess) {
-      setTimeout(() => {
-        onSuccess();
-      }, 3500);
+      const response = await fetch(`${API_BASE}/contacts`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const resData = await response.json().catch(() => ({}));
+
+      if (!response.ok || !resData.success) {
+        throw new Error(
+          resData.message || "Submission failed. Your inquiry could not be saved. Please try again."
+        );
+      }
+
+      // Only show success confirmation if the backend explicitly confirmed it was saved
+      setIsSubmitted(true);
+
+      try {
+        window.open("https://apps.hamsasoham.com/portal/index.xhtml", "_blank", "noopener,noreferrer");
+      } catch {
+        // ignore
+      }
+
+      if (onSuccess) {
+        setTimeout(() => {
+          onSuccess();
+        }, 3500);
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      setIsSubmitted(false);
+      setSubmitError(
+        err.message || "Could not connect to database server. Your inquiry was not saved. Please retry."
+      );
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -302,13 +353,31 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
         />
       </div>
 
+      {/* Error Alert */}
+      {submitError && (
+        <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold flex items-center gap-2">
+          <AlertCircle className="w-4 h-4 text-rose-500 shrink-0" />
+          <span>{submitError}</span>
+        </div>
+      )}
+
       {/* Submit Action */}
       <button
         type="submit"
-        className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF4D27] to-[#FF6B4A] hover:from-[#E03A14] hover:to-[#FF4D27] text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#FF4D27]/30 hover:shadow-xl hover:-translate-y-0.5 transition-all cursor-pointer"
+        disabled={isSubmitting}
+        className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF4D27] to-[#FF6B4A] hover:from-[#E03A14] hover:to-[#FF4D27] text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#FF4D27]/30 hover:shadow-xl hover:-translate-y-0.5 transition-all cursor-pointer disabled:opacity-60"
       >
-        <span>Request Live Demo</span>
-        <Send className="w-4 h-4" />
+        {isSubmitting ? (
+          <span className="flex items-center gap-2">
+            <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+            <span>Sending Inquiry to Database...</span>
+          </span>
+        ) : (
+          <>
+            <span>Request Live Demo</span>
+            <Send className="w-4 h-4" />
+          </>
+        )}
       </button>
 
       <p className="text-[11px] text-slate-400 text-center">
