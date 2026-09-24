@@ -90,14 +90,16 @@ export const AdminPage = () => {
     setAuthError(""); setAuthSuccess(""); setAuthLoading(true);
     try {
       const res = await fetch(`${API_BASE}/admin/login`, {
-        method: "POST", headers: { "Content-Type": "application/json" },
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify(loginForm),
       });
-      const data = await res.json();
+      let data;
+      try { data = await res.json(); } catch { throw new Error("Server error. Please try again."); }
       if (res.ok && data.success) { handleAuthSuccess(data.token, data.admin); }
       else { throw new Error(data.message || "Invalid admin email or password"); }
     } catch (err) {
-      setAuthError(err.message || "Failed to connect to database.");
+      setAuthError(err.message || "Failed to connect to server.");
     } finally { setAuthLoading(false); }
   };
 
