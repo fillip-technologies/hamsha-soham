@@ -36,11 +36,31 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [mobileError, setMobileError] = useState("");
+
+  const validateMobile = (mobile) => {
+    const cleanedDigits = (mobile || "").replace(/\D/g, "");
+    let coreNumber = cleanedDigits;
+    if (cleanedDigits.length === 12 && cleanedDigits.startsWith("91")) {
+      coreNumber = cleanedDigits.slice(2);
+    } else if (cleanedDigits.length === 11 && cleanedDigits.startsWith("0")) {
+      coreNumber = cleanedDigits.slice(1);
+    }
+    // Must be exactly 10 digits starting with 6, 7, 8, or 9
+    return /^[6-9]\d{9}$/.test(coreNumber);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setSubmitError("");
+    setMobileError("");
+
+    if (!validateMobile(formData.mobile)) {
+      setMobileError("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    setIsSubmitting(true);
 
     // Prepare complete form submission payload taking all inputs from the form
     const payload = {
@@ -223,11 +243,35 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
           <input
             type="tel"
             required
+            maxLength={15}
             placeholder="+91 98765 43210"
             value={formData.mobile}
-            onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-            className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-900 focus:outline-none focus:border-[#FF4D27] focus:bg-white transition-colors"
+            onChange={(e) => {
+              const val = e.target.value.replace(/[^0-9+\s\-()]/g, "");
+              setFormData({ ...formData, mobile: val });
+              if (mobileError) setMobileError("");
+            }}
+            onBlur={() => {
+              if (formData.mobile.trim()) {
+                if (!validateMobile(formData.mobile)) {
+                  setMobileError("Please enter a valid 10-digit mobile number.");
+                } else {
+                  setMobileError("");
+                }
+              }
+            }}
+            className={`w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border ${
+              mobileError
+                ? "border-rose-500 focus:border-rose-500 bg-rose-50/20"
+                : "border-slate-200 focus:border-[#FF4D27] focus:bg-white"
+            } text-sm font-medium text-slate-900 focus:outline-none transition-colors`}
           />
+          {mobileError && (
+            <p className="text-xs text-rose-600 font-medium mt-1 flex items-center gap-1">
+              <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+              <span>{mobileError}</span>
+            </p>
+          )}
         </div>
 
         <div>
