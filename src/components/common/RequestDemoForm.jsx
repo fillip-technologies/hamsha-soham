@@ -76,12 +76,6 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
       // Only show success confirmation if the backend explicitly confirmed it was saved
       setIsSubmitted(true);
 
-      try {
-        window.open("https://apps.hamsasoham.com/portal/index.xhtml", "_blank", "noopener,noreferrer");
-      } catch {
-        // ignore
-      }
-
       if (onSuccess) {
         setTimeout(() => {
           onSuccess();
@@ -113,7 +107,7 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
           <span className="font-bold text-slate-900">{formData.organization || "your organization"}</span>.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+        {/* <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
           <a
             href="https://apps.hamsasoham.com/portal/index.xhtml"
             target="_blank"
@@ -145,26 +139,14 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
           >
             Submit Another Request
           </button>
-        </div>
+        </div> */}
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 text-left select-none">
-      {/* Quick Direct Portal Bar */}
-      <div className="p-3 rounded-2xl bg-slate-100 border border-slate-200/80 flex items-center justify-between gap-3 text-xs">
-        <span className="font-semibold text-slate-700">Looking for immediate live portal access?</span>
-        <a
-          href="https://apps.hamsasoham.com/portal/index.xhtml"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-3.5 py-1.5 rounded-full bg-[#0B132B] hover:bg-slate-800 text-white font-bold text-[11px] shrink-0 transition-all shadow-xs"
-        >
-          <span>Launch Portal ↗</span>
-        </a>
-      </div>
-      
+
       {/* Row 1: Name & Organization */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
