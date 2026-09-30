@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   User,
   Building2,
@@ -37,6 +37,14 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [mobileError, setMobileError] = useState("");
+  const successRef = useRef(null);
+
+  // Bring the success message into view, since it is much shorter than the form it replaces
+  useEffect(() => {
+    if (isSubmitted && successRef.current) {
+      successRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [isSubmitted]);
 
   const validateMobile = (mobile) => {
     const cleanedDigits = (mobile || "").replace(/\D/g, "");
@@ -114,7 +122,7 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
 
   if (isSubmitted) {
     return (
-      <div className="p-8 sm:p-10 rounded-3xl bg-emerald-50 border border-emerald-200 text-center space-y-5 animate-in fade-in duration-300">
+      <div ref={successRef} className="p-8 sm:p-10 rounded-3xl bg-emerald-50 border border-emerald-200 text-center space-y-5 animate-in fade-in duration-300">
         <div className="w-16 h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-emerald-500/30">
           <CheckCircle2 className="w-9 h-9" />
         </div>
