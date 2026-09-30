@@ -370,7 +370,8 @@ export const EcosystemSection = () => {
                     {item.protocol}
                   </span>
                   <Link
-                    to="/contact"
+                    to="/contact#contact-form"
+                    state={{ message: `Inquiry for ${item.name} (${item.fullName}) integration - Protocol: ${item.protocol}` }}
                     className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-[#FF4D27] text-white font-extrabold text-xs shadow-xs transition-all hover:scale-105 shrink-0 cursor-pointer"
                   >
                     <span>Request Integration</span>

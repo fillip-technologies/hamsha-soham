@@ -18,7 +18,7 @@ import {
 
 const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000/api";
 
-export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = false }) => {
+export const RequestDemoForm = ({ defaultProduct = "", defaultMessage = "", onSuccess, isInModal = false }) => {
   const [formData, setFormData] = useState({
     name: "",
     organization: "",
@@ -30,8 +30,20 @@ export const RequestDemoForm = ({ defaultProduct = "", onSuccess, isInModal = fa
     beds: "",
     product: defaultProduct || "e_Kshitiz",
     currentHis: "",
-    message: "",
+    message: defaultMessage || "",
   });
+
+  useEffect(() => {
+    if (defaultProduct) {
+      setFormData((prev) => ({ ...prev, product: defaultProduct }));
+    }
+  }, [defaultProduct]);
+
+  useEffect(() => {
+    if (defaultMessage) {
+      setFormData((prev) => ({ ...prev, message: defaultMessage }));
+    }
+  }, [defaultMessage]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);

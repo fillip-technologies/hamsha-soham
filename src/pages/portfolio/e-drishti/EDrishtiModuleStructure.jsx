@@ -118,7 +118,7 @@ export const EDrishtiModuleStructure = () => {
         <div className="max-w-3xl mx-auto text-center mb-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-800 text-[11px] font-extrabold uppercase tracking-widest mb-3">
             <Settings2 className="w-3.5 h-3.5 text-sky-600" />
-            24 Connected Modules • Minimized Scrolling
+            24 Connected Modules
           </div>
           <h2 className="text-2xl sm:text-4xl font-black text-[#0B132B] tracking-tight leading-tight">
             e_Drishti Complete <span className="text-sky-600">Module Structure</span>

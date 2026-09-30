@@ -1,13 +1,27 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { ContactHero } from "./ContactHero";
 import { ContactForm } from "./ContactForm";
 import { ContactInfo } from "./ContactInfo";
 import { ContactMap } from "./ContactMap";
 
 export const ContactPage = () => {
+  const { hash } = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (hash) {
+      const id = hash.replace("#", "");
+      const timer = setTimeout(() => {
+        const elem = document.getElementById(id);
+        if (elem) {
+          elem.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [hash]);
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans select-none">

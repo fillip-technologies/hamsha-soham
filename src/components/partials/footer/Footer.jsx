@@ -65,6 +65,21 @@ export const Footer = () => {
     },
   ];
 
+  const handleFooterLinkClick = (path) => {
+    if (!path) return;
+    if (path.includes("#")) {
+      const [targetPath, targetHash] = path.split("#");
+      if (window.location.pathname === targetPath || (!targetPath && window.location.pathname)) {
+        const elem = document.getElementById(targetHash);
+        if (elem) {
+          elem.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="relative z-30 w-full bg-[#0E162E] text-white pt-20 pb-12 overflow-hidden select-none border-t border-slate-700/60 font-sans">
       {/* Background Decorative Mesh Orbs */}
@@ -137,6 +152,7 @@ export const Footer = () => {
                       ) : (
                         <Link
                           to={linkItem.path}
+                          onClick={() => handleFooterLinkClick(linkItem.path)}
                           className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer group py-0.5"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-[#FF4D27] opacity-0 group-hover:opacity-100 transition-opacity" />

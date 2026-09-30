@@ -1,10 +1,22 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { RequestDemoForm } from "../../components/common/RequestDemoForm";
 import { Sparkles } from "lucide-react";
 
 export const ContactForm = () => {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const defaultProduct = location.state?.product || searchParams.get("product") || "";
+  const defaultMessage = location.state?.message || searchParams.get("message") || "";
+
   return (
-    <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-xl relative overflow-hidden text-left">
+    <div
+      id="contact-form"
+      className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-xl relative overflow-hidden text-left scroll-mt-28"
+    >
+      {/* Anchor for demo-form alias */}
+      <span id="demo-form" className="absolute -top-28 pointer-events-none" />
+
       <div className="space-y-2 mb-8 border-b border-slate-100 pb-5">
         <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#FF4D27]">
           <Sparkles className="w-4 h-4 text-[#FF4D27]" />
@@ -19,7 +31,7 @@ export const ContactForm = () => {
       </div>
 
       {/* Unified Master Request Demo Form */}
-      <RequestDemoForm />
+      <RequestDemoForm defaultProduct={defaultProduct} defaultMessage={defaultMessage} />
     </div>
   );
 };

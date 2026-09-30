@@ -221,7 +221,7 @@ export const SolutionsPage = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link
-              to="/contact"
+              to="/contact#contact-form"
               className="px-7 py-3 rounded-full bg-gradient-to-r from-[#FF4D27] via-orange-500 to-sky-600 hover:from-[#FF4D27] hover:to-sky-700 text-white font-bold text-sm sm:text-base shadow-xl shadow-[#FF4D27]/30 transition-all flex items-center gap-2.5"
             >
               <span>Contact Solution Specialists</span>

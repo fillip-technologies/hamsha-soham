@@ -134,7 +134,7 @@ export const HwaiWorkflowSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-extrabold uppercase tracking-widest mb-3">
             <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
-            16 Integrated Care Steps • Minimized Scrolling
+            16 Integrated Care Steps
           </div>
           <h2 className="text-2xl sm:text-4xl font-black text-[#0B132B] tracking-tight leading-tight">
             HWAI Complete Hospital <span className="text-amber-600">Workflow</span>
