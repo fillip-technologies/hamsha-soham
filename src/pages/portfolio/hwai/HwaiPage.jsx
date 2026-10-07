@@ -160,13 +160,13 @@ export const HwaiPage = () => {
         </div>
 
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          
+
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight">
               Traditional Static Reports vs <span className="text-amber-600">HWAI Healthcare Management</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg">
-              Transform reactive hospital management into proactive, intelligent healthcare operations.
+              Make the transition from static hospital management to proactive and intelligent healthcare operations with the best hospital management system in India.
             </p>
           </div>
 
@@ -241,7 +241,7 @@ export const HwaiPage = () => {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-amber-950 via-slate-900 to-slate-950 pointer-events-none" />
-        
+
         {/* Glowing hover spotlight on dark banner */}
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-400 -z-0"
@@ -252,7 +252,7 @@ export const HwaiPage = () => {
             `,
           }}
         />
-        
+
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center space-y-4">
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
             Schedule Your Live{" "}

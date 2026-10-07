@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Building2,
   Users,
   Activity,
   ShieldCheck,
@@ -23,21 +22,16 @@ export const EDrishtiEnterpriseSection = () => {
   return (
     <section
       id="enterprise-eye-hospital"
-      className="py-20 sm:py-28 bg-[#F8FAFC] border-t border-slate-200/80 scroll-mt-24 relative overflow-hidden select-none"
+      className="pt-8 sm:pt-12 pb-20 sm:pb-28 bg-[#F8FAFC] border-t border-slate-200/80 scroll-mt-24 relative overflow-hidden select-none"
     >
       {/* Soft Ambient Mesh Glows */}
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-sky-400/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 left-10 w-[500px] h-[500px] bg-cyan-400/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-sky-800 text-xs font-extrabold uppercase tracking-widest">
-            <Building2 className="w-3.5 h-3.5 text-sky-600" />
-            Enterprise Ophthalmic Network
-          </div>
 
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center space-y-4 mb-12 sm:mb-14">
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight leading-[1.12]">
             Enterprise Eye Hospital &{" "}
             <span className="bg-gradient-to-r from-sky-600 via-cyan-500 to-[#FF4D27] bg-clip-text text-transparent">
@@ -46,17 +40,17 @@ export const EDrishtiEnterpriseSection = () => {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-            Centralized cloud architecture for multi-location eye hospitals, LASIK surgery centers, vision screening camps, and optical chains with unified patient records and real-time operational telemetry.
+            Enable your organization with the latest eye hospital management system, which is powered by advanced cloud-based architecture. Integrating multiple eye hospitals, LASIK facilities, vision camps, and optics stores becomes an easy job through shared patient databases and operational telemetry.
           </p>
         </div>
 
         {/* Dynamic Bento Box Architecture Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
+
           {/* BENTO CARD 1: Centralized Operations & Branch Telemetry (Spans 8 Columns) */}
           <div className="lg:col-span-8 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 hover:border-sky-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-sky-600 via-cyan-500 to-[#FF4D27]" />
-            
+
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">

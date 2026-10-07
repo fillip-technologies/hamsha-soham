@@ -67,7 +67,7 @@ export const FeaturesSection = () => {
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
       const scrollableHeight = sectionRef.current.offsetHeight - window.innerHeight;
-      
+
       if (scrollableHeight <= 0) return;
 
       const currentScroll = -rect.top;
@@ -112,17 +112,17 @@ export const FeaturesSection = () => {
     >
       {/* Sticky Fixed Viewport During Scroll */}
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#3B41C5] via-[#6366F1] to-[#F97316] border-b border-white/10">
-        
+
         {/* Ambient Background Glows */}
         <div className="absolute top-1/4 left-1/6 w-[550px] h-[550px] bg-white/10 rounded-full blur-[140px] pointer-events-none -z-0" />
         <div className="absolute bottom-1/4 right-1/6 w-[600px] h-[600px] bg-amber-400/15 rounded-full blur-[150px] pointer-events-none -z-0" />
-        
+
         {/* Subtle Geometric Grid */}
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff15_1px,transparent_1px)] [background-size:32px_32px] pointer-events-none -z-0 opacity-40" />
 
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-14 items-center">
-            
+
             {/* Left Side: Text Description & Scroll Guide (5 Columns) */}
             <div className="lg:col-span-5 space-y-5 sm:space-y-7 text-left">
 
@@ -136,7 +136,8 @@ export const FeaturesSection = () => {
 
               {/* Section Paragraph */}
               <p className="text-sm sm:text-base lg:text-lg text-white/85 font-normal leading-relaxed max-w-lg">
-                Empowering hospitals, clinical networks, and specialty healthcare groups with next-generation unified management solutions. Experience seamless operational consistency, automated clinical workflows, and real-time multi-branch synchronization on a single secure platform.
+                Enabling hospitals, clinical networks, and specialty healthcare organizations with the most advanced hospital management software in India. Discover future-generation solutions that offer unparalleled consistency in operations, automation in clinical workflows, and real-time synchronization across multiple branches in a single platform.
+
               </p>
 
               {/* Action CTA Button */}
@@ -155,7 +156,7 @@ export const FeaturesSection = () => {
             {/* Right Side: Scroll-Driven Overlapping Deck of Cards (7 Columns) */}
             <div className="lg:col-span-7 relative min-h-[360px] sm:min-h-[500px] lg:min-h-[560px] flex items-center justify-center">
               <div className="relative w-full max-w-[340px] sm:max-w-[520px] lg:max-w-[650px] h-[330px] sm:h-[390px] lg:h-[430px] mx-auto">
-                
+
                 {features.map((card, idx) => {
                   // Define staggered scroll intervals for each card to arrive
                   let arrivalProgress = 1;
@@ -182,13 +183,13 @@ export const FeaturesSection = () => {
                   const incomingOffsetY = isMobile ? 0 : 45;
                   const currentX = targetX + (1 - arrivalProgress) * incomingOffsetX;
                   const currentY = targetY + (1 - arrivalProgress) * incomingOffsetY;
-                  
+
                   // 100% solid opaque (never transparent when entering)
                   const currentOpacity = arrivalProgress > 0.01 ? 1 : 0;
                   const currentScale = isMobile
                     ? (isSelected ? 1 : 0.96)
                     : 0.95 + arrivalProgress * 0.05;
-                  
+
                   // Progressive Z-index: newer cards always land ON TOP of older cards
                   const currentZ = (idx + 1) * 10 + (isSelected ? 5 : 0);
 
@@ -202,11 +203,10 @@ export const FeaturesSection = () => {
                         zIndex: currentZ,
                         pointerEvents: arrivalProgress > 0.3 ? "auto" : "none",
                       }}
-                      className={`absolute top-0 left-0 w-full sm:w-[520px] lg:w-[550px] min-h-[290px] sm:min-h-[300px] lg:min-h-[330px] bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-9 border border-slate-200/90 shadow-2xl transition-all duration-300 ease-out cursor-pointer flex flex-col justify-between opacity-100 ${
-                        isSelected
-                          ? "ring-2 sm:ring-4 ring-white/80 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] sm:shadow-[0_35px_70px_-15px_rgba(0,0,0,0.4)]"
-                          : "shadow-[0_15px_30px_-10px_rgba(0,0,0,0.2)] sm:shadow-[0_20px_45px_-15px_rgba(0,0,0,0.25)]"
-                      }`}
+                      className={`absolute top-0 left-0 w-full sm:w-[520px] lg:w-[550px] min-h-[290px] sm:min-h-[300px] lg:min-h-[330px] bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-9 border border-slate-200/90 shadow-2xl transition-all duration-300 ease-out cursor-pointer flex flex-col justify-between opacity-100 ${isSelected
+                        ? "ring-2 sm:ring-4 ring-white/80 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] sm:shadow-[0_35px_70px_-15px_rgba(0,0,0,0.4)]"
+                        : "shadow-[0_15px_30px_-10px_rgba(0,0,0,0.2)] sm:shadow-[0_20px_45px_-15px_rgba(0,0,0,0.25)]"
+                        }`}
                     >
                       {/* Card Top: Number & Title */}
                       <div className="flex items-start justify-between gap-3 sm:gap-4">
@@ -226,7 +226,7 @@ export const FeaturesSection = () => {
 
                       {/* Card Bottom: Animated Abstract Geometric Lens Badge + Description */}
                       <div className="flex items-end gap-4 sm:gap-6 pt-4 sm:pt-6 mt-auto">
-                        
+
                         {/* Geometric Lens Badge */}
                         <div
                           className={`w-14 h-14 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-xl sm:rounded-2xl ${card.badgeBg} relative overflow-hidden flex items-center justify-center shrink-0 border border-slate-200/60 shadow-inner group`}

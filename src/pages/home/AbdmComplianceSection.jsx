@@ -7,12 +7,12 @@ export const AbdmComplianceSection = () => {
   const sectionRef = useRef(null);
 
   const coversList = [
-    "Instant ABHA Health ID Generation & Aadhaar Verification",
-    "Secure ABHA/PHR App Authentication via Unique ABHA Address",
-    "Real-time Notifications for Health Record Linking & Generation",
-    "Counterless OPD Queue Tokens via HIP Scan & Share QR Code",
-    "Seamless Health Record Discovery & Access via PHR Apps",
-    "Granular Patient Consent Management for Cross-Facility Doctor Access",
+    "ABHA Health ID Generation and Aadhaar Card Verification",
+    "ABHA or PHR App Authentication Using Unique ABHA Address",
+    "Notifications for Health Records Linking and Generating",
+    "OPD Queue Token Generation Using HIP Scan and QR Code",
+    "Health Record Discovery and Access through PHR Apps",
+    "Granular Patient Consent for Cross-Facility Doctor Access",
   ];
 
   const floatingIcons = [
@@ -277,7 +277,7 @@ export const AbdmComplianceSection = () => {
               </h2>
 
               <p className="text-lg sm:text-xl font-bold text-slate-800">
-                <span className="underline decoration-slate-900 underline-offset-4 decoration-2">Hamsa Soham</span> is certified for ABDM's M1, M2, and M3.
+                <span className="underline decoration-slate-900 underline-offset-4 decoration-2">Hamsa Soham</span> Certified for ABDM’s M1, M2 & M3 Modules.
               </p>
 
               <p className="italic text-slate-500 font-medium text-sm sm:text-base">
@@ -287,7 +287,8 @@ export const AbdmComplianceSection = () => {
 
             {/* Paragraph Description */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-              The Ayushman Bharat Digital Mission (ABDM) establishes a unified digital infrastructure for nationwide healthcare. By deploying robust digital highways, it bridges systemic gaps between patients, hospitals, diagnostics, and health registries.
+              With the Ayushman Bharat Digital Mission (ABDM), a single digital platform is being built to link patients, hospitals, laboratories, and health registries. Hamsa Soham HMIS, the best hospital management software in India, helps you stay compliant and up-to-date with innovative functionalities.
+
             </p>
 
             {/* Section Subheading: Hamsa Soham HMIS covers */}

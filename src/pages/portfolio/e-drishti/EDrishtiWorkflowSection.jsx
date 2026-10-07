@@ -88,19 +88,23 @@ export const EDrishtiWorkflowSection = () => {
       />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight leading-[1.12]">
-            Registration to{" "}
-            <span className="bg-gradient-to-r from-cyan-600 via-sky-500 to-[#FF4D27] bg-clip-text text-transparent">
-              Inventory Management
-            </span>
-          </h2>
 
-          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-            Eliminate operational silos. A unified workflow connecting front-desk OPD tokening, optometry auto-refractors, doctor consultation notes, retail optical POS, and inventory stock control.
-          </p>
+        {/* Section Header: Title on Left, Paragraph on Right */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 lg:gap-12 items-end mb-12 sm:mb-14 text-left">
+          <div className="md:col-span-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0B132B] tracking-tight leading-[1.12]">
+              Registration to{" "}
+              <span className="bg-gradient-to-r from-cyan-600 via-sky-500 to-[#FF4D27] bg-clip-text text-transparent">
+                Inventory Management
+              </span>
+            </h2>
+          </div>
+
+          <div className="md:col-span-6">
+            <p className="text-slate-600 text-base sm:text-lg font-normal leading-relaxed">
+              Get out of those operational barriers through the eye hospital management system that integrates all workflows, including front-desk OPD tokening, optometry auto-refractors, doctor consultation notes, retail optical POS, and stock inventory controls into one intelligent system.
+            </p>
+          </div>
         </div>
 
         {/* 5-Step Visual Workflow Stepper Bar */}
@@ -137,11 +141,11 @@ export const EDrishtiWorkflowSection = () => {
 
         {/* Dynamic Bento Box Architecture Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
+
           {/* BENTO CARD 1: Optical Retail Store POS & Frame Inventory (Featured Card - 8 Columns) */}
           <div className="lg:col-span-8 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-cyan-600 via-sky-500 to-[#FF4D27]" />
-            
+
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">

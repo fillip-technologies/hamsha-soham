@@ -205,7 +205,7 @@ export const HwaiAbdmSection = () => {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-normal">
-            Fully certified across ABDM M1, M2 & M3 milestones. Connect your hospital with India's national health network — ABHA IDs, HFR/HPR registries, and PM-JAY cashless settlement.
+            ABDM M1, M2 & M3 certified, Hamsa Soham, the best hospital management system in India, integrates your hospital with India’s National Health Network using ABHA IDs, HFR/HPR registry, and PM-JAY cashless transactions.
           </p>
         </div>
 
@@ -223,13 +223,14 @@ export const HwaiAbdmSection = () => {
                 ?
               </h3>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                The <strong className="text-[#0B132B] font-bold">Ayushman Bharat Digital Mission (ABDM)</strong> is India's flagship initiative by the National Health Authority (NHA) to build an open, interoperable digital health ecosystem. It connects every citizen, hospital, doctor, and insurer under a single unified framework — powered by verifiable digital health identities and consent-based medical record sharing.
+                The  <strong className="text-[#0B132B] font-bold"> Ayushman Bharat Digital Mission (ABDM) </strong> is India’s premier program, led by the National Health Authority (NHA), towards creating an open and interoperable digital health ecosystem. It creates a platform where citizens, hospitals, doctors, and insurers come together within a common platform enabled by digital health identities and consent-driven record sharing.
+
               </p>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                 The <strong className="text-[#0B132B] font-bold">National Health Authority (NHA)</strong> oversees certification of hospital information systems across three progressive milestones — from ABHA identity creation and OPD digitisation (M1), to standardised FHIR clinical records and registry synchronisation (M2), to full longitudinal health record exchange with patient-controlled consent (M3). NHA also manages the PM-JAY Transaction Management System (TMS) for direct cashless insurance claim processing.
               </p>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                HWAI is <strong className="text-[#0B132B] font-bold">NHA-certified across all three ABDM milestones</strong> and fully integrated with the PM-JAY TMS API — enabling hospitals to go live on India's national health grid without custom development or third-party middleware.
+                A fully certified solution across all ABDM phases and seamless integration with PM-JAY make Hamsa Soham the best hospital management system in India. It helps hospitals connect with the national health ecosystem without any customization or third-party middleware solutions.
               </p>
             </div>
 

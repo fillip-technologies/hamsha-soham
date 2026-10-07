@@ -9,7 +9,6 @@ import {
   CheckCircle2,
   ArrowRight,
   Stethoscope,
-  TrendingUp,
   Sparkles,
   HeartPulse,
   Brain,
@@ -59,7 +58,7 @@ export const HwaiEnterpriseSection = () => {
       kpi: "45% Shorter Patient Turnaround Time",
       kpiSub: "Smart queue balancing across 40+ consultation cabins",
       title: "High-Volume OPD Flow & Intelligent Token Dispatch",
-      desc: "Eliminate reception bottlenecks and reduce patient waiting times with AI-assisted token allocation, multi-counter triage routing, doctor cabin scheduling, and real-time SMS/WhatsApp queue updates.",
+      desc: "We offer a quicker and smarter patient experience with the best hospital management system in India, powered by OPD allocation, Priority Triage Routing, doctor cabin scheduling, real‑time SMS/WhatsApp Updates, and Multi‑Language Digital Queue Displays.",
       features: [
         "Automated token generation with doctor cabin availability & turn-around time algorithms",
         "Multi-language digital queue display boards for waiting lounges & consultation corridors",
@@ -88,7 +87,7 @@ export const HwaiEnterpriseSection = () => {
       kpi: "2-Hour Fast-Track Discharge",
       kpiSub: "Automated billing audit and electronic nursing handover",
       title: "Real-Time Visual Bed Boards & Inpatient Care Suite",
-      desc: "Gain 360° operational visibility over bed occupancy across ICU, HDU, Emergency, and ward suites. Streamline doctor rounds, nursing shift handovers, bed transfers, and fast-track discharge workflows.",
+      desc: "Have full control over bed occupancy in ICU, HDU, ER & wards through the top hospital management system in India. Ensure efficient bed management through streamlined activities like doctors’ rounds, nurse shift changes, bed transfers, and fast-track discharges.",
       features: [
         "Interactive color-coded visual bed board tracking real-time occupancy, sanitization & availability",
         "Electronic ISBAR nursing shift handover charts with automated vital sign trend monitoring",
@@ -116,7 +115,7 @@ export const HwaiEnterpriseSection = () => {
       kpi: "100% WHO Surgical Safety Compliant",
       kpiSub: "Mandatory pre-op PAC and implant consumption tracking",
       title: "High-Turnover OT Scheduling & Surgical Workflows",
-      desc: "Maximize surgical throughput and eliminate scheduling conflicts with master OT rosters, Pre-Anesthesia Checkup (PAC) clearance tracking, WHO surgical safety protocols, and implant barcode logging.",
+      desc: "Increase efficiency in the surgical process and avoid scheduling clashes using the best hospital management system in India through efficient OT rosters, PAC clearance monitoring, and WHO safety guidelines. In addition, implant barcode logging will ensure precision in all surgeries.",
       features: [
         "Master multi-OT interactive calendar synchronizing surgeons, anesthetists & scrub nurses",
         "Mandatory 3-step WHO Surgical Safety Checklist (Sign-In, Time-Out, Sign-Out) enforcement",
@@ -142,7 +141,7 @@ export const HwaiEnterpriseSection = () => {
       kpi: "Zero Expiry Stock Leakage",
       kpiSub: "Automated FIFO stock rotation and automated ward re-indenting",
       title: "CPOE, Bedside MAR & Multi-Store Inventory Control",
-      desc: "Bridge the gap between clinical orders and inventory. Features Computerized Physician Order Entry (CPOE), bedside barcode Medication Administration Records (MAR), automated stock re-indenting, and near-expiry alerts.",
+      desc: "Bridge the communication gap between clinical orders and stock through our advanced hospital management system in India that offers CPOE, bedside barcoded MAR, and multi-store inventory management. With automated stock re-indenting and near-expiry reminders, we bring efficiency and safety to the supply chain process.",
       features: [
         "Real-time main pharmacy store vs sub-ward dispensary stock synchronization",
         "Near-expiry automatic return-to-vendor alerts reducing stock wastage to zero",
@@ -168,7 +167,7 @@ export const HwaiEnterpriseSection = () => {
       kpi: "<2% Claim Deduction Rate",
       kpiSub: "Pre-audit scrutiny and direct tariff package mapping",
       title: "Accelerated Insurance Pre-Auth & Settlement Desk",
-      desc: "Accelerate cashless approvals and reduce claim rejection rates below 2%. Features instant tariff package estimation, 1-click digital pre-auth document compilation, and real-time claim query tracking.",
+      desc: "Boost the speed of cashless approvals and lower claim rejection rates to less than 2% with the top hospital management system in India. With features like instant tariff calculation, one-click pre-authorization document compilation, and real-time claim inquiry tracking, it makes insurance settlements easy.",
       features: [
         "Instant treatment package estimation mapped against specific insurer & corporate tariffs",
         "1-Click digital document packet compiler assembling EMR notes & diagnostic reports",
@@ -244,7 +243,7 @@ export const HwaiEnterpriseSection = () => {
       />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         {/* Section Master Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight leading-[1.15]">
@@ -255,7 +254,8 @@ export const HwaiEnterpriseSection = () => {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-            Synchronizing multi-location hospital networks, high-throughput OPD/IPD operations, tertiary surgical suites, and unified financial workflows into a single intelligent platform.
+            Enjoy the most effective hospital management system in India that is designed specifically to coordinate hospital networks with multiple locations, high-throughput OPD/IPD processes, tertiary surgery centers, and financial processes, all in one intelligent system.
+
           </p>
         </div>
 
@@ -269,11 +269,10 @@ export const HwaiEnterpriseSection = () => {
                 <button
                   key={dept.id}
                   onClick={() => setActiveDeptTab(idx)}
-                  className={`px-3 py-3 rounded-xl sm:rounded-full text-xs sm:text-[13px] font-bold flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer ${
-                    isActive
-                      ? "bg-gradient-to-r from-amber-600 via-orange-500 to-amber-500 text-white shadow-md shadow-amber-500/25"
-                      : "text-slate-700 hover:text-slate-900 hover:bg-amber-50/60"
-                  }`}
+                  className={`px-3 py-3 rounded-xl sm:rounded-full text-xs sm:text-[13px] font-bold flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer ${isActive
+                    ? "bg-gradient-to-r from-amber-600 via-orange-500 to-amber-500 text-white shadow-md shadow-amber-500/25"
+                    : "text-slate-700 hover:text-slate-900 hover:bg-amber-50/60"
+                    }`}
                 >
                   <TabIcon className={`w-4 h-4 shrink-0 ${isActive ? "text-white" : "text-slate-400"}`} />
                   <span className="truncate">{dept.name.split("&")[0]}</span>
@@ -287,24 +286,23 @@ export const HwaiEnterpriseSection = () => {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-xl mb-16 relative overflow-hidden">
           {/* Top highlight border using master brand flame/amber gradient */}
           <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-600 via-orange-500 to-amber-400" />
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
+
             {/* Left 7 Columns: Department Breakdown */}
             <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="flex flex-wrap items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-600 flex items-center justify-center shadow-xs">
-                  <DeptIcon className="w-6 h-6" />
+              <div className="flex items-center gap-3">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-600 flex items-center justify-center shadow-xs shrink-0">
+                  <DeptIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-[11px] font-extrabold uppercase tracking-wider border border-amber-200/80">
-                    {currentDept.badge}
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-black text-[#0B132B] mt-1 tracking-tight">
-                    {currentDept.title}
-                  </h3>
-                </div>
+                <span className="px-3.5 py-1.5 rounded-full bg-amber-50 text-amber-800 text-[11px] font-extrabold uppercase tracking-wider border border-amber-200/80 inline-flex items-center">
+                  {currentDept.badge}
+                </span>
               </div>
+
+              <h3 className="text-2xl sm:text-3xl font-black text-[#0B132B] tracking-tight">
+                {currentDept.title}
+              </h3>
 
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                 {currentDept.desc}
@@ -320,16 +318,7 @@ export const HwaiEnterpriseSection = () => {
                 ))}
               </div>
 
-              {/* Department Benchmark Chip */}
-              <div className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-r from-amber-50 via-orange-50/40 to-white border border-amber-200/80">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-r from-amber-600 to-orange-500 text-white flex items-center justify-center shrink-0 shadow-xs">
-                  <TrendingUp className="w-4.5 h-4.5" />
-                </div>
-                <div>
-                  <div className="text-xs font-black text-[#0B132B]">{currentDept.kpi}</div>
-                  <div className="text-[11px] text-slate-600">{currentDept.kpiSub}</div>
-                </div>
-              </div>
+
             </div>
 
             {/* Right 5 Columns: Realistic Interactive Live Department HUD Mockup */}

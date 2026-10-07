@@ -41,16 +41,16 @@ export const AboutSection = () => {
       title: "About Us & Brand Story",
       tagline: "The Core Philosophy of Breathing & Existence",
       content:
-        "Hamsa Soham is defined by Breathing and in another word by Life and existence. Inhalation is Synonymous of HAMSA & SOHAM is exhalation. Soham is 'So I am' and it means that we are the God and God is in us. We believe that what breathing is to life a good management is to any system and specially Healthcare Systems.",
+        `For us at Hamsa Soham, identity is about life and its rhythms. The name Hamsa refers to inhaling, whereas Soham is about exhaling, and the philosophy that comes out of it is about the eternal truth – "So I am". It is about recognizing the divinity within each one of us.`,
       dotColor: "bg-[#FF4D27]",
     },
     {
       id: "mission",
       index: 1,
       title: "Mission",
-      tagline: "Empowering Healthcare at the Margins",
+      tagline: "Empowerment in Healthcare at the Periphery",
       content:
-        "To bring change in scenario of healthcare for those who are left on the margins of growth by helping in creating institutions who can deliver quality healthcare with service and by using technology in its delivery.",
+        "We aim to empower healthcare services for communities that have been overlooked during the path of development. With hospital management software in India, we offer quality healthcare with empathy and service, along with the power of technology.",
       dotColor: "bg-[#0284C7]",
     },
     {
@@ -59,7 +59,7 @@ export const AboutSection = () => {
       title: "Vision",
       tagline: "Leading Healthcare Startup & Platform",
       content:
-        "We shall strive to become leading healthcare startup in field of healthcare through innovation & technology & collaboration.",
+        "As the best hospital software in India, we endeavour to be the premier and trustworthy healthcare startup in the healthcare sector through innovation, technology, and collaboration.",
       dotColor: "bg-emerald-500",
     },
     {
@@ -68,7 +68,7 @@ export const AboutSection = () => {
       title: "Credo",
       tagline: "Uncompromising Quality & Lifetime Compliance",
       content:
-        "Our association shall be for Quality & compliance. We shall be available to our associates in thick & thin of their life cycle.",
+        "At Hamsa Soham, our approach to work is uncompromising quality and lifetime compliance. With our hospital management software in India,  we stick with our associates throughout their work tenure and deal with their problems reliably and responsibly.",
       dotColor: "bg-purple-600",
     },
     {
@@ -77,7 +77,7 @@ export const AboutSection = () => {
       title: "Why Choose Us",
       tagline: "Complete Health Care Information System",
       content:
-        "Our HIMS is a complete Health Care Information System which provides the benefits of streamlined operation, enhanced administration & control, Superior patient care, strict cost control and improved profitability. We are one among the very few who offer an advanced solution globally that's simple, reliable, affordable and proven.",
+        "Hamsa Soham HMIS, known as the best hospital management software in India, helps you realize the potential of our innovative healthcare information system. As opposed to standard programs, we offer you a reliable, affordable, and ready-to-use global product.",
       dotColor: "bg-amber-500",
     },
   ];
@@ -165,13 +165,13 @@ export const AboutSection = () => {
             `,
           }}
         />
-        
+
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center">
-            
+
             {/* Left Column: Fixed Headline & Subtitle */}
             <div className="lg:col-span-5 space-y-4 sm:space-y-6 text-left">
-              
+
               {/* Stationary Section Title */}
               <div className="space-y-1.5 sm:space-y-2 pt-2">
                 <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-[#0B132B] leading-tight">
@@ -187,7 +187,7 @@ export const AboutSection = () => {
 
               {/* GJR Style Dynamic Floating Animated Brand Orbs Stage (Desktop Only) */}
               <div className="hidden lg:flex relative pt-2 items-center gap-8 min-h-[240px]">
-                
+
                 {/* Dynamic Floating Orbs Track */}
                 <div className="relative w-24 h-[320px] flex justify-center">
                   {/* Track Line */}
@@ -255,9 +255,8 @@ export const AboutSection = () => {
 
                     {/* Smooth Accordion Content Reveal */}
                     <div
-                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        isOpen ? "max-h-96 opacity-100 pt-3 sm:pt-6" : "max-h-0 opacity-0 pt-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-96 opacity-100 pt-3 sm:pt-6" : "max-h-0 opacity-0 pt-0"
+                        }`}
                     >
                       <div className="pl-6 sm:pl-9 space-y-2">
                         <p className="text-xs font-bold uppercase tracking-wider text-[#FF4D27]">

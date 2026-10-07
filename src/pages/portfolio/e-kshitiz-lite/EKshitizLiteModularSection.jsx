@@ -4,7 +4,6 @@ import {
   Sparkles,
   CheckCircle2,
   Plus,
-  Sliders,
   Pill,
   Microscope,
   BedDouble,
@@ -108,23 +107,18 @@ export const EKshitizLiteModularSection = () => {
       <div className="absolute bottom-10 left-10 w-[450px] h-[450px] bg-teal-200/20 rounded-full blur-[100px] pointer-events-none -z-0" />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-extrabold uppercase tracking-widest shadow-xs">
-            <Sliders className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Need-Based HIMS Architecture</span>
-          </div>
 
+        {/* Section Header */}
+        <div className="max-w-4xl mx-auto text-center space-y-4 mb-14">
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight leading-tight">
-            A Compact Edition of e_Kshitiz —{" "}
+            A Compact Edition of e_Kshitiz — <br className="hidden sm:inline" />
             <span className="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-600 bg-clip-text text-transparent">
               Modules Provided As Per Your Need
             </span>
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-            Avoid paying for heavy enterprise features your facility doesn't use. <strong className="text-slate-800 font-bold">e_Kshitiz Lite</strong> is a modular, small edition of our flagship HIMS. You activate only the exact departments you operate, and plug in more modules anytime.
+            Avoid paying for functionalities that you do not need for your organisation go for the e_Kshitiz Lite version, which is modular in nature and one of the top hospital management software in India. The HIMS system is designed on the basis of a need-based structure. This allows you to activate the departments that exist in your hospital presently while ensuring efficiency and lower operating costs, and it will also give you the ability to expand and add modules in the future.
           </p>
         </div>
 
@@ -135,10 +129,10 @@ export const EKshitizLiteModularSection = () => {
               01
             </div>
             <h3 className="text-base font-extrabold text-[#0B132B] mb-1">
-              Specify Facility Scale
+              Choose Right Facility Size
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Whether you run a 10-bed clinic, a daycare surgical center, or a 50-bed nursing home, pick only relevant workflows.
+              Be it a 10-bed facility, a surgery daycare center, or a 50-bed nursing home facility, use only those workflows that make sense to you.
             </p>
           </div>
 
@@ -147,10 +141,10 @@ export const EKshitizLiteModularSection = () => {
               02
             </div>
             <h3 className="text-base font-extrabold text-[#0B132B] mb-1">
-              Deploy Clean Tailored Menus
+              Roll Out Clean & Customized Menus
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Doctors and receptionists only see the screens they need. Zero complex menus, zero confusion, and 100% staff adoption.
+              Ensure that doctors and receptionists see only the screens that they need—no clutter, no confusion, and 100 percent staff acceptance.
             </p>
           </div>
 
@@ -159,21 +153,21 @@ export const EKshitizLiteModularSection = () => {
               03
             </div>
             <h3 className="text-base font-extrabold text-[#0B132B] mb-1">
-              Add Modules On Demand
+              Use Modules On-the-Go
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              When opening an in-house pharmacy, lab counter, or expanding beds, enable the corresponding module with zero downtime.
+              Are you planning to expand with a pharmacy or laboratory counter? Enable the module on the go.
             </p>
           </div>
         </div>
 
         {/* The Dual Setup: Base Core + Modular Add-ons Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-14">
-          
+
           {/* Left: Always Included Core Base Foundation */}
           <div className="lg:col-span-5 bg-gradient-to-br from-[#062419] to-[#0D3B2E] text-white rounded-3xl p-8 sm:p-9 shadow-xl border border-emerald-900/50 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
-            
+
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-emerald-200 text-xs font-extrabold tracking-wide mb-5">
               <PackageCheck className="w-3.5 h-3.5 text-emerald-300" />
               Standard In Every Setup
@@ -236,41 +230,37 @@ export const EKshitizLiteModularSection = () => {
               <div className="flex items-center gap-1.5 p-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold">
                 <button
                   onClick={() => setActiveTab("all")}
-                  className={`px-3 py-1 rounded-full transition-all cursor-pointer ${
-                    activeTab === "all"
-                      ? "bg-white text-slate-900 shadow-xs font-bold"
-                      : "text-slate-600 hover:text-slate-900"
-                  }`}
+                  className={`px-3 py-1 rounded-full transition-all cursor-pointer ${activeTab === "all"
+                    ? "bg-white text-slate-900 shadow-xs font-bold"
+                    : "text-slate-600 hover:text-slate-900"
+                    }`}
                 >
                   All (4)
                 </button>
                 <button
                   onClick={() => setActiveTab("clinical")}
-                  className={`px-3 py-1 rounded-full transition-all cursor-pointer ${
-                    activeTab === "clinical"
-                      ? "bg-white text-slate-900 shadow-xs font-bold"
-                      : "text-slate-600 hover:text-slate-900"
-                  }`}
+                  className={`px-3 py-1 rounded-full transition-all cursor-pointer ${activeTab === "clinical"
+                    ? "bg-white text-slate-900 shadow-xs font-bold"
+                    : "text-slate-600 hover:text-slate-900"
+                    }`}
                 >
                   Clinical
                 </button>
                 <button
                   onClick={() => setActiveTab("diagnostic")}
-                  className={`px-3 py-1 rounded-full transition-all cursor-pointer ${
-                    activeTab === "diagnostic"
-                      ? "bg-white text-slate-900 shadow-xs font-bold"
-                      : "text-slate-600 hover:text-slate-900"
-                  }`}
+                  className={`px-3 py-1 rounded-full transition-all cursor-pointer ${activeTab === "diagnostic"
+                    ? "bg-white text-slate-900 shadow-xs font-bold"
+                    : "text-slate-600 hover:text-slate-900"
+                    }`}
                 >
                   Diagnostic
                 </button>
                 <button
                   onClick={() => setActiveTab("finance")}
-                  className={`px-3 py-1 rounded-full transition-all cursor-pointer ${
-                    activeTab === "finance"
-                      ? "bg-white text-slate-900 shadow-xs font-bold"
-                      : "text-slate-600 hover:text-slate-900"
-                  }`}
+                  className={`px-3 py-1 rounded-full transition-all cursor-pointer ${activeTab === "finance"
+                    ? "bg-white text-slate-900 shadow-xs font-bold"
+                    : "text-slate-600 hover:text-slate-900"
+                    }`}
                 >
                   Finance
                 </button>

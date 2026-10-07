@@ -122,13 +122,13 @@ export const EKshitizLiteHero = () => {
       </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 w-full">
-        
+
         {/* Asymmetric 2-Column Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Headlines & Action CTAs */}
           <div className="lg:col-span-6 space-y-6 text-left">
-            
+
             {/* Edition Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-300/80 text-emerald-900 text-xs font-black uppercase tracking-wider shadow-xs">
               <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
@@ -145,7 +145,7 @@ export const EKshitizLiteHero = () => {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-              The agile, compact edition of our flagship e_Kshitiz HIMS. Built specifically for nursing homes, polyclinics, and mid-sized hospitals—we give you only the modules you actually need today, keeping software costs low and operations blazing fast, with instant upgrades as you grow.
+              e_Kshitiz Lite is the compact version of our premium product, which is rated as one of the top hospital management software in India, catering especially to nursing homes, polyclinics, and Mid-Sized hospitals. Thanks to the modularity of this product, you only have what you need right now, saving on costs and maximizing speed, yet allowing for easy scalability of the system as your hospital grows bigger.
             </p>
 
             {/* Action Buttons */}
@@ -173,13 +173,13 @@ export const EKshitizLiteHero = () => {
 
           {/* Right Column: Clean Showcase Frame */}
           <div className="lg:col-span-6 relative">
-            
+
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400/30 via-teal-400/20 to-cyan-400/20 rounded-3xl blur-2xl -z-10 transform scale-105" />
 
             {/* Main Window Container */}
             <div className="relative rounded-3xl bg-slate-950 p-2 sm:p-3 border border-slate-800 shadow-2xl overflow-hidden group">
-              
+
               {/* macOS Header Bar */}
               <div className="bg-slate-900 px-4 py-2.5 rounded-t-2xl border-b border-slate-800 flex items-center justify-between">
                 <div className="flex items-center gap-1.5">

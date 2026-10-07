@@ -9,14 +9,17 @@ export const AbhaCardSection = () => {
       title: "ABHA Address",
       copy: (
         <>
-          An ABHA (Ayushman Bharat Health Account) Address serves as a unique digital handle (a personalized username) allowing you to securely view and share medical records online. Formatted similarly to <span className="font-semibold text-slate-800">'yourname@consentmanager'</span>—such as <span className="font-semibold text-[#FF4D27]">xyz@abdm</span> linked to an ABDM Consent Manager—it facilitates frictionless, consent-driven health data exchange across India's national health network.
+          It is a unique digital address (e.g., yourname@consentmanager) that is a gateway through which one can access one’s health records securely.
+          Helps people view and share their health information securely via the internet.
+          It is linked with the ABDM Consent Manager for consent-based sharing in the Indian connected health ecosystem.
+
         </>
       ),
     },
     {
       Icon: CreditCard,
       title: "ABHA Number",
-      copy: "The ABHA Number acts as your primary digital identity across India's connected healthcare ecosystem. This 14-digit personalized identification number securely anchors your verified personal identity, medical history, and clinical health records across all participating facilities.",
+      copy: "It is a 14-digit unique number that forms the basis of a digital identity in the health sector. Links up with the verified personal information, health history, and clinical records of individuals from hospitals and diagnostic centers. Recognised as the basis of India’s digital health infrastructure, making patients’ care seamless and reliable.",
     },
   ];
 
@@ -177,7 +180,8 @@ export const AbhaCardSection = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#0B132B] tracking-tight leading-tight">
               Ayushman Bharat Health Account (ABHA)
             </h2>
-
+            <p className="text-slate-700 font-medium  text-md sm:text-md lg:text-md mt-6 leading-relaxed">
+              When it comes to the best hospital management software in India, consolidation with ABHA is vital.</p>
             <div className="mt-7 grid gap-4">
               {infoBlocks.map(({ Icon, title, copy }, idx) => (
                 <div

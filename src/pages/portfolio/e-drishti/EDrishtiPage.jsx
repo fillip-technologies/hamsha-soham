@@ -111,11 +111,13 @@ export const EDrishtiPage = () => {
       {/* 2. Dropdown Highlight Section 1: Enterprise Eye Hospital */}
       <EDrishtiEnterpriseSection />
 
+      {/* 4. Complete Module Structure */}
+      <EDrishtiModuleStructure />
+
       {/* 3. Dropdown Highlight Section 2: Registration to Inventory Management */}
       <EDrishtiWorkflowSection />
 
-      {/* 4. Complete Module Structure */}
-      <EDrishtiModuleStructure />
+
 
       {/* 5. Dropdown Highlight Section 3: Comprehensive Eye EMR */}
       <EDrishtiEmrSection />
@@ -123,7 +125,7 @@ export const EDrishtiPage = () => {
       {/* 5. Interactive Clinical Workspace Tour */}
       <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-          
+
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
             <span className="px-4 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-extrabold tracking-wider uppercase">
               Role-Based Experience
@@ -149,11 +151,10 @@ export const EDrishtiPage = () => {
                   <button
                     key={role.id}
                     onClick={() => setActiveRoleTab(idx)}
-                    className={`px-4 py-3 rounded-xl sm:rounded-full text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer ${
-                      isActive
-                        ? "bg-white text-slate-900 shadow-md border border-slate-200/90"
-                        : "text-slate-600 hover:text-slate-900 hover:bg-white/50 font-semibold"
-                    }`}
+                    className={`px-4 py-3 rounded-xl sm:rounded-full text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer ${isActive
+                      ? "bg-white text-slate-900 shadow-md border border-slate-200/90"
+                      : "text-slate-600 hover:text-slate-900 hover:bg-white/50 font-semibold"
+                      }`}
                   >
                     <RoleIcon className={`w-4 h-4 shrink-0 ${isActive ? "text-sky-600" : "text-slate-400"}`} />
                     <span className="truncate">{role.title}</span>
@@ -173,7 +174,7 @@ export const EDrishtiPage = () => {
                 <div className="absolute top-0 right-0 w-96 h-96 bg-sky-400/10 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-                  
+
                   {/* Left Column: Details */}
                   <div className="lg:col-span-7 space-y-6 text-left">
                     <div className="flex items-center gap-3">
@@ -240,13 +241,15 @@ export const EDrishtiPage = () => {
       {/* 4. Paper vs e_Drishti Comparison Matrix */}
       <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-          
+
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight">
               Paper Files vs <span className="text-sky-600">e_Drishti HIMS</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg">
-              Why leading eye care networks are replacing manual paper charts with e_Drishti.
+              Reasons Why Top Eye Care Chains Have Switched Over. <br />
+              Replace your traditional paper-based files with the latest technology-backed eye hospital management system, e-Drishti, used by India's top eye care chains.
+
             </p>
           </div>
 
@@ -260,7 +263,7 @@ export const EDrishtiPage = () => {
               <ul className="space-y-3 text-sm text-slate-700">
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Lost paper vision charts & misplaced refraction history
+                  Vision charts lost and refraction history untraceable
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-rose-500" />
@@ -268,11 +271,11 @@ export const EDrishtiPage = () => {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Unrecorded optical stock leakage & frame inventory errors
+                  Optical stock loss undocumented and errors in frame inventory
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Slow manual NABH audit compilation taking weeks
+                  Time-consuming NABH audit report creation (taking weeks)
                 </li>
               </ul>
             </div>
@@ -290,15 +293,16 @@ export const EDrishtiPage = () => {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-sky-600" />
-                  Instant auto-refractometer data import in 1 click
+                  One-click auto-refractometer reading input
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-sky-600" />
-                  Automated optical barcode POS & stock re-order alerts
+                  Barcoded POS and automatic stock reorder alert
+
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-sky-600" />
-                  1-Click automated NABH & NABL audit report generation
+                  One-click NABH & NABL audit report creation
                 </li>
               </ul>
             </div>
@@ -310,7 +314,7 @@ export const EDrishtiPage = () => {
       {/* 5. Bottom Call-To-Action Glass Banner */}
       <section className="py-10 sm:py-14 bg-slate-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-sky-950 via-slate-900 to-slate-950 pointer-events-none" />
-        
+
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center space-y-4">
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
             Schedule Your Personalized{" "}
@@ -320,7 +324,8 @@ export const EDrishtiPage = () => {
           </h2>
 
           <p className="text-slate-300 text-base max-w-2xl mx-auto">
-            Discover how e_Drishti streamlines doctor consultations, optical POS, and OT cataract management.
+            From inefficiency to efficiency, switch to the future of eye care with the best eye hospital management system.
+
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">

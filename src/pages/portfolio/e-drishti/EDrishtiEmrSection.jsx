@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Eye,
   Stethoscope,
   FileCheck2,
   Activity,
@@ -26,13 +25,10 @@ export const EDrishtiEmrSection = () => {
       <div className="absolute bottom-0 right-10 w-[500px] h-[500px] bg-[#FF4D27]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-[#FF4D27] text-xs font-extrabold uppercase tracking-widest">
-            <Eye className="w-3.5 h-3.5 text-[#FF4D27]" />
-            Ophthalmic Speciality EMR
-          </div>
+
 
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight leading-[1.12]">
             Comprehensive{" "}
@@ -42,17 +38,18 @@ export const EDrishtiEmrSection = () => {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-            Purpose-built for Ophthalmologists, Optometrists, and Retina Specialists. Rapid visual refraction charting, diagnostic OCT image attachment, tonometry flowsheets, and 1-click prescription generation.
+            With elevated ophthalmic care and the advanced eye hospital management system, purpose-built with Rapid visual refraction charting, diagnostic OCT image attachments, tonometry flowsheets, and One‑click prescription generation, our next-gen clinical suite integrates accurate diagnostics, smart workflows, and patient-centric innovation.
+
           </p>
         </div>
 
         {/* Dynamic Bento Box Architecture Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
+
           {/* BENTO CARD 1: Interactive Refraction & Acuity Engine (Featured Card - 8 Columns) */}
           <div className="lg:col-span-8 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 hover:border-orange-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#FF4D27] via-orange-500 to-sky-600" />
-            
+
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
@@ -81,17 +78,15 @@ export const EDrishtiEmrSection = () => {
                   <div className="flex gap-1.5 bg-slate-200/60 p-1 rounded-lg">
                     <button
                       onClick={() => setActiveEyeTab("OD")}
-                      className={`px-3 py-1 rounded-md text-xs font-extrabold transition-all ${
-                        activeEyeTab === "OD" ? "bg-white text-orange-600 shadow-2xs" : "text-slate-600"
-                      }`}
+                      className={`px-3 py-1 rounded-md text-xs font-extrabold transition-all ${activeEyeTab === "OD" ? "bg-white text-orange-600 shadow-2xs" : "text-slate-600"
+                        }`}
                     >
                       OD (Right Eye)
                     </button>
                     <button
                       onClick={() => setActiveEyeTab("OS")}
-                      className={`px-3 py-1 rounded-md text-xs font-extrabold transition-all ${
-                        activeEyeTab === "OS" ? "bg-white text-sky-600 shadow-2xs" : "text-slate-600"
-                      }`}
+                      className={`px-3 py-1 rounded-md text-xs font-extrabold transition-all ${activeEyeTab === "OS" ? "bg-white text-sky-600 shadow-2xs" : "text-slate-600"
+                        }`}
                     >
                       OS (Left Eye)
                     </button>
