@@ -6,11 +6,9 @@ import {
   Phone,
   CheckCircle2,
   XCircle,
-  Eye,
-  FileText,
-  Zap,
   ArrowRight,
 } from "lucide-react";
+import { SEO } from "../../../components/common/SEO";
 
 export const EDrishtiLitePage = () => {
 
@@ -20,6 +18,12 @@ export const EDrishtiLitePage = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans">
+      {/* Page Meta Title & Description */}
+      <SEO
+        title="Medical Software India | e_Drishti Lite for Eye Clinics"
+        description="e_Drishti Lite is compact, scalable medical software India for eye clinics, doctors, and optical stores, offering tailored modules and plug‑and‑play efficiency."
+      />
+
       {/* 1. Hero Section */}
       <EDrishtiLiteHero />
 
@@ -29,7 +33,7 @@ export const EDrishtiLitePage = () => {
       {/* 3. Clinic Features Section */}
       <EDrishtiLiteFeatures />
 
-      {/* 3. Comparison Matrix: Manual Worksheets vs e_Drishti Lite */}
+      {/* 4. Comparison Matrix: Manual Clinic Registers vs e_Drishti Lite */}
       <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
           
@@ -38,7 +42,7 @@ export const EDrishtiLitePage = () => {
               Manual Paper Prescriptions vs <span className="text-purple-600">e_Drishti Lite</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg">
-              Streamline your eye clinic operations and eliminate patient wait times.
+              Make your eye clinic efficient and avoid any patient waiting time by using e_Drishti Lite, one of the best medical software India.
             </p>
           </div>
 
@@ -51,20 +55,20 @@ export const EDrishtiLitePage = () => {
               </div>
               <ul className="space-y-3 text-sm text-slate-700">
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Handwritten spectacle prescriptions hard for patients to read
+                  <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
+                  Manual spectacle prescriptions are not clearly legible for patients
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Manual stock register discrepancies in optical frame inventory
+                  <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
+                  Errors in the stock register for optical frames
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  No patient visit history tracking or quick re-consult lookup
+                  <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
+                  Patient history is not recorded; cannot see the patient's previous consultations
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Time wasted re-typing refraction numbers manually
+                  <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
+                  Time-consuming manual entry of refraction values
                 </li>
               </ul>
             </div>
@@ -77,20 +81,20 @@ export const EDrishtiLitePage = () => {
               </div>
               <ul className="space-y-3 text-sm text-slate-800 font-medium">
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-purple-600" />
-                  1-Click printed spectacle & eye drops prescription output
+                  <span className="w-2 h-2 rounded-full bg-purple-600 shrink-0" />
+                  Single-click printing of spectacles and eye drops prescription
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-purple-600" />
-                  Automated frame stock deduction & optical POS barcode billing
+                  <span className="w-2 h-2 rounded-full bg-purple-600 shrink-0" />
+                  Automated frame stock subtraction through barcode billing
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-purple-600" />
-                  Instant patient history lookup from past consult visits
+                  <span className="w-2 h-2 rounded-full bg-purple-600 shrink-0" />
+                  Immediate access to the patient's history through previous consultations
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-purple-600" />
-                  Direct auto-refractor & diagnostic device connectivity
+                  <span className="w-2 h-2 rounded-full bg-purple-600 shrink-0" />
+                  Automatic connection to auto refractor and other diagnostic equipment
                 </li>
               </ul>
             </div>

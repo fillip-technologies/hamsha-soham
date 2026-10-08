@@ -11,36 +11,36 @@ import {
 export const EKshitizFeatures = () => {
   const enterpriseFeatures = [
     {
-      title: "Integrated IPD & OPD Management",
-      desc: "Complete inpatient and outpatient registration, bed management, doctor round notes, and automated discharge summaries.",
+      title: "IPD & OPD Patient Flow Management",
+      desc: "From patient registration to bed management, doctor's notes, and discharge summary.",
       icon: Building2,
       iconBg: "bg-orange-50 text-[#FF4D27] border-orange-200/60",
       glowColor: "group-hover:border-orange-300",
     },
     {
-      title: "LIS & RIS Diagnostics Interfacing",
-      desc: "Direct integration with Laboratory Information Systems (LIS) and Radiology equipment for instant diagnostic report delivery.",
+      title: "LIS & RIS Diagnostic Interfacing",
+      desc: "Integrated lab and radiology for instant reports.",
       icon: Activity,
       iconBg: "bg-sky-50 text-sky-600 border-sky-200/60",
       glowColor: "group-hover:border-sky-300",
     },
     {
-      title: "Pharmacy & Central Store POS",
-      desc: "Automated pharmacy inventory, batch expiry tracking, barcode billing, and central store stock replenishment.",
+      title: "Pharmacy & Central Stores POS System",
+      desc: "Automatic management of inventory, drug expiry of drugs, barcode billing, and re-ordering.",
       icon: FileText,
       iconBg: "bg-emerald-50 text-emerald-600 border-emerald-200/60",
       glowColor: "group-hover:border-emerald-300",
     },
     {
-      title: "NABH & NABL Audit Compliance",
-      desc: "Built-in clinical quality indicators, infection control audit forms, and automated NABH compliance documentation.",
+      title: "NABH & NABL Compliance",
+      desc: "Quality Indicators, Infection Control Forms, and compliance management.",
       icon: ShieldCheck,
       iconBg: "bg-amber-50 text-amber-600 border-amber-200/60",
       glowColor: "group-hover:border-amber-300",
     },
     {
-      title: "OT & ICU Workflow Suite",
-      desc: "Operation theatre scheduling, surgical checklist logs, ICU monitor vitals recording, and anesthesia notes.",
+      title: "OT & ICU Workflow Module",
+      desc: "Surgical planning, vitals recording in ICU, and Anesthesia notes.",
       icon: Zap,
       iconBg: "bg-indigo-50 text-indigo-600 border-indigo-200/60",
       glowColor: "group-hover:border-indigo-300",
@@ -67,8 +67,8 @@ export const EKshitizFeatures = () => {
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight uppercase">
             Enterprise <span className="bg-gradient-to-r from-[#FF4D27] via-orange-500 to-amber-500 bg-clip-text text-transparent">Features</span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal">
-            Everything your multispeciality hospital needs to centralize clinical, financial, and operational workflows.
+          <p className="text-slate-600 text-base sm:text-lg max-w-3xl mx-auto font-normal">
+            All features that will help you consolidate your clinical, financial, and operational workflow in your multispeciality hospital are packed in this system.
           </p>
         </div>
 

@@ -26,7 +26,7 @@ export const AboutHero = () => {
           </h1>
 
           <p className="text-slate-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl mx-auto">
-            Enterprise HIMS platforms, specialized ophthalmic EMR workflows, and predictive AI engines empowering 50+ hospital networks across India.
+            Enterprises' HIMS solutions, ophthalmic EMR processes, and prediction by AI systems are deployed across 50+ hospitals throughout the nation. Known as the best hospital ERP software India, this system consolidates operations and improves healthcare results.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-1">

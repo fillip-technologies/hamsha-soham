@@ -9,6 +9,7 @@ import {
   XCircle,
   ArrowRight,
 } from "lucide-react";
+import { SEO } from "../../../components/common/SEO";
 
 export const EKshitizPage = () => {
   const location = useLocation();
@@ -30,6 +31,12 @@ export const EKshitizPage = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans">
+      {/* Page Meta Title & Description */}
+      <SEO
+        title="Hospital Billing Software India | e_Kshitiz HIMS"
+        description="Upgrade from legacy systems to e_Kshitiz HIMS, trusted hospital billing software India, with centralized EMR, zero‑leakage billing, and real‑time analytics."
+      />
+
       {/* 1. Hero Section */}
       <EKshitizHero />
 
@@ -42,39 +49,39 @@ export const EKshitizPage = () => {
       {/* 3. Comparison Matrix */}
       <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-          
+
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight">
               Legacy Systems vs <span className="text-[#FF4D27]">e_Kshitiz HIMS</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg">
-              Why leading multispeciality hospitals upgrade to e_Kshitiz Enterprise.
+              Top Multispeciality Hospitals are now switching from legacy and fragmented systems to e_Kshitiz Enterprise, which is widely used and accepted as top-of-the-line hospital billing software India.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Legacy Standalone Systems */}
+            {/* Legacy Fragmented Systems */}
             <div className="bg-rose-50/50 rounded-3xl p-8 border border-rose-200/70 space-y-6">
               <div className="flex items-center gap-3 text-rose-700">
                 <XCircle className="w-6 h-6" />
-                <h3 className="text-xl font-extrabold">Legacy Disconnected Software</h3>
+                <h3 className="text-xl font-extrabold">Legacy Fragmented Systems</h3>
               </div>
               <ul className="space-y-3 text-sm text-slate-700">
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Isolated software for billing, pharmacy, and LIS diagnostics
+                  <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
+                  Billing, pharmacy, and diagnostics modules operate in isolation
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  High risk of billing leakage & unrecorded medication dispensing
+                  <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
+                  Vulnerability to billing leakage and dispensing not captured
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Weeks required to compile manual NABH audit compliance files
+                  <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
+                  Time-consuming effort to prepare manual NABH audit documentation
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  No real-time occupancy or OT utilization dashboard for management
+                  <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
+                  Lack of real-time dashboards for bed occupancy and OT scheduling
                 </li>
               </ul>
             </div>
@@ -87,20 +94,20 @@ export const EKshitizPage = () => {
               </div>
               <ul className="space-y-3 text-sm text-slate-800 font-medium">
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-[#FF4D27]" />
-                  Centralized EMR, billing, IPD/OPD, LIS, RIS, and Pharmacy integration
+                  <span className="w-2 h-2 rounded-full bg-[#FF4D27] shrink-0" />
+                  EMR, Billing, IPD/OPD, LIS, RIS, Pharmacy integrated
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-[#FF4D27]" />
-                  Automated drug interaction warnings & zero-leakage patient billing
+                  <span className="w-2 h-2 rounded-full bg-[#FF4D27] shrink-0" />
+                  Drug interaction and no-leakage billing automated
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-[#FF4D27]" />
-                  1-Click automated NABH & NABL audit report generation
+                  <span className="w-2 h-2 rounded-full bg-[#FF4D27] shrink-0" />
+                  NABH and NABL audit reports in one click
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="w-2 h-2 rounded-full bg-[#FF4D27]" />
-                  Real-time bed occupancy, OT scheduling, and financial analytics
+                  <span className="w-2 h-2 rounded-full bg-[#FF4D27] shrink-0" />
+                  Real-time dashboards for bed occupancy, OT scheduling, and financial management
                 </li>
               </ul>
             </div>
@@ -112,7 +119,7 @@ export const EKshitizPage = () => {
       {/* 4. Bottom Compact CTA Banner */}
       <section className="py-10 sm:py-14 bg-slate-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-950 via-slate-900 to-slate-950 pointer-events-none" />
-        
+
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center space-y-4">
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
             Schedule Your Live{" "}
@@ -122,7 +129,7 @@ export const EKshitizPage = () => {
           </h2>
 
           <p className="text-slate-300 text-base max-w-2xl mx-auto">
-            Discover how e_Kshitiz centralizes multispeciality hospital operations, IPD/OPD, and NABH compliance.
+            From fragmentation to innovation, e_Kshitiz Enterprise is the benchmark of hospital billing software India.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">

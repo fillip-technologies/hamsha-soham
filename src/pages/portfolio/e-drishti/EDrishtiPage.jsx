@@ -24,6 +24,7 @@ import {
   BarChart3,
   Cpu,
 } from "lucide-react";
+import { SEO } from "../../../components/common/SEO";
 
 export const EDrishtiPage = () => {
   const [activeRoleTab, setActiveRoleTab] = useState(0);
@@ -105,6 +106,12 @@ export const EDrishtiPage = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans">
+      {/* Page Meta Title & Description */}
+      <SEO
+        title="Eye Hospital Management System | e_Drishti HIMS"
+        description="Replace paper charts with e_Drishti, the leading eye hospital management system, offering digital records, smart audits, and seamless optical inventory control."
+      />
+
       {/* 1. Light Medical Hero Section */}
       <EDrishtiHero />
 

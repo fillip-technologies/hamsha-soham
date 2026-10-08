@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import {
-  Layers,
-  Sparkles,
   CheckCircle2,
   Plus,
-  Sliders,
   Glasses,
   Zap,
   BedDouble,
   BarChart3,
   ArrowRight,
   ShieldCheck,
-  Stethoscope,
-  ChevronRight,
   PackageCheck,
   Phone,
 } from "lucide-react";
@@ -108,21 +103,16 @@ export const EDrishtiLiteModularSection = () => {
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-purple-800 text-xs font-extrabold uppercase tracking-widest shadow-xs">
-            <Sliders className="w-3.5 h-3.5 text-purple-600" />
-            <span>Tailored Modular Architecture</span>
-          </div>
-
+        <div className="max-w-4xl mx-auto text-center space-y-4 mb-14">
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight leading-tight">
-            A Compact Edition of e_Drishti —{" "}
+            A Compact Edition of e_Drishti — <br className="hidden sm:inline" />
             <span className="bg-gradient-to-r from-purple-600 via-indigo-500 to-sky-600 bg-clip-text text-transparent">
               Modules Provided As Per Your Need
             </span>
           </h2>
 
-          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-            Unlike heavy enterprise software that charges you for unused features, <strong className="text-slate-800 font-bold">e_Drishti Lite</strong> is a small, flexible version of our full suite. You choose strictly the modules your clinic requires today, and activate more as you expand.
+          <p className="text-slate-600 text-base sm:text-lg max-w-3xl mx-auto font-normal leading-relaxed">
+            e_Drishti Lite is the slim, customizable version of our top-of-the-line product suite, which has been classified as one of the most effective medical software India. This application is designed specifically for ophthalmic clinics, hospitals, and optical retail outlets, and its architecture ensures that your business doesn’t have any unnecessary features through customizable modules.
           </p>
         </div>
 
@@ -133,10 +123,10 @@ export const EDrishtiLiteModularSection = () => {
               01
             </div>
             <h3 className="text-base font-extrabold text-[#0B132B] mb-1">
-              Select Your Clinical Scope
+              Select Scope for Your Clinic
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Tell us whether you operate an independent optometry clinic, an eye hospital OPD, or an optical showroom.
+              Select modules that suit your facility – whether it is an Optometrist’s clinic, eye hospital outpatient department, or optical shop.
             </p>
           </div>
 
@@ -145,10 +135,10 @@ export const EDrishtiLiteModularSection = () => {
               02
             </div>
             <h3 className="text-base font-extrabold text-[#0B132B] mb-1">
-              We Activate Only Needed Modules
+              Have Only Modules You Need
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Your instance is delivered clean and pre-configured with zero clutter, zero unwanted menus, and lower pricing.
+              Have a neat and ready configuration with no unnecessary modules whatsoever and economy of cost.
             </p>
           </div>
 
@@ -157,10 +147,10 @@ export const EDrishtiLiteModularSection = () => {
               03
             </div>
             <h3 className="text-base font-extrabold text-[#0B132B] mb-1">
-              Plug In More As You Grow
+              Expand with More as You Grow
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Add Optical POS, Device Sync, or Daycare OT anytime with 1-click modular activation—your patient data never changes.
+              Plug-in modules like Optical POS, Device Sync, or Daycare OT immediately with no data loss at all.
             </p>
           </div>
         </div>

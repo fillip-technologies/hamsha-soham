@@ -146,7 +146,7 @@ export const EDrishtiLiteHero = () => {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-              The agile, compact edition of our flagship e_Drishti platform. Designed for eye clinics, practitioners, and optical stores—we provide tailored modules strictly according to your needs with zero enterprise bloat and 100% plug-and-play scalability.
+              e_Drishti Lite is the efficient, compact version of our main software product line that is tailored especially for use by eye clinics, individual doctors, and even optical stores. It is considered one of the best-performing medical software India. The software offers customized modules as per your requirements and makes sure that it does not come with all the enterprise features, making it 100 percent scalable and plug-and-play.
             </p>
 
             {/* Action Buttons */}

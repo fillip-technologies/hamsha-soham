@@ -8,6 +8,7 @@ import {
   XCircle,
   ArrowRight,
 } from "lucide-react";
+import { SEO } from "../../../components/common/SEO";
 
 export const EKshitizLitePage = () => {
 
@@ -17,6 +18,12 @@ export const EKshitizLitePage = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans">
+      {/* Page Meta Title & Description */}
+      <SEO
+        title="Top Hospital Management Software in India | e_Kshitiz Lite"
+        description="Switch from manual billing to e_Kshitiz Lite, the top hospital management software in India, with 1‑click prescriptions, faster queues, and smart EHR access."
+      />
+
       {/* 1. Hero Section */}
       <EKshitizLiteHero />
 
@@ -29,13 +36,14 @@ export const EKshitizLitePage = () => {
       {/* 3. Comparison Matrix */}
       <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-          
+
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight">
               Manual Hospital Billing vs <span className="text-emerald-600">e_Kshitiz Lite</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg">
-              Upgrade your nursing home or mid-sized hospital with zero IT complexity.
+              Healthcare companies have been upgrading their manual register systems to the top hospital management software in India with the purpose of increasing efficiency and accuracy.
+
             </p>
           </div>
 
@@ -49,19 +57,19 @@ export const EKshitizLitePage = () => {
               <ul className="space-y-3 text-sm text-slate-700">
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Handwritten doctor prescriptions prone to pharmacy dispensing errors
+                  Handwritten prescriptions by doctors, resulting in pharmacy dispensing errors.
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Long patient queues at OPD counter during peak morning hours
+                  Frustration in the form of long queues of patients.
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Untracked patient medical history across repeat visits
+                  Absence of a tracked patient's medical history.
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-rose-500" />
-                  Manual daily cash reconciliation taking hours after OPD close
+                  Long process of cash reconciliation taking hours.
                 </li>
               </ul>
             </div>
@@ -75,19 +83,19 @@ export const EKshitizLitePage = () => {
               <ul className="space-y-3 text-sm text-slate-800 font-medium">
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-600" />
-                  1-Click printed OPD prescriptions & diagnostic test requests
+                  One-click prescriptions free of any errors.
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-600" />
-                  Fast barcode billing reducing patient queue time by 75%
+                  Barcode billing system saving up to 75% of patient queue time.
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-600" />
-                  Instant electronic health record (EHR) lookup for repeat patients
+                  Patient health records (EHR) accessible instantly with one click.
                 </li>
                 <li className="flex items-center gap-2.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-600" />
-                  Automated daily billing summary & cash collection reports
+                  Auto-generation of bills and audit reports.
                 </li>
               </ul>
             </div>
@@ -99,7 +107,7 @@ export const EKshitizLitePage = () => {
       {/* 4. Bottom Compact CTA Banner */}
       <section className="py-10 sm:py-14 bg-slate-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-950 via-slate-900 to-slate-950 pointer-events-none" />
-        
+
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center space-y-4">
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
             Schedule Your Live{" "}
@@ -109,7 +117,7 @@ export const EKshitizLitePage = () => {
           </h2>
 
           <p className="text-slate-300 text-base max-w-2xl mx-auto">
-            Discover how e_Kshitiz Lite simplifies OPD billing, electronic health records, and pharmacy management.
+            From inefficiency to innovation — that’s why e_Kshitiz Lite is the best hospital management system software in India.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">

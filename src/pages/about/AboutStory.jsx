@@ -27,7 +27,7 @@ export const AboutStory = () => {
             </div>
 
             <p className="text-slate-600 text-base sm:text-lg font-normal leading-relaxed">
-              Founded with a vision to eliminate operational bottlenecks in Indian healthcare institutions, Hamsa Soham delivers end-to-end, high-availability software platforms that streamline patient care, OPD/IPD queues, and financial auditing.
+              Launched with a mission to remove all bottlenecks associated with Indian healthcare establishments, Hamsa Soham provides high-availability systems that enhance patient treatment, OPD/IPD processing, and financial auditing processes. Known as the best hospital ERP software India, we ensure efficient healthcare outcomes for modern hospitals.
             </p>
 
             <div className="space-y-4 pt-2">
@@ -38,7 +38,7 @@ export const AboutStory = () => {
                 <div>
                   <h3 className="text-lg font-extrabold text-[#0B132B]">Our Core Mission</h3>
                   <p className="text-sm text-slate-600 mt-1 leading-relaxed">
-                    To empower healthcare providers with intuitive, compliant, and hardware-interfaced software that reduces patient wait times and guarantees NABH audit readiness.
+                    Empowering healthcare providers to leverage user-friendly, NABH-ready tools to save their patients’ time, improve compliance, and streamline clinical governance.
                   </p>
                 </div>
               </div>
@@ -50,7 +50,7 @@ export const AboutStory = () => {
                 <div>
                   <h3 className="text-lg font-extrabold text-[#0B132B]">Specialized Vision</h3>
                   <p className="text-sm text-slate-600 mt-1 leading-relaxed">
-                    Pioneering specialized ophthalmic EMR workflows alongside multispeciality enterprise HIMS to serve single-doctor clinics up to 500-bed hospital chains.
+                    From cutting-edge eye health EMR solutions to HIMS software systems for hospitals up to 500 beds, our scalable solutions revolutionize patient management.
                   </p>
                 </div>
               </div>

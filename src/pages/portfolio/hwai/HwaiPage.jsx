@@ -12,6 +12,7 @@ import {
   XCircle,
   ArrowRight,
 } from "lucide-react";
+import { SEO } from "../../../components/common/SEO";
 
 export const HwaiPage = () => {
   const location = useLocation();
@@ -62,6 +63,12 @@ export const HwaiPage = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans">
+      {/* Page Meta Title & Description */}
+      <SEO
+        title="Best hospital management system in India | HWAI"
+        description="Upgrade from static reports to HWAI, the best hospital management system in India, with real‑time audits, smart OPD queues, and live executive dashboards."
+      />
+
       {/* 1. Hero Section */}
       <HwaiHero />
 

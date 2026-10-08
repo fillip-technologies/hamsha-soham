@@ -28,7 +28,7 @@ export const SolutionsGrid = () => {
       id: "hwai",
       title: "HWAI Healthcare Management",
       sub: "Healthcare Operations & Management System",
-      desc: "Comprehensive healthcare management and operational intelligence ecosystem engineered for high-volume multispecialty hospitals, clinical audit compliance, and national health mission connectivity.",
+      desc: "HWAI is an intelligent health management system designed to manage the operations of large multispeciality hospitals. It combines all functions such as clinical workflow management, predictive OPD wait time, and insurance claims pre-audit. Renowned as the best HMS software in India, HWAI ensures precision, compliance, and efficiency across every hospital department.",
       icon: Sparkles,
       image: hwaiImg,
       link: "/products/hwai",
@@ -169,18 +169,21 @@ export const SolutionsGrid = () => {
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 space-y-12">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-3.5">
+        <div className="max-w-4xl mx-auto text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold tracking-wide uppercase">
             <Zap className="w-3.5 h-3.5 text-amber-400" />
             <span>Structured Product Solutions</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight">
-            Tailored Healthcare <span className="bg-gradient-to-r from-[#FF4D27] via-purple-600 to-blue-600 bg-clip-text text-transparent">Architecture</span>
+          <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight leading-[1.12]">
+            Tailored Healthcare Architecture — <br className="hidden sm:inline" />
+            <span className="bg-gradient-to-r from-[#FF4D27] via-purple-600 to-blue-600 bg-clip-text text-transparent">
+              Best HMS Software in India
+            </span>
           </h2>
 
-          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal">
-            Select a solution pillar below to inspect our specialized clinical workflows, compliance frameworks, and deployment models.
+          <p className="text-slate-600 text-base sm:text-lg max-w-3xl mx-auto font-normal leading-relaxed">
+            Choose any of the four solution pillars to find out more about customized clinical workflows, regulatory compliance mechanisms, and implementation strategies. As the best HMS software in India, this healthcare architecture integrates all hospital processes effectively.
           </p>
         </div>
 

@@ -4,6 +4,7 @@ import { SolutionsGrid } from "./SolutionsGrid";
 import { SDLCProcess } from "./SDLCProcess";
 import { Link } from "react-router-dom";
 import { Phone, ArrowRight, Sparkles, Eye, Layers, Building2 } from "lucide-react";
+import { SEO } from "../../components/common/SEO";
 
 export const SolutionsPage = () => {
   useEffect(() => {
@@ -12,6 +13,12 @@ export const SolutionsPage = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans select-none">
+      {/* Page Meta Title & Description */}
+      <SEO
+        title="The Best HMS Software in India by Hamsa Soham."
+        description="Built with a proven, secure process, the best HMS software in India delivers high‑performance hospital solutions with compliance, scalability, and reliability."
+      />
+
       {/* 1. Solutions Hero Section */}
       <SolutionsHero />
 
@@ -21,10 +28,10 @@ export const SolutionsPage = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[350px] bg-gradient-to-r from-purple-500/10 via-sky-500/10 to-[#FF4D27]/10 blur-[120px] pointer-events-none" />
 
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          
+
           <div className="bg-[#0A1128]/95 backdrop-blur-2xl border border-slate-700/60 rounded-3xl shadow-2xl p-8 sm:p-12 text-left">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-700/60 gap-8 md:gap-0">
-              
+
               {/* COLUMN 1: HWAI */}
               <div className="md:pr-8 space-y-4 pt-4 md:pt-0">
                 <div className="space-y-3">
@@ -155,13 +162,13 @@ export const SolutionsPage = () => {
       {/* 4. Value Proposition Matrix */}
       <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80 text-left">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-          
+
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight">
               Why Healthcare Leaders Choose <span className="text-[#FF4D27]">Hamsa Soham</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg">
-              Enterprise architecture engineered for zero downtime, 100% NABH compliance, and effortless staff adoption.
+              Designed with a feature of no downtime and easy adaptation by staff members, Hamsa Soham is the best HMS software in India with 100% NABH compliance.
             </p>
           </div>
 
@@ -206,7 +213,7 @@ export const SolutionsPage = () => {
       {/* 6. Bottom Compact CTA Banner */}
       <section className="py-10 sm:py-14 bg-slate-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-[#1C2A52] to-slate-950 pointer-events-none" />
-        
+
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center space-y-4">
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
             Need a Customized{" "}

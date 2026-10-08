@@ -11,10 +11,17 @@ import { PortfolioSection } from "./PortfolioSection";
 import { WhyHamsaSection } from "./WhyHamsaSection";
 import { ClientsSection } from "./ClientsSection";
 import { TestimonialsSection } from "./TestimonialsSection";
+import { SEO } from "../../components/common/SEO";
 
 export const Home = () => {
   return (
     <div className="min-h-screen bg-slate-50">
+      {/* Homepage SEO Meta Title & Description */}
+      <SEO
+        title="Best Hospital Management Software in India | Hamsa Soham"
+        description="Discover the best hospital management software in India with Hamsa Soham. Streamline hospital operations with secure, integrated, & scalable healthcare IT solutions."
+      />
+
       {/* 1. Homepage Hero Section */}
       <HeroSection />
 

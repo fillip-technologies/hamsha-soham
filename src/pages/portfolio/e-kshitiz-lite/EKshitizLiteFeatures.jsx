@@ -12,42 +12,42 @@ export const EKshitizLiteFeatures = () => {
   const modularFeatures = [
     {
       title: "Fast Patient Billing & Registration",
-      desc: "Instant OPD patient registration, automated consultation fee collection, and barcode receipt printing in under 1 minute.",
+      desc: "Rapid OPD registration, fee collection, and barcode receipts in under a minute.",
       icon: FileText,
       iconBg: "bg-emerald-50 text-emerald-600 border-emerald-200/60",
       glowColor: "group-hover:border-emerald-300",
     },
     {
       title: "Modular Module Activation",
-      desc: "Plug-and-play architecture allowing nursing homes to enable OPD, Pharmacy, IPD, or LIS modules as they scale.",
+      desc: "Easy plug-and-play system that works with OPD, Pharmacy, IPD, or LIS modules as per needs.",
       icon: Zap,
       iconBg: "bg-teal-50 text-teal-600 border-teal-200/60",
       glowColor: "group-hover:border-teal-300",
     },
     {
       title: "Electronic Health Records (EHR)",
-      desc: "Structured doctor prescription sheets, medical history, ICD-10 diagnosis codes, and digital prescription printing.",
+      desc: "Digitized prescriptions, medical history, ICD-10 diagnosis coding, and printing in digital format for a complete patient record.",
       icon: Activity,
       iconBg: "bg-cyan-50 text-cyan-600 border-cyan-200/60",
       glowColor: "group-hover:border-cyan-300",
     },
     {
       title: "Pharmacy & Retail POS",
-      desc: "In-house pharmacy counter management with batch stock tracking, expiry alerts, and barcode prescription billing.",
+      desc: " In-house pharmacy module for batch management, expiration alerts, and barcode billing.",
       icon: Building2,
       iconBg: "bg-sky-50 text-sky-600 border-sky-200/60",
       glowColor: "group-hover:border-sky-300",
     },
     {
-      title: "Rapid 30-Minute Deployment",
-      desc: "Zero IT complexity with pre-configured hospital master templates getting your hospital operational in 30 minutes.",
+      title: "Rapid 30-Minute Setup",
+      desc: "Ready-to-use templates for hospitals make sure that there is no need for IT complications.",
       icon: CheckCircle2,
       iconBg: "bg-amber-50 text-amber-600 border-amber-200/60",
       glowColor: "group-hover:border-amber-300",
     },
     {
       title: "Secure Cloud Backup",
-      desc: "Automatic daily encrypted backups ensuring your hospital data is safe, compliant, and accessible 24/7.",
+      desc: "Daily backup of encrypted hospital data to ensure data safety and compliance at all times.",
       icon: Lock,
       iconBg: "bg-rose-50 text-rose-600 border-rose-200/60",
       glowColor: "group-hover:border-rose-300",
@@ -61,14 +61,14 @@ export const EKshitizLiteFeatures = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl pointer-events-none -z-0" />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         {/* Clean Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight uppercase">
             Modular <span className="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-600 bg-clip-text text-transparent">Features</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal">
-            Essential modules built for fast patient management, electronic prescriptions, and hospital billing.
+            Modular Features, Driving the Top Hospital Management Software in India
           </p>
         </div>
 

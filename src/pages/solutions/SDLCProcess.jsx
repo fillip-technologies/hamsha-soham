@@ -91,14 +91,14 @@ export const SDLCProcess = () => {
   return (
     <section className="py-20 sm:py-28 bg-white border-t border-slate-200/80 relative overflow-hidden select-none text-left">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-        
+
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight uppercase">
             Our Development <span className="bg-gradient-to-r from-[#FF4D27] via-amber-500 to-sky-600 bg-clip-text text-transparent">Process</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">
-            A structured, proven 5-step SDLC process ensuring secure, high-performance web applications and hospital management software.
+            The process of a 5-step SDLC is well structured and proven to deliver highly secure, high-performance web applications and HMS systems. Designed to be the best HMS software in India, this process promises efficiency and scalability.
           </p>
         </div>
 
@@ -110,11 +110,10 @@ export const SDLCProcess = () => {
               <button
                 key={idx}
                 onClick={() => setActiveTab(idx)}
-                className={`p-4 rounded-2xl border text-left transition-all duration-300 relative group cursor-pointer ${
-                  isSelected
+                className={`p-4 rounded-2xl border text-left transition-all duration-300 relative group cursor-pointer ${isSelected
                     ? "bg-[#0B132B] border-[#0B132B] text-white shadow-xl scale-105"
                     : "bg-slate-50 border-slate-200/80 text-slate-700 hover:bg-slate-100"
-                }`}
+                  }`}
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className={`text-xs font-black px-2 py-0.5 rounded-full ${isSelected ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"}`}>
@@ -133,7 +132,7 @@ export const SDLCProcess = () => {
           <div className={`absolute top-0 left-0 right-0 h-2 bg-gradient-to-r ${active.gradient}`} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <div className="flex items-center gap-3">

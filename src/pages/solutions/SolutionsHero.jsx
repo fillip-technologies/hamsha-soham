@@ -78,12 +78,12 @@ export const SolutionsHero = () => {
 
   return (
     <section className="relative overflow-hidden pt-12 pb-24 sm:pt-16 sm:pb-32 bg-[#F9FAFC] text-slate-900 select-none font-sans">
-      
+
       {/* Background Ambient Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-indigo-100/40 via-purple-50/20 to-transparent rounded-full blur-[140px] pointer-events-none -z-0" />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 w-full text-center space-y-6">
-        
+
         {/* Main Title & Subtitle */}
         <div className="space-y-3.5 max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#0B132B] tracking-tight leading-[1.10]">
@@ -106,13 +106,13 @@ export const SolutionsHero = () => {
           </h1>
 
           <p className="text-slate-500 text-sm sm:text-base max-w-md mx-auto font-normal leading-relaxed">
-            One platform to centralize your eye clinic, multispeciality hospital, and AI operations.
+            As the best HMS Software in India, integrating diagnostics, OPD/IPD, pharmacy, and billing into one robust platform and ensures compliance and growth for advanced hospitals.
           </p>
         </div>
 
         {/* Dynamic Curved Ribbon Loop & FULL ROTATING CAROUSEL STAGE */}
         <div className="relative pt-10 sm:pt-14 pb-8 max-w-6xl mx-auto flex items-center justify-center min-h-[500px] sm:min-h-[600px]">
-          
+
           {/* Prominent Thick Blue Ribbon Loop Vector Background */}
           <svg
             className="absolute inset-0 w-full h-full pointer-events-none -z-0"
@@ -154,10 +154,10 @@ export const SolutionsHero = () => {
 
           {/* POSITION 2: CENTER SMARTPHONE HERO CARD (Exact Match to Design Screenshot) */}
           <div className="relative z-20 w-[285px] sm:w-[325px] lg:w-[355px] bg-[#0A0D1B] rounded-[44px] sm:rounded-[48px] p-2 sm:p-2.5 shadow-2xl border border-slate-700/80 ring-1 ring-slate-800 hover:scale-[1.01] transition-all duration-700 text-left">
-            
+
             {/* iPhone App Screen Container */}
             <div className="bg-[#FAFBFD] rounded-[36px] sm:rounded-[40px] p-4 sm:p-5 space-y-4 font-sans text-slate-900 overflow-hidden shadow-inner min-h-[460px] flex flex-col justify-between">
-              
+
               <div className="space-y-4">
                 {/* App Brand Header */}
                 <div className="flex items-center justify-between">
@@ -217,11 +217,10 @@ export const SolutionsHero = () => {
                   <button
                     key={idx}
                     onClick={() => setActiveOffset((idx - 2 + products.length) % products.length)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      (activeOffset + 2) % products.length === idx
-                        ? "w-6 bg-[#5254F2]"
-                        : "w-1.5 bg-slate-300 hover:bg-slate-400"
-                    }`}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${(activeOffset + 2) % products.length === idx
+                      ? "w-6 bg-[#5254F2]"
+                      : "w-1.5 bg-slate-300 hover:bg-slate-400"
+                      }`}
                   />
                 ))}
               </div>

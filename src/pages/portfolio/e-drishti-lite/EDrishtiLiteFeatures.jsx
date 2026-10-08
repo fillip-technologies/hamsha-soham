@@ -11,43 +11,43 @@ import {
 export const EDrishtiLiteFeatures = () => {
   const liteFeatures = [
     {
-      title: "Fast Consultation Worksheets",
-      desc: "Streamlined single-screen consultation sheet for optometrists and eye doctors to complete refraction charts and prescriptions in under 2 minutes.",
+      title: "Fast Consultation Forms",
+      desc: "Create complete charts and prescriptions within 2 minutes using easy and efficient single-screen forms.",
       icon: Eye,
       iconBg: "bg-purple-50 text-purple-600 border-purple-200/60",
       glowColor: "group-hover:border-purple-300",
     },
     {
-      title: "Diagnostic Device Integration",
-      desc: "Direct auto-refractor & tonometer data sync eliminating manual entry errors during patient eye examinations.",
+      title: "Integration with Diagnostic Devices",
+      desc: "Avoid errors in recording test results due to manual input through a direct interface with an auto-refractor and tonometer.",
       icon: Zap,
       iconBg: "bg-indigo-50 text-indigo-600 border-indigo-200/60",
       glowColor: "group-hover:border-indigo-300",
     },
     {
-      title: "Optical Inventory & Prescription POS",
-      desc: "Integrated optical store module for frame barcode billing, spectacle lens prescription printing, and inventory stock alerts.",
+      title: "Optical Inventory and Prescription Point of Sale",
+      desc: "Efficient barcode billing system, lens prescription printouts, and stock management for optical stores.",
       icon: FileText,
       iconBg: "bg-sky-50 text-sky-600 border-sky-200/60",
       glowColor: "group-hover:border-sky-300",
     },
     {
-      title: "Cross-Platform Access",
-      desc: "Runs smoothly on all clinic devices — Windows PCs, Android tablets, iPads, and Mac computers.",
+      title: "Cross-Platform Operation",
+      desc: "Works flawlessly on Windows PC, Android tablets, iPad, and Mac computers.",
       icon: Monitor,
       iconBg: "bg-[#FFF5F2] text-[#FF4D27] border-[#FF4D27]/30",
       glowColor: "group-hover:border-[#FF4D27]/40",
     },
     {
-      title: "Rapid 15-Minute Setup",
-      desc: "Pre-configured clinic settings and master data allowing eye clinics to go live on day 1 without setup delays.",
+      title: "Quick 15-Minute Setup",
+      desc: "Your clinic gets ready with pre-configured settings on day one itself.",
       icon: CheckCircle2,
       iconBg: "bg-emerald-50 text-emerald-600 border-emerald-200/60",
       glowColor: "group-hover:border-emerald-300",
     },
     {
-      title: "Secure Cloud Backup & Access Controls",
-      desc: "Automated encryption, daily cloud backups, and granular staff permission controls for clinic peace of mind.",
+      title: "Daily Encrypted Backups and Access Controls",
+      desc: "Regular cloud backups and detailed user controls make sure your clinic's information is secure.",
       icon: Lock,
       iconBg: "bg-amber-50 text-amber-600 border-amber-200/60",
       glowColor: "group-hover:border-amber-300",
@@ -67,8 +67,8 @@ export const EDrishtiLiteFeatures = () => {
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight uppercase">
             Clinic <span className="bg-gradient-to-r from-purple-600 via-indigo-500 to-sky-600 bg-clip-text text-transparent">Features</span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal">
-            Everything your eye clinic needs to manage patient consults, optical inventory, and billing seamlessly.
+          <p className="text-slate-600 text-base sm:text-lg max-w-3xl mx-auto font-normal">
+            The comprehensive tool you need to handle everything from consultation to optical inventory management and billing for your eye clinic is available in e_Drishti Lite, which is one of the most efficient medical software India.
           </p>
         </div>
 

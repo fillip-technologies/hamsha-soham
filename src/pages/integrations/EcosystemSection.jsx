@@ -296,21 +296,74 @@ export const EcosystemSection = () => {
   ];
 
   return (
-    <section id="connected-ecosystem" className="py-20 sm:py-28 bg-[#F8FAFC] border-t border-slate-200/80 text-left select-none font-sans relative">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 space-y-12">
+    <section id="connected-ecosystem" className="py-20 sm:py-28 bg-[#F8FAFC] border-t border-slate-200/80 text-left select-none font-sans relative overflow-hidden">
+      <style>{`
+        @keyframes ecosystem-geometry-drift {
+          0%, 100% { transform: translate3d(0,0,0) rotate(0deg); }
+          50% { transform: translate3d(12px,-10px,0) rotate(3deg); }
+        }
+        .ecosystem-geometry-bg {
+          background-image: linear-gradient(135deg,rgba(14,165,233,.08) 0 1px,transparent 1px 28px),linear-gradient(45deg,rgba(255,77,39,.06) 0 1px,transparent 1px 32px);
+          background-size: 56px 56px, 72px 72px;
+          mask-image: linear-gradient(180deg,transparent,black 10%,black 90%,transparent);
+        }
+        .ecosystem-geo-shape { animation: ecosystem-geometry-drift 10s ease-in-out infinite; }
+        @media (prefers-reduced-motion: reduce) {
+          .ecosystem-geo-shape { animation: none !important; }
+        }
+      `}</style>
+
+      {/* Decorative Geometric Background (Matching Testimonial Section Style) */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#F8FAFC_0%,#FFFFFF_48%,#F8FAFC_100%)]" />
+        <div className="ecosystem-geometry-bg absolute inset-0 opacity-80" />
+        <div className="absolute inset-0 bg-[radial-gradient(#0EA5E9_1.2px,transparent_1.2px)] [background-size:28px_28px] opacity-15" />
+
+        {/* Left Decorative Accent */}
+        <div className="ecosystem-geo-shape absolute -left-20 top-20 h-64 w-64 rotate-12 border-[28px] border-[#FF4D27]/10" />
+
+        {/* Primary Large Rotated Diamond Frame in Right Blank Area */}
+        <div
+          className="ecosystem-geo-shape absolute -right-16 sm:-right-8 lg:right-10 xl:right-24 top-10 sm:top-14 lg:top-16 h-72 w-72 sm:h-84 sm:w-84 lg:h-[380px] lg:w-[380px] rotate-45 border-[32px] sm:border-[36px] lg:border-[40px] border-sky-500/20"
+          style={{ animationDelay: "1.4s" }}
+        />
+
+        {/* Secondary Warm Accent Diamond Frame */}
+        <div
+          className="ecosystem-geo-shape absolute right-16 sm:right-24 lg:right-44 xl:right-60 top-28 sm:top-32 lg:top-36 h-40 w-40 sm:h-48 sm:w-48 lg:h-56 lg:w-56 rotate-[28deg] border-[18px] sm:border-[22px] border-[#FF4D27]/12"
+          style={{ animationDelay: "2.4s" }}
+        />
+
+        {/* Mid-Section Emerald Diamond Accent */}
+        <div
+          className="ecosystem-geo-shape absolute bottom-12 left-[38%] h-44 w-44 rotate-[28deg] border-[22px] border-emerald-500/10"
+          style={{ animationDelay: "2.2s" }}
+        />
+
+        {/* Subtle Decorative Solid Blocks */}
+        <div className="absolute left-[7%] bottom-28 h-20 w-20 rotate-45 bg-[#FF4D27]/[0.05]" />
+        <div className="absolute right-[20%] top-20 h-24 w-24 rotate-12 bg-sky-500/[0.055]" />
+        <div className="absolute right-[8%] top-64 h-20 w-20 rotate-45 bg-[#FF4D27]/[0.05]" />
+
+        {/* Soft Radial Ambient Glow */}
+        <div className="absolute right-0 top-0 w-[600px] h-[500px] bg-gradient-to-bl from-sky-200/35 via-orange-100/20 to-transparent rounded-full blur-[140px]" />
+      </div>
+
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 space-y-12 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl space-y-4">
+        <div className="max-w-4xl space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 text-[#FF4D27] text-xs font-black uppercase tracking-wider">
             <span>Interoperability Architecture</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight">
-            Connected Healthcare <span className="text-[#FF4D27]">Ecosystem</span>
+          <h2 className="text-3xl sm:text-5xl font-black text-[#0B132B] tracking-tight leading-tight">
+            Unified Healthcare Network – <br className="hidden sm:inline" />
+            <span className="text-[#FF4D27]">Advanced Hospital Software in India</span>
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-            Hamsa Soham eliminates clinical data silos by interfacing directly with clinical hardware, laboratory analyzers, medical imaging modalities, financial ledgers, and national healthcare exchanges.
+            Hamsa Soham overcomes the problem of data silos by connecting directly to hardware, lab analyzers, imaging devices, financial systems, and national exchanges. This leading hospital software in India helps hospitals to get connected, comply effectively, and improve patient care.
           </p>
         </div>
 

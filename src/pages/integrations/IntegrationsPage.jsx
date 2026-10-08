@@ -3,6 +3,7 @@ import { IntegrationsHero } from "./IntegrationsHero";
 import { EcosystemSection } from "./EcosystemSection";
 import { SecurityComplianceSection } from "./SecurityComplianceSection";
 import { IntegrationsCTA } from "./IntegrationsCTA";
+import { SEO } from "../../components/common/SEO";
 
 export const IntegrationsPage = () => {
   useEffect(() => {
@@ -11,6 +12,12 @@ export const IntegrationsPage = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans select-none">
+      {/* Page Meta Title & Description */}
+      <SEO
+        title="Secure & Compliant Hospital Software in India"
+        description="Discover advanced hospital software in India by Hamsa Soham, delivering secure, scalable, and interoperable solutions for patient care and hospital management."
+      />
+
       {/* 1. Integrations Hero with Connected Network Highlights */}
       <IntegrationsHero />
 

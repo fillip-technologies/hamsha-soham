@@ -40,13 +40,14 @@ export const AboutStats = () => {
   return (
     <section className="py-16 sm:py-24 bg-white border-t border-slate-200/80 select-none">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 text-center space-y-12">
-        
+
         <div className="max-w-2xl mx-auto space-y-3">
           <h2 className="text-3xl sm:text-4xl font-black text-[#0B132B] tracking-tight uppercase">
             Proven Scale & <span className="bg-gradient-to-r from-[#FF4D27] via-amber-500 to-sky-600 bg-clip-text text-transparent">Reliability</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Quantifiable impact delivered across healthcare institutions nationwide.
+
+            Recognised as the best hospital ERP software India, it equips hospitals with unparalleled dependability, compliance, and scalability to improve patient care and financial management.
           </p>
         </div>
 

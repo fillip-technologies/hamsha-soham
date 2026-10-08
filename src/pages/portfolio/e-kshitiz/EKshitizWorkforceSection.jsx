@@ -33,7 +33,7 @@ export const EKshitizWorkforceSection = () => {
       <div className="absolute bottom-0 left-10 w-[500px] h-[500px] bg-[#FF4D27]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-800 text-xs font-extrabold uppercase tracking-widest">
@@ -49,17 +49,19 @@ export const EKshitizWorkforceSection = () => {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-            Engineered for mid-sized hospitals, SMB clinics, and healthcare workforces. Unifies IPD/OPD bed management, pharmacy billing, lab LIS diagnostics, and staff shift rosters into an easy-to-use platform.
+
+            This system has been developed especially to be used by mid-sized hospitals and clinics and is an integration of IPD and OPD bed management, pharmacy billing, laboratory diagnostics, and staff management. This system is reliable and efficient hospital billing software India.
+
           </p>
         </div>
 
         {/* Dynamic Bento Box Architecture Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
+
           {/* BENTO CARD 1: Integrated IPD Bed Management & Patient Queue (Featured Card - 8 Columns) */}
           <div className="lg:col-span-8 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 hover:border-blue-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-[#FF4D27]" />
-            
+
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">

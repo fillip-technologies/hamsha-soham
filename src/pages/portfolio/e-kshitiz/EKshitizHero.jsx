@@ -122,24 +122,24 @@ export const EKshitizHero = () => {
       </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 w-full">
-        
+
         {/* Asymmetric 2-Column Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Headlines & Action CTAs */}
           <div className="lg:col-span-6 space-y-6 text-left">
-            
+
             {/* Master Headline */}
             <h1 className="text-4xl sm:text-6xl font-black text-[#0B132B] tracking-tight leading-[1.10]">
               e_Kshitiz <br />
               <span className="bg-gradient-to-r from-[#FF4D27] via-orange-500 to-amber-500 bg-clip-text text-transparent">
-                Enterprise Hospital Information System
+                Full‑Scale Hospital Information System
               </span>
             </h1>
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-              Full-scale enterprise HIMS for large hospitals and medical centers managing IPD, OPD, OT, ICU, Pharmacy, LIS Diagnostics, and Finance centrally with 100% NABH compliance.
+              The e_Kshitiz Enterprise system is an all-encompassing HIMS system that complies with NABH standards for use in hospitals and medical centers. Referred to as advanced hospital billing software India, it handles registration, billing, finance, along with IPD, OPD, ICU, Pharmacy, and Diagnostics seamlessly.
             </p>
 
             {/* Action Buttons */}
@@ -167,13 +167,13 @@ export const EKshitizHero = () => {
 
           {/* Right Column: Clean Showcase Frame */}
           <div className="lg:col-span-6 relative">
-            
+
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-tr from-[#FF4D27]/30 via-orange-400/20 to-amber-400/20 rounded-3xl blur-2xl -z-10 transform scale-105" />
 
             {/* Main Window Container */}
             <div className="relative rounded-3xl bg-slate-950 p-2 sm:p-3 border border-slate-800 shadow-2xl overflow-hidden group">
-              
+
               {/* macOS Header Bar */}
               <div className="bg-slate-900 px-4 py-2.5 rounded-t-2xl border-b border-slate-800 flex items-center justify-between">
                 <div className="flex items-center gap-1.5">

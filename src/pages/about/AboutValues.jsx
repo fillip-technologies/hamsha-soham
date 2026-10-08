@@ -44,7 +44,7 @@ export const AboutValues = () => {
   return (
     <section className="py-20 sm:py-28 bg-[#FAFCFF] border-t border-slate-200/80 select-none">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-        
+
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 text-white text-xs font-extrabold uppercase tracking-wider shadow-xs">
@@ -56,7 +56,7 @@ export const AboutValues = () => {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal">
-            The foundational standards driving our software engineering, client support, and product innovation.
+            Our values shape software engineering, customer service, and innovation efforts, thereby ensuring reliability and compliance. Known as the best hospital ERP software India, we provide solutions that enable healthcare organizations across the nation to grow.
           </p>
         </div>
 

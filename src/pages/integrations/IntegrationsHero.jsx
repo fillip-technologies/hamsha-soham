@@ -119,20 +119,20 @@ export const IntegrationsHero = () => {
 
   return (
     <section className="relative overflow-hidden pt-12 pb-16 sm:pt-16 sm:pb-24 bg-gradient-to-b from-[#F3F8FD] via-[#F8FBFE] to-white text-slate-900 select-none font-sans border-b border-slate-200/80">
-      
+
       {/* Soft Ambient Mesh Background Lights */}
       <div className="absolute top-0 left-1/4 w-[650px] h-[400px] bg-sky-200/40 rounded-full blur-[140px] pointer-events-none -z-0" />
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[400px] bg-orange-100/35 rounded-full blur-[140px] pointer-events-none -z-0" />
       <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] [background-size:24px_24px] opacity-35 pointer-events-none" />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         {/* Dual-Column Master Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center text-left">
-          
+
           {/* LEFT COLUMN: Narrative, Headlines, Value Points & CTAs */}
           <div className="lg:col-span-6 space-y-6">
-            
+
             {/* Main Headline */}
             <div className="space-y-3.5">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#0B132B] tracking-tight leading-[1.08]">
@@ -143,7 +143,7 @@ export const IntegrationsHero = () => {
               </h1>
 
               <p className="text-slate-600 text-base sm:text-lg font-normal leading-relaxed max-w-xl">
-                The central nervous system of your healthcare enterprise. Seamlessly bridge diagnostic analyzers, DICOM PACS imaging, hospital ERPs, insurance TPAs, and national ABDM registries into a single unified medical network.
+                Our well-designed hospital software in India can be the central part of your healthcare enterprise as it integrates the diagnostic analyzers, DICOM PACS imaging, ERP’s, insurance TPAs, and the ABDM registries into one medical network.
               </p>
             </div>
 
@@ -191,7 +191,7 @@ export const IntegrationsHero = () => {
 
           {/* RIGHT COLUMN: Interactive Animated Interoperability Solar Orbit Reactor */}
           <div className="lg:col-span-6 relative flex items-center justify-center min-h-[460px] sm:min-h-[500px]">
-            
+
             {/* Ambient Circular Glow */}
             <div className="absolute inset-0 m-auto w-[380px] h-[380px] bg-gradient-to-r from-blue-300/30 via-sky-200/40 to-orange-200/25 blur-3xl rounded-full pointer-events-none" />
 
@@ -262,7 +262,7 @@ export const IntegrationsHero = () => {
 
             {/* 1. CENTRAL GLOWING CORE HUB */}
             <div className="relative z-20 w-44 h-44 sm:w-48 sm:h-48 rounded-full bg-white border-2 border-slate-200 shadow-2xl p-3 flex flex-col items-center justify-center text-center group cursor-pointer hover:scale-105 transition-all">
-              
+
               {/* Pulsing Concentric Aura Ring */}
               <div className="absolute inset-0 -m-3 rounded-full border-2 border-[#FF4D27]/30 animate-ping pointer-events-none" style={{ animationDuration: "3s" }} />
               <div className="absolute inset-0 -m-1.5 rounded-full border-2 border-sky-400/30 animate-pulse pointer-events-none" />
@@ -292,16 +292,14 @@ export const IntegrationsHero = () => {
                 <div
                   key={node.id}
                   onClick={() => setActiveNode(nIdx)}
-                  className={`absolute z-30 transition-all duration-500 cursor-pointer ${node.pos} ${
-                    isSelected ? "scale-110 z-40" : "hover:scale-105"
-                  }`}
+                  className={`absolute z-30 transition-all duration-500 cursor-pointer ${node.pos} ${isSelected ? "scale-110 z-40" : "hover:scale-105"
+                    }`}
                 >
                   <div
-                    className={`p-2.5 sm:p-3 rounded-2xl border transition-all duration-300 flex items-center gap-2.5 ${
-                      isSelected
-                        ? "bg-white border-[#0B132B] shadow-2xl ring-2 ring-[#0B132B]/10"
-                        : "bg-white/95 hover:bg-white border-slate-200 shadow-md backdrop-blur-md"
-                    }`}
+                    className={`p-2.5 sm:p-3 rounded-2xl border transition-all duration-300 flex items-center gap-2.5 ${isSelected
+                      ? "bg-white border-[#0B132B] shadow-2xl ring-2 ring-[#0B132B]/10"
+                      : "bg-white/95 hover:bg-white border-slate-200 shadow-md backdrop-blur-md"
+                      }`}
                   >
                     <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl ${node.color} flex items-center justify-center shadow-md shrink-0`}>
                       <Icon className="w-5 h-5" />
