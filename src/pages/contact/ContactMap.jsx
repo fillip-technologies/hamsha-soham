@@ -51,7 +51,7 @@ export const ContactMap = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#FF4D27] shrink-0 mt-0.5" />
                   <div className="text-sm text-slate-700 leading-relaxed font-normal">
-                    Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna, Bihar – 800025, India
+                    Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna, Bihar – 800014, India
                   </div>
                 </div>
 

@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail, MessageCircle, ShieldCheck } from "lucide-react";
 export const ContactInfo = () => {
   return (
     <div className="space-y-6 text-left select-none">
-      
+
       {/* Corporate Address Card */}
       <div className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-md space-y-5">
         <div className="flex items-center gap-3">
@@ -25,7 +25,7 @@ export const ContactInfo = () => {
             <span>Address:</span>
           </div>
           <p className="text-xs text-slate-600 font-medium leading-relaxed pl-5">
-            Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna, Bihar – 800025, India
+            Flat No. 3B, Mayank Manan, Ashokpuri, Khajpura, Patna, Bihar – 800014, India
           </p>
         </div>
       </div>
@@ -35,7 +35,7 @@ export const ContactInfo = () => {
         <h4 className="text-lg font-black text-[#0B132B]">Direct Contact Lines</h4>
 
         <div className="space-y-3">
-          
+
           {/* Phone Numbers */}
           <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
             <div className="text-xs font-black text-[#0B132B] flex items-center gap-2">

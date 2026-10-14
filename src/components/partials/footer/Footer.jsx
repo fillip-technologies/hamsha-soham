@@ -51,7 +51,7 @@ export const Footer = () => {
         { name: "Support", path: "/contact" },
         { name: "License Activation", path: "/contact" },
         { name: "Service Request", path: "/contact" },
-        { name: "Webmail", path: "/contact" },
+        { name: "Webmail", path: "https://hamsasoham.com:2096/", isExternal: true },
       ],
     },
     {
