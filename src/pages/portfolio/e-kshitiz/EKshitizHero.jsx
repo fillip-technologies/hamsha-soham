@@ -6,7 +6,7 @@ import {
   X,
   Building2,
 } from "lucide-react";
-import eKshitizImg from "../../../assets/portfolio/e_Kshitiz.png";
+import eKshitizImg from "../../../assets/portfolio/e_Kshitiz.webp";
 import { AnimatedCounter } from "../../../components/common/AnimatedCounter";
 
 export const EKshitizHero = () => {

@@ -6,7 +6,7 @@ import {
   X,
   Eye,
 } from "lucide-react";
-import eDrishtiImg from "../../../assets/portfolio/e_Drishti_P_I.png";
+import eDrishtiImg from "../../../assets/portfolio/e_Drishti_P_I.webp";
 import { AnimatedCounter } from "../../../components/common/AnimatedCounter";
 
 export const EDrishtiHero = () => {

@@ -1,36 +1,29 @@
-import React, { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Navbar } from "./components/partials/navbar/Navbar";
 import { Footer } from "./components/partials/footer/Footer";
 import { Home } from "./pages/home/Home";
 
+// All non-home pages are lazy-loaded so first-time visitors only download the home page bundle.
 // Product Pages
-import { EDrishtiPage } from "./pages/portfolio/e-drishti/EDrishtiPage";
-import { EDrishtiLitePage } from "./pages/portfolio/e-drishti-lite/EDrishtiLitePage";
-import { EKshitizPage } from "./pages/portfolio/e-kshitiz/EKshitizPage";
-import { EKshitizLitePage } from "./pages/portfolio/e-kshitiz-lite/EKshitizLitePage";
-import { HwaiPage } from "./pages/portfolio/hwai/HwaiPage";
+const EDrishtiPage = lazy(() => import("./pages/portfolio/e-drishti/EDrishtiPage"));
+const EDrishtiLitePage = lazy(() => import("./pages/portfolio/e-drishti-lite/EDrishtiLitePage"));
+const EKshitizPage = lazy(() => import("./pages/portfolio/e-kshitiz/EKshitizPage"));
+const EKshitizLitePage = lazy(() => import("./pages/portfolio/e-kshitiz-lite/EKshitizLitePage"));
+const HwaiPage = lazy(() => import("./pages/portfolio/hwai/HwaiPage"));
 
-// Solutions Page
-import { SolutionsPage } from "./pages/solutions/SolutionsPage";
+// Solutions, Integrations, About, Contact Pages
+const SolutionsPage = lazy(() => import("./pages/solutions/SolutionsPage"));
+const IntegrationsPage = lazy(() => import("./pages/integrations/IntegrationsPage"));
+const AboutPage = lazy(() => import("./pages/about/AboutPage"));
+const ContactPage = lazy(() => import("./pages/contact/ContactPage"));
 
-// Integrations Page
-import { IntegrationsPage } from "./pages/integrations/IntegrationsPage";
+// Auth & Admin Pages
+const LoginPage = lazy(() => import("./pages/login/LoginPage"));
+const SignupPage = lazy(() => import("./pages/signup/SignupPage"));
+const AdminPage = lazy(() => import("./pages/admin/AdminPage"));
 
-// About Page
-import { AboutPage } from "./pages/about/AboutPage";
-
-// Contact Page
-import { ContactPage } from "./pages/contact/ContactPage";
-
-// Login Page
-import { LoginPage } from "./pages/login/LoginPage";
-
-// Signup Page
-import { SignupPage } from "./pages/signup/SignupPage";
-
-// Admin Page (Admin Login, Signup & Inquiries Dashboard)
-import { AdminPage } from "./pages/admin/AdminPage";
+const PageFallback = () => <div className="min-h-screen" aria-busy="true" />;
 
 // Scroll To Top on Route Navigation Component
 const ScrollToTop = () => {
@@ -66,6 +59,7 @@ export function AppContent() {
 
       {/* Main Page Content with React Router Routes */}
       <main className="flex-1">
+        <Suspense fallback={<PageFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
           
@@ -92,6 +86,7 @@ export function AppContent() {
           <Route path="/admin" element={<AdminPage />} />
           <Route path="*" element={<Home />} />
         </Routes>
+        </Suspense>
       </main>
 
 

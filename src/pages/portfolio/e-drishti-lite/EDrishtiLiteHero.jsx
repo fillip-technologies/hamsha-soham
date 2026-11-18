@@ -7,7 +7,7 @@ import {
   Eye,
   Zap,
 } from "lucide-react";
-import eDrishtiLiteImg from "../../../assets/portfolio/e_Drishtilite_P_I.png";
+import eDrishtiLiteImg from "../../../assets/portfolio/e_Drishtilite_P_I.webp";
 import { AnimatedCounter } from "../../../components/common/AnimatedCounter";
 
 export const EDrishtiLiteHero = () => {

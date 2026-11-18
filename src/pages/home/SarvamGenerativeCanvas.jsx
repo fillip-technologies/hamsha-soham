@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import basePatternImg from "../../assets/sarvam-grid-base.png";
+import basePatternImg from "../../assets/sarvam-grid-base.webp";
 
 /**
  * SarvamGenerativeCanvas

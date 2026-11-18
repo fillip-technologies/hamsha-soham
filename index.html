@@ -17,7 +17,6 @@
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DV0HMLWQ"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18469118510"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -25,6 +24,22 @@
 
     gtag('config', 'G-W0DV0HMLWQ');
     gtag('config', 'AW-18469118510');
+  </script>
+
+  <!-- Event snippet for Contact conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18469118510/9QB3CPeOp5odEK7E4eZE',
+          'event_callback': callback
+      });
+      return false;
+    }
   </script>
 </head>
 

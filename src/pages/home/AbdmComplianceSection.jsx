@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Activity, CheckCircle2, Cloud, FileText, QrCode, ShieldCheck } from "lucide-react";
-import ayushmanLogo from "../../assets/aysuhman-bharat-removebg-preview.png";
-import nhaLogo from "../../assets/nha.png";
+import ayushmanLogo from "../../assets/aysuhman-bharat-removebg-preview.webp";
+import nhaLogo from "../../assets/nha.webp";
 
 export const AbdmComplianceSection = () => {
   const sectionRef = useRef(null);

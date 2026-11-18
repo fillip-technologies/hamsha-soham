@@ -11,9 +11,9 @@ import {
 } from "lucide-react";
 
 // Official PDF and image assets
-import ayushmanLogo from "../../assets/aysuhman-bharat-removebg-preview.png";
-import ayushmanSeal from "../../assets/pdf/aysuhaman-1.png";
-import nhaLogo from "../../assets/nha.png";
+import ayushmanLogo from "../../assets/aysuhman-bharat-removebg-preview.webp";
+import ayushmanSeal from "../../assets/pdf/aysuhaman-1.webp";
+import nhaLogo from "../../assets/nha.webp";
 import abdmCertPdf from "../../assets/pdf/certificate.pdf";
 import safeCertPdf from "../../assets/pdf/safe-cert.pdf";
 import vapCertPdf from "../../assets/pdf/VAPcert.pdf";

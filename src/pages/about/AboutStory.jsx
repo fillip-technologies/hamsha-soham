@@ -1,6 +1,6 @@
 import React from "react";
 import { Target, Eye } from "lucide-react";
-import heroDashboardImg from "../../assets/hero-dashboard.jpeg";
+import heroDashboardImg from "../../assets/hero-dashboard.webp";
 
 export const AboutStory = () => {
   return (
