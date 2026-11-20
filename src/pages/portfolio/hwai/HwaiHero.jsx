@@ -6,7 +6,7 @@ import {
   X,
   Sparkles,
 } from "lucide-react";
-import hwaiImg from "../../../assets/portfolio/hwai.png";
+import hwaiImg from "../../../assets/portfolio/hwai.webp";
 import { AnimatedCounter } from "../../../components/common/AnimatedCounter";
 
 export const HwaiHero = () => {

@@ -9,10 +9,10 @@ import {
 } from "lucide-react";
 
 // Product images
-import eKshitizImg from "../../assets/portfolio/e_Kshitiz.png";
-import eKshitizLiteImg from "../../assets/portfolio/e_KshitizLite.png";
-import eDrishtiImg from "../../assets/portfolio/e_Drishti_P_I.png";
-import eDrishtiLiteImg from "../../assets/portfolio/e_Drishtilite_P_I.png";
+import eKshitizImg from "../../assets/portfolio/e_Kshitiz.webp";
+import eKshitizLiteImg from "../../assets/portfolio/e_KshitizLite.webp";
+import eDrishtiImg from "../../assets/portfolio/e_Drishti_P_I.webp";
+import eDrishtiLiteImg from "../../assets/portfolio/e_Drishtilite_P_I.webp";
 
 export const SegmentSolutionsSection = () => {
   const cards = [

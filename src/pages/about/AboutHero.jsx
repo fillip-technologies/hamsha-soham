@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { ShieldCheck, Award, Eye, Building2, Sparkles, ArrowRight, Calendar, Activity, Phone } from "lucide-react";
 
 // Portfolio Product Images
-import eDrishtiImg from "../../assets/portfolio/e_Drishti_P_I.png";
-import hwaiImg from "../../assets/portfolio/hwai.png";
-import heroDashboardImg from "../../assets/hero-dashboard.jpeg";
+import eDrishtiImg from "../../assets/portfolio/e_Drishti_P_I.webp";
+import hwaiImg from "../../assets/portfolio/hwai.webp";
+import heroDashboardImg from "../../assets/hero-dashboard.webp";
 
 export const AboutHero = () => {
   return (
